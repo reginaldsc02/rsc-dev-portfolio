@@ -9,31 +9,31 @@ import {
 export const navLinks = [
   {
     title: "Home",
-    url: "#hero",
+    url: "hero",
     icon: <FaHome />,
   },
 
   {
     title: "Projects",
-    url: "#projects",
+    url: "projects",
     icon: <FaBriefcase />,
   },
 
   {
     title: "About",
-    url: "#about",
+    url: "about",
     icon: <FaUser />,
   },
 
   {
     title: "Skills",
-    url: "#skills",
+    url: "skills",
     icon: <FaReact />,
   },
 
   {
     title: "Contact",
-    url: "#contact",
+    url: "contact",
     icon: <FaPhoneAlt />,
   },
 ];

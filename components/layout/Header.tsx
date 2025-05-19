@@ -21,10 +21,10 @@ export const Header = ({
     <header className="px-5 py-4 flex items-center justify-between border-b-[1px] border-solid border-b-gray-100/10">
       <div className="flex items-center gap-3.5">
         <ReactScrollLink
-          to="#hero"
+          to="hero"
           smooth
           spy
-          onClick={() => setActive("#hero")}
+          onClick={() => setActive("hero")}
           className="cursor-pointer group"
         >
           <div className="flex items-center gap-2">
