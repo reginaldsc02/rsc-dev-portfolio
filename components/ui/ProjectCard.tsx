@@ -23,12 +23,13 @@ export const ProjectCard = ({
   primaryProgrammingLanguageUsed,
 }: Props) => {
   return (
-    <div className="pb-5 bg-gray-900 rounded-lg">
+    <div className="pb-2 bg-gray-900 rounded-lg">
       <Image
         src={projectImageSrc}
         alt={projectImageAltText || "Alt text is not available."}
         width={500}
         height={250}
+        layout="responsive"
         className="w-full h-1/2 object-center object-cover rounded-t-lg"
       />
 
