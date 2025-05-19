@@ -24,6 +24,7 @@ export const MainLayout = () => {
           <Contact />
         </div>
       </main>
+
       <Footer />
     </div>
   );
