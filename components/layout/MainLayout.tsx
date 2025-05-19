@@ -14,12 +14,15 @@ export const MainLayout = () => {
         gitHubAccountLink="https://github.com/reginaldsc02"
         websiteVersion="0.1.0"
       />
-      <main>
-        <Hero />
-        <Projects />
-        <About />
-        <Skills />
-        <Contact />
+      <main className="md:min-w-7xl mx-auto flex">
+        <div className="w-16 min-h-screen border-r-[1px] border-solid border-r-gray-50/10"></div>
+        <div>
+          <Hero />
+          <Projects />
+          <About />
+          <Skills />
+          <Contact />
+        </div>
       </main>
       <Footer />
     </div>
