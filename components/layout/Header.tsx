@@ -17,8 +17,6 @@ export const Header = ({
 }) => {
   const [active, setActive] = useState("");
 
-  console.log(active);
-
   return (
     <header className="px-5 py-4 flex items-center justify-between border-b-[1px] border-solid border-b-gray-100/10">
       <div className="flex items-center gap-3.5">
