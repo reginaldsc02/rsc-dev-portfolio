@@ -8,15 +8,14 @@ import { Header } from "./Header";
 
 export const MainLayout = () => {
   return (
-    <div className="min-h-screen grid grid-cols-1 grid-rows-[auto_1fr_auto]">
+    <div className="min-w-full min-h-screen grid grid-cols-1 grid-rows-[auto_1fr_auto]">
       <Header
         logoName="reginaldsc02"
         gitHubAccountLink="https://github.com/reginaldsc02"
         websiteVersion="0.1.0"
       />
-      <main className="md:min-w-7xl mx-auto flex">
-        <div className="w-16 min-h-screen border-r-[1px] border-solid border-r-gray-50/10"></div>
-        <div>
+      <main className="w-full 2xl:max-w-7xl mx-auto">
+        <div className="w-[calc(100%-5rem)] mx-auto min-h-screen border-x-[1px] border-solid border-x-gray-50/10">
           <Hero />
           <Projects />
           <About />
