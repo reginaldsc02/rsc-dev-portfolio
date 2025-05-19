@@ -3,20 +3,22 @@
 import { FaGithub, FaUser } from "react-icons/fa";
 import { Link as ReactScrollLink } from "react-scroll";
 import { navLinks } from "../data/navLinks";
-import { useState } from "react";
 import Link from "next/link";
+import { Dispatch, SetStateAction } from "react";
 
 export const Header = ({
+  active,
+  setActive,
   logoName,
   gitHubAccountLink,
   websiteVersion,
 }: {
+  active: string;
+  setActive: Dispatch<SetStateAction<string>>;
   logoName: string;
   gitHubAccountLink: string;
   websiteVersion: string;
 }) => {
-  const [active, setActive] = useState("");
-
   return (
     <header className="px-5 py-4 flex items-center justify-between border-b-[1px] border-solid border-b-gray-100/10">
       <div className="flex items-center gap-3.5">
