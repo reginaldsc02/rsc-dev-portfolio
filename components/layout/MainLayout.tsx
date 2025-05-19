@@ -8,8 +8,12 @@ import { Header } from "./Header";
 
 export const MainLayout = () => {
   return (
-    <div>
-      <Header />
+    <div className="min-h-screen grid grid-cols-1 grid-rows-[auto_1fr_auto]">
+      <Header
+        logoName="reginaldsc02"
+        gitHubAccountLink="https://github.com/reginaldsc02"
+        websiteVersion="0.1.0"
+      />
       <main>
         <Hero />
         <Projects />
