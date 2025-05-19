@@ -31,6 +31,7 @@ export const Header = ({
             <div className="p-2.5 border-[1px] border-solid border-gray-100/25 rounded-full">
               <FaUser className="scale-110 group-hover:text-primary transition-colors duration-200 ease-linear" />
             </div>
+
             <div className="text-xl font-medium lowercase">
               {logoName || "Logo Name"}
             </div>
