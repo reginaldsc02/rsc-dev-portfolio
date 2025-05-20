@@ -18,7 +18,8 @@ export const Footer = () => {
         </p>
 
         <p className="text-gray-50/50">
-          Designed & Developed with ❤️ | Powered by Next.js & TailwindCSS
+          Designed & Developed with <span className="text-gray-50">❤️</span> |
+          Powered by Next.js & TailwindCSS
         </p>
       </div>
     </footer>
