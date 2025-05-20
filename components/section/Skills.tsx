@@ -26,7 +26,7 @@ export const Skills = () => {
           </p>
         </div>
 
-        <p className="mt-5">
+        <p className="mt-5 tracking-wide">
           Behind every flawless system is a toolbox wielded with mastery and
           heart. From the quiet hum of backend servers to the rhythmic pulse of
           APIs, my skills are the sparks that ignite innovation and keep the
