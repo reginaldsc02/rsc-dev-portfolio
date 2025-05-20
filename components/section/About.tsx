@@ -57,7 +57,7 @@ export const About = () => {
           alt="Reginald Sahil Chand"
           width={500}
           height={500}
-          className="w-full h-full object-center object-cover filter grayscale opacity-40 rounded-md"
+          className="w-full h-full object-center object-cover filter grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-200 ease-linear rounded-md"
         />
       </div>
     </section>
