@@ -14,7 +14,7 @@ export const Projects = () => {
           </span>
 
           <div className="flex items-center gap-2.5">
-            <span className="font-medium"> Engine Room Highlights</span>
+            <span className="font-medium">Engine Room Highlights</span>
             <span className="text-sm font-black uppercase">
               Featured Projects
             </span>
