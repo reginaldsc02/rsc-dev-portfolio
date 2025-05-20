@@ -55,12 +55,12 @@ export const Header = ({
                 smooth
                 spy
                 onClick={() => setActive(item.url)}
-                className={`flex items-center gap-2 cursor-pointer hover:text-gray-50 transition-colors duration-200 ease-linear ${
+                className={`flex items-center gap-2 cursor-pointer hover:text-gray-50 group transition-colors duration-200 ease-linear ${
                   active === item.url ? "text-primary" : "text-gray-50/50"
                 }`}
               >
                 <div>{item.icon}</div>
-                <div>{item.title}</div>
+                <div className="group-active:scale-95">{item.title}</div>
               </ReactScrollLink>
             </li>
           ))}
