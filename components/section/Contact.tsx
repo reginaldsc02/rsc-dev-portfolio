@@ -77,6 +77,7 @@ export const Contact = () => {
           <div
             onClick={copyEmailToClipboard}
             aria-label="Copy email to clipboard"
+            className="w-fit"
           >
             <PrimaryButton
               buttonText={"Let’s Build Something"}

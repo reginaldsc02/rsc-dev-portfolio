@@ -48,12 +48,19 @@ export const Hero = ({
         </div>
 
         <div className="my-5 border-y-[1px] border-solid border-y-gray-50/10">
-          <Link to="projects" smooth spy onClick={() => setActive("projects")}>
-            <PrimaryButton
-              buttonText="View Projects"
-              buttonIcon={<FaSearch />}
-            />
-          </Link>
+          <div className="w-fit">
+            <Link
+              to="projects"
+              smooth
+              spy
+              onClick={() => setActive("projects")}
+            >
+              <PrimaryButton
+                buttonText="View Projects"
+                buttonIcon={<FaSearch />}
+              />
+            </Link>
+          </div>
         </div>
 
         <blockquote className="pt-10 px-5 text-right text-gray-50/50 border-b-[1px] border-dashed border-b-gray-50/10">
