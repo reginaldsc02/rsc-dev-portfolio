@@ -67,7 +67,7 @@ export const Contact = () => {
                 href={"mailto: reginaldsc02@gmail.com"}
                 target="_blank"
                 rel="noreferrer"
-                className="underline font-bold text-gray-50/50 inline-block transition-all duration-200 ease-linear hover:text-gray-50 active:scale-95"
+                className="underline font-bold text-gray-50/50 inline-block transition-all duration-200 ease-linear hover:text-gray-50"
               >
                 reginaldsc02@gmail.com
               </Link>
