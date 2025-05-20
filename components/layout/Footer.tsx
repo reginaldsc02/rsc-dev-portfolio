@@ -10,7 +10,7 @@ export const Footer = () => {
             href={"https://github.com/reginaldsc02"}
             target="_blank"
             rel="noreferrer"
-            className="italic hover:text-primary transition-colors duration-200 ease-linear"
+            className="underline font-bold hover:text-primary transition-colors duration-200 ease-linear"
           >
             Reginald Sahil Chand
           </Link>{" "}
