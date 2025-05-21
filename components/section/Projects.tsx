@@ -51,7 +51,7 @@ export const Projects = () => {
         <ProjectCard
           projectImageSrc={"/images/projects/ai-gen-nms.png"}
           projectImageAltText={"Notification Management System Microservice"}
-          projectTitle={"Notification Management System Microservice"}
+          projectTitle={"Notification Management System"}
           projectLink={"https://github.com/reginaldsc02/nms-microservice"}
           projectRepoName={"nms-microservice"}
           projectDescription={
