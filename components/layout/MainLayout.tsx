@@ -32,7 +32,7 @@ export const MainLayout = () => {
         </div>
       </main>
 
-      <Footer />
+      <Footer setActive={setActive} />
     </div>
   );
 };
