@@ -38,7 +38,7 @@ export const Footer = ({
         </p>
       </div>
 
-      <div className="mt-5">
+      <div className="mt-5 group">
         <hr className="opacity-10" />
         <ReactScrollLink
           to="hero"
@@ -50,9 +50,9 @@ export const Footer = ({
           className="mt-2.5 flex items-center gap-1.5 cursor-pointer text-xs font-bold uppercase"
         >
           <span>
-            <FaArrowUp />
+            <FaArrowUp className="group-hover:animate-bounce" />
           </span>
-          <span>Move to top</span>
+          <span>Scroll to top</span>
         </ReactScrollLink>
       </div>
     </footer>
