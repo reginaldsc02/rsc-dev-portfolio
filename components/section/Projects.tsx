@@ -7,28 +7,32 @@ export const Projects = () => {
       id="projects"
       className="mt-16 p-2.5 border-t-[1px] border-solid border-t-gray-50/10"
     >
-      <div className="my-5 p-5 text-balance border-[1px] border-solid border-gray-50/10 rounded-lg">
-        <div className="mb-2.5 flex items-center gap-1.5 capitalize text-4xl font-bold">
-          <span>
-            <FaBriefcase />
-          </span>
-
-          <div className="flex items-center gap-2.5">
-            <span className="font-medium">Engine Room Highlights</span>
-            <span className="text-sm font-black uppercase">
-              Featured Projects
+      <div className="my-5 flex justify-between gap-10 text-balance border-[1px] border-solid border-gray-50/10 rounded-lg">
+        <div className="p-5">
+          <div className="mb-2.5 flex items-center gap-1.5 capitalize text-4xl font-bold">
+            <span>
+              <FaBriefcase />
             </span>
+
+            <div className="flex items-center gap-2.5">
+              <span className="font-medium">Engine Room Highlights</span>
+              <span className="text-sm font-black uppercase">
+                Featured Projects
+              </span>
+            </div>
           </div>
+
+          <p className="tracking-wide text-gray-50/50">
+            A collection of robust backend microservices and management systems
+            that power smooth, scalable, and efficient digital experiences
+            behind the scenes. From notification management to file uploads and
+            content handling, these projects showcase my knack for building
+            solid foundations that keep everything running like clockwork - no
+            drama, just dependable code doing its thing.
+          </p>
         </div>
 
-        <p className="w-[700px] tracking-wide leading-5 text-gray-50/50">
-          A collection of robust backend microservices and management systems
-          that power smooth, scalable, and efficient digital experiences behind
-          the scenes. From notification management to file uploads and content
-          handling, these projects showcase my knack for building solid
-          foundations that keep everything running like clockwork - no drama,
-          just dependable code doing its thing.
-        </p>
+        <div className="w-[1300px] min-h-40 bg-[url('/images/projects/ai-gen-background-projects.png')] bg-center bg-cover bg-no-repeat rounded-tr-lg rounded-br-lg filter saturate-200"></div>
       </div>
 
       <div className="grid grid-cols-3 gap-2.5">
