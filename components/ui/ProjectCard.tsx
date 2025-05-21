@@ -69,9 +69,7 @@ export const ProjectCard = ({
         </Link>
 
         <div className="flex items-center gap-1.5">
-          <div className="w-4 h-4 flex items-center justify-center border-[1px] border-solid border-gray-50 rounded-full">
-            <div className="w-2 h-2 bg-amber-300 rounded-full animate-ping"></div>
-          </div>
+          <div className="w-4 h-4 flex items-center justify-center bg-amber-300 rounded-full"></div>
           <div className="tracking-wide capitalize font-light">
             {primaryProgrammingLanguageUsed ||
               "Primary Programming Language Used"}
