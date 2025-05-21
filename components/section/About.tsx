@@ -16,7 +16,7 @@ export const About = () => {
           <span className="font-medium">Between Logic & Lore</span>
         </div>
 
-        <p className="mb-5 tracking-wide leading-5 text-gray-50/50">
+        <p className="mb-5 tracking-wide text-gray-50/50">
           The Brain Behind the Backend
         </p>
 

@@ -32,7 +32,7 @@ export const Hero = ({
           thoughtful code meets elegant design and real human need.
         </h1>
 
-        <div className="p-5 text-balance leading-5 border-y-[1px] border-solid border-y-gray-50/10">
+        <div className="p-5 text-balance border-y-[1px] border-solid border-y-gray-50/10">
           <p>
             With a passion for elegant code and user-first design, I engineer
             full-stack solutions that are as scalable as they are seamless.
