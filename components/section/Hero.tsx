@@ -42,8 +42,8 @@ export const Hero = ({
             architecture, intuitive interfaces, and a touch of creative soul.
           </p>
           <p>
-            Whether it's backend logic or frontend finesse, I deliver software
-            that feels as good as it functions.
+            Whether it&apos;s backend logic or frontend finesse, I deliver
+            software that feels as good as it functions.
           </p>
         </div>
 

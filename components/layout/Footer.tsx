@@ -45,7 +45,8 @@ export const Footer = ({
           smooth
           spy
           onClick={() => {
-            setActive("hero"), toast.success("Yeeted to the top ✨");
+            setActive("hero");
+            toast.success("Yeeted to the top ✨");
           }}
           className="mt-2.5 flex items-center gap-1.5 cursor-pointer text-xs font-bold uppercase"
         >

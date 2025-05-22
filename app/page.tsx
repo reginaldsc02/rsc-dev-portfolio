@@ -6,10 +6,9 @@ import { Toaster } from "react-hot-toast";
 
 export default function Home() {
   const customCursorRef = useRef<HTMLDivElement>(null);
-  const [customCursorClicked, setCustomCursorClicked] = useState(false);
 
   useEffect(() => {
-    const moveCursor = (e: any) => {
+    const moveCursor = (e: MouseEvent) => {
       if (customCursorRef.current) {
         customCursorRef.current.style.left = `${e.pageX}px`;
         customCursorRef.current.style.top = `${e.pageY}px`;
