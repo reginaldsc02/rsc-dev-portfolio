@@ -28,7 +28,7 @@ export const NavigationScrolled = ({
       <button
         tabIndex={1}
         onClick={handleNavigationMenuOpen}
-        className="lg:hidden p-2.5 cursor-pointer rounded-full"
+        className="lg:hidden p-2.5 cursor-pointer rounded-full hover:text-primary transition-colors duration-200 ease-linear"
       >
         <FaBars className="text-2xl" />
       </button>

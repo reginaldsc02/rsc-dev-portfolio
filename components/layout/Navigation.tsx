@@ -39,7 +39,7 @@ export const Navigation = ({
         <button
           tabIndex={0}
           onClick={handleNavigationMenuOpen}
-          className="lg:hidden p-2.5 cursor-pointer rounded-full"
+          className="lg:hidden p-2.5 cursor-pointer rounded-full hover:text-red-500 transition-colors duration-200 ease-linear"
         >
           <MdClose className="text-2xl" />
         </button>
