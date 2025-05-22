@@ -5,6 +5,7 @@ import { Link as ReactScrollLink } from "react-scroll";
 import { navLinks } from "../data/navLinks";
 import Link from "next/link";
 import { Dispatch, SetStateAction } from "react";
+import { Navigation } from "./Navigation";
 
 export const Header = ({
   active,
@@ -46,36 +47,13 @@ export const Header = ({
         </div>
       </div>
 
-      <nav>
-        <ul className="flex items-center gap-5">
-          {navLinks.map((item) => (
-            <li key={item.url}>
-              <ReactScrollLink
-                to={item.url}
-                smooth
-                spy
-                onClick={() => setActive(item.url)}
-                className={`flex items-center gap-2 cursor-pointer hover:text-gray-50 group transition-colors duration-200 ease-linear ${
-                  active === item.url ? "text-primary" : "text-gray-50/50"
-                }`}
-              >
-                <div>{item.icon}</div>
-                <div className="group-active:scale-95">{item.title}</div>
-              </ReactScrollLink>
-            </li>
-          ))}
-
-          <li>
-            <Link
-              href={gitHubAccountLink || "/"}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FaGithub className="scale-125" />
-            </Link>
-          </li>
-        </ul>
-      </nav>
+      <Navigation
+        tag="nav"
+        ariaLabel="Primary Navigation"
+        active={active}
+        setActive={setActive}
+        gitHubAccountLink={gitHubAccountLink}
+      />
     </header>
   );
 };
