@@ -54,7 +54,7 @@ export const About = () => {
           <Link
             href={"/documents/resume.pdf"}
             download={true}
-            className="block w-fit"
+            className="block w-fit rounded-full"
           >
             <Buttons
               buttonText={"Download Resume"}
@@ -62,7 +62,10 @@ export const About = () => {
             />
           </Link>
 
-          <Link href={"/documents/resume/"} className="block w-fit">
+          <Link
+            href={"/documents/resume/"}
+            className="block w-fit rounded-full"
+          >
             <Buttons
               buttonText={"Preview Resume"}
               buttonIcon={<FaFilePdf />}

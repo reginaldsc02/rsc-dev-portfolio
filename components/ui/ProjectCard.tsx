@@ -46,7 +46,7 @@ export const ProjectCard = ({
             href={projectLink || "/"}
             target="_blank"
             rel="noreferrer"
-            className="flex items-center gap-1.5 lowercase tracking-tighter font-medium text-gray-50/50"
+            className="flex items-center gap-1.5 lowercase tracking-tighter font-medium text-gray-50/50 rounded-md"
           >
             <span>
               <FaLink />
