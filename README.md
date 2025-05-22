@@ -1,3 +1,7 @@
+# 💼 Reginald Chand — Developer Portfolio
+
+Welcome to the source code for my **personal portfolio**, a modern, fullstack web experience built with [Next.js](https://nextjs.org). This project showcases my skills in web development, design, and frontend engineering - blending clean code with bold visuals.
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
