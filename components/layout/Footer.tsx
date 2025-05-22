@@ -3,7 +3,6 @@ import Link from "next/link";
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
 import { FaArrowUp } from "react-icons/fa";
 import toast from "react-hot-toast";
-import { playNotificationAudio } from "@/functions/playNotificationAudio";
 
 export const Footer = ({
   setActive,
@@ -46,11 +45,7 @@ export const Footer = ({
           smooth
           spy
           onClick={() => {
-            setActive("hero"),
-              playNotificationAudio(
-                "/audio/notification/notification-primary.mp3"
-              ),
-              toast.success("Yeeted to the top ✨");
+            setActive("hero"), toast.success("Yeeted to the top ✨");
           }}
           className="mt-2.5 flex items-center gap-1.5 cursor-pointer text-xs font-bold uppercase"
         >

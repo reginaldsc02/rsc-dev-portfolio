@@ -3,7 +3,6 @@ import { PrimaryButton } from "../ui/Buttons";
 import Link from "next/link";
 import { useState } from "react";
 import toast from "react-hot-toast";
-import { playNotificationAudio } from "@/functions/playNotificationAudio";
 
 export const Contact = () => {
   const [copied, setCopied] = useState(false);
@@ -76,12 +75,7 @@ export const Contact = () => {
           </p>
 
           <div
-            onClick={() => {
-              copyEmailToClipboard(),
-                playNotificationAudio(
-                  "/audio/notification/notification-primary.mp3"
-                );
-            }}
+            onClick={() => copyEmailToClipboard()}
             aria-label="Copy email to clipboard"
             className="w-fit"
           >
