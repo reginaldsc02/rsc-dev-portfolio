@@ -8,6 +8,7 @@ import { Projects } from "../section/Projects";
 import { Skills } from "../section/Skills";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
+import { NavigationScrolled } from "./NavigationScrolled";
 
 export const MainLayout = () => {
   const [active, setActive] = useState("");
@@ -20,6 +21,12 @@ export const MainLayout = () => {
         logoName="reginaldsc02"
         gitHubAccountLink="https://github.com/reginaldsc02"
         websiteVersion="0.1.0"
+      />
+
+      <NavigationScrolled
+        active={active}
+        setActive={setActive}
+        gitHubAccountLink="https://github.com/reginaldsc02"
       />
 
       <main className="w-full 2xl:max-w-7xl mx-auto">
