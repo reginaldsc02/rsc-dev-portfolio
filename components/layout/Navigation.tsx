@@ -52,7 +52,6 @@ export const Navigation = ({
               to={item.url}
               smooth
               spy
-              tabIndex={-1}
               onClick={() => {
                 setActive(item.url);
                 handleNavigationMenuOpen();

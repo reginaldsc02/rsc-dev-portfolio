@@ -28,7 +28,6 @@ export const Header = ({
         <ReactScrollLink
           to="hero"
           smooth
-          tabIndex={-1}
           onClick={() => setActive("hero")}
           className="cursor-pointer group"
         >
