@@ -17,8 +17,8 @@ export const Footer = ({
   }, []);
 
   return (
-    <footer className="px-5 py-4 border-t-[1px] border-solid border-t-gray-100/10">
-      <div className="p-5 flex items-center justify-between border-[1px] border-solid border-gray-100/10 rounded-lg">
+    <footer className="px-2.5 md:px-5 py-4 border-t-[1px] border-solid border-t-gray-100/10">
+      <div className="p-5 flex flex-col md:flex-row md:items-center justify-between gap-2.5 border-[1px] border-solid border-gray-100/10 rounded-lg">
         <p>
           &copy;{" "}
           <Link

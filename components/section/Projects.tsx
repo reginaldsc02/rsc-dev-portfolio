@@ -9,12 +9,12 @@ export const Projects = () => {
     >
       <div className="my-5 flex justify-between gap-10 text-balance border-[1px] border-solid border-gray-50/10 rounded-lg">
         <div className="p-5">
-          <div className="mb-2.5 flex items-center gap-1.5 capitalize text-4xl font-bold">
-            <span>
+          <div className="mb-2.5 flex items-center gap-1.5 capitalize text-3xl md:text-4xl font-bold">
+            <span className="hidden md:block">
               <FaBriefcase />
             </span>
 
-            <div className="flex items-center gap-2.5">
+            <div className="flex flex-col md:flex-row md:items-center gap-2.5">
               <span className="font-medium">Engine Room Highlights</span>
               <span className="text-sm font-black uppercase">
                 Featured Projects
@@ -32,10 +32,10 @@ export const Projects = () => {
           </p>
         </div>
 
-        <div className="w-[1300px] min-h-40 bg-[url('/images/projects/ai-gen-background-projects.png')] bg-center bg-cover bg-no-repeat rounded-tr-lg rounded-br-lg filter saturate-200"></div>
+        <div className="hidden xl:block w-[1300px] min-h-40 bg-[url('/images/projects/ai-gen-background-projects.png')] bg-center bg-cover bg-no-repeat rounded-tr-lg rounded-br-lg filter saturate-200"></div>
       </div>
 
-      <div className="grid grid-cols-3 gap-2.5">
+      <div className="grid xl:grid-cols-3 gap-2.5">
         <ProjectCard
           projectImageSrc={"/images/projects/ai-gen-bms.png"}
           projectImageAltText={"Blog Management System"}

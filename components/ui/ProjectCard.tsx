@@ -24,19 +24,19 @@ export const ProjectCard = ({
 }: Props) => {
   return (
     <div className="pb-2 group bg-gray-900 rounded-lg">
-      <Image
-        src={projectImageSrc}
-        alt={projectImageAltText || "Alt text is not available."}
-        width={500}
-        height={250}
-        layout="responsive"
-        className="w-full h-1/2 object-center object-cover rounded-t-lg filter group-hover:saturate-200 transition-all duration-200 ease-linear"
-      />
+      <div className="w-full aspect-video relative">
+        <Image
+          src={projectImageSrc}
+          alt={projectImageAltText || "Alt text is not available."}
+          fill
+          className="object-cover object-top rounded-t-lg filter group-hover:saturate-200 transition-all duration-200 ease-linear"
+        />
+      </div>
 
       <div className="p-5 grid gap-5">
         <div>
           <div className="flex items-center gap-1.5 text-xl font-bold capitalize">
-            <span>
+            <span className="max-[375px]:hidden">
               <FaBriefcase />
             </span>
             <span>{projectTitle || "Project Title"}</span>
@@ -57,11 +57,16 @@ export const ProjectCard = ({
           </Link>
         </div>
 
-        <p className="tracking-wide font-medium">
+        <p className="lg:max-w-[800px] xl:max-w-[420px] tracking-wide">
           {projectDescription || "Project Description"}
         </p>
 
-        <Link href={projectLink || "/"} target="_blank" rel="noreferrer">
+        <Link
+          href={projectLink || "/"}
+          target="_blank"
+          rel="noreferrer"
+          className="w-fit rounded-full"
+        >
           <PrimaryButton
             buttonIcon={<FaGithub />}
             buttonText="View Source Code"

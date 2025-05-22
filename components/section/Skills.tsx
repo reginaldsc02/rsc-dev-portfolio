@@ -8,15 +8,15 @@ export const Skills = () => {
       className="my-5 p-2.5 border-y-[1px] border-solid border-y-gray-50/10"
     >
       <div className="w-full flex items-start justify-center flex-col p-2.5 border-y-[1px] border-solid border-y-gray-50/10">
-        <div className="flex items-center justify-center gap-2.5">
+        <div className="flex flex-col lg:flex-row lg:items-center justify-center gap-2.5">
           <div className="flex items-center gap-1.5 text-balance capitalize text-4xl font-bold">
-            <span className="animate-spin">
+            <span className="hidden md:block animate-spin">
               <FaReact />
             </span>
 
             <span className="font-medium">The Arsenal of Alchemy</span>
 
-            <span className="animate-spin">
+            <span className="hidden md:block animate-spin">
               <FaReact />
             </span>
           </div>
@@ -38,7 +38,7 @@ export const Skills = () => {
       </div>
 
       <div className="mt-5 p-2.5 grid border-[1px] border-solid border-gray-50/10 rounded-lg">
-        <ul className="grid grid-cols-4 gap-2.5">
+        <ul className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2.5">
           {knownSkills.map((skill) => (
             <li
               className={`w-full p-5 flex items-center gap-2 border-[1px] border-solid border-gray-50/10 rounded-lg hover:border-gray-50 transition-all duration-200 ease-linear`}

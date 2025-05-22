@@ -29,7 +29,7 @@ export const Contact = () => {
       <div className="p-5 border-[1px] border-solid border-gray-50/10 rounded-lg">
         <div>
           <div className="flex items-center gap-1.5 capitalize text-4xl font-bold">
-            <span>
+            <span className="hidden md:block">
               <FaPhoneAlt />
             </span>
 
@@ -57,8 +57,8 @@ export const Contact = () => {
         </p>
 
         <div className="mt-5">
-          <p className="mb-5 p-5 flex items-center gap-2 text-2xl border-y-[1px] border-solid border-y-gray-50/10">
-            <span>
+          <p className="mb-5 p-5 flex items-center gap-2 sm:text-2xl border-y-[1px] border-solid border-y-gray-50/10">
+            <span className="hidden sm:block">
               <FaMailBulk />
             </span>
             <span>

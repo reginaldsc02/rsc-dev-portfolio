@@ -5,11 +5,11 @@ export const About = () => {
   return (
     <section
       id="about"
-      className="my-5 p-2.5 flex items-start justify-between gap-2.5 border-y-[1px] border-solid border-y-gray-50/10"
+      className="my-5 p-2.5 flex flex-col lg:flex-row lg:items-start justify-between gap-2.5 border-y-[1px] border-solid border-y-gray-50/10"
     >
-      <div className="w-1/2 min-h-[500px] p-5 border-[1px] border-solid border-gray-50/10 rounded-lg">
+      <div className="lg:w-1/2 lg:min-h-[500px] p-5 border-[1px] border-solid border-gray-50/10 rounded-lg">
         <div className="mb-2.5 flex items-center gap-1.5 text-balance capitalize text-4xl font-bold">
-          <span>
+          <span className="hidden md:block">
             <FaUser />
           </span>
 
@@ -20,7 +20,7 @@ export const About = () => {
           The Brain Behind the Backend
         </p>
 
-        <div className="w-[500px] text-gray-50/50 tracking-wide grid gap-2.5">
+        <div className="xl:w-[500px] text-gray-50/50 tracking-wide grid gap-2.5">
           <p>
             I’m a backend focused but full-stack developer with a poetic heart
             and a strategic mind. Someone who finds beauty in clean
@@ -51,7 +51,7 @@ export const About = () => {
         </div>
       </div>
 
-      <div className="w-1/2 h-[500px] p-1 border-[1px] border-solid border-gray-50/10 rounded-lg">
+      <div className="lg:w-1/2 h-[500px] p-1 border-[1px] border-solid border-gray-50/10 rounded-lg">
         <Image
           src={"/images/personal/personal-pic.jpg"}
           alt="Reginald Sahil Chand"
