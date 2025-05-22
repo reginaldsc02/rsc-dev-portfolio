@@ -2,8 +2,8 @@
 
 :root {
   --rsc-primary: #4f46e5;
-  --background: #f9fafb;
-  --foreground: #121212;
+  --background: #030712;
+  --foreground: #f9fafb;
 }
 
 @theme inline {
@@ -14,12 +14,13 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
+/* SAVE THIS FOR LATER UPDATES */
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #030712;
     --foreground: #f9fafb;
   }
-}
+} */
 
 body {
   overflow-x: hidden;
