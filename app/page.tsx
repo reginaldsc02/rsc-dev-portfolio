@@ -1,7 +1,7 @@
 "use client";
 
 import { MainLayout } from "@/components/layout/MainLayout";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { Toaster } from "react-hot-toast";
 
 export default function Home() {

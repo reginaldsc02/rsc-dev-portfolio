@@ -5,7 +5,7 @@ import { useState } from "react";
 import toast from "react-hot-toast";
 
 export const Contact = () => {
-  const [copied, setCopied] = useState(false);
+  const [, setCopied] = useState(false);
   const email = "reginaldsc02@gmail.com";
 
   const copyEmailToClipboard = async () => {
