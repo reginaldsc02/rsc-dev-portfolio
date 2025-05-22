@@ -19,7 +19,7 @@ export const NavigationScrolled = ({
 }) => {
   return (
     <div
-      className={`w-fit lg:mx-auto pr-0 lg:pr-5 ${
+      className={`w-fit lg:mx-auto lg:py-2.5 lg:pl-5 ${
         isIntersecting
           ? "opacity-100 pointer-events-auto"
           : "opacity-0 pointer-events-none"

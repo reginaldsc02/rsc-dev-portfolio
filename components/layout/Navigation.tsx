@@ -33,31 +33,31 @@ export const Navigation = ({
         isNavigationMenuOpen ? "translate-x-0" : "translate-x-full"
       } overflow-y-auto lg:overflow-y-hidden`}
     >
-      <div className="mb-5 p-5 flex items-center justify-between border-b-[1px] border-solid border-b-gray-50/10 lg:hidden">
+      <div className="mb-5 py-2.5 px-5 pr-2.5 flex items-center justify-between border-b-[1px] border-solid border-b-gray-50/10 lg:hidden">
         <span className="text-lg">Menu</span>
 
         <button
           tabIndex={0}
           onClick={handleNavigationMenuOpen}
-          className="lg:hidden cursor-pointer rounded-full"
+          className="lg:hidden p-2.5 cursor-pointer rounded-full"
         >
           <MdClose className="text-2xl" />
         </button>
       </div>
 
-      <ul className="h-screen lg:h-auto p-5 lg:p-2.5 lg:pt-2.5 lg:flex lg:items-center lg:gap-2.5 text-2xl lg:text-base overflow-y-auto lg:overflow-hidden">
+      <ul className="h-screen lg:h-auto p-5 lg:p-0 lg:py-2.5 lg:pr-5 lg:flex lg:items-center lg:gap-5 text-2xl lg:text-base overflow-y-auto lg:overflow-hidden">
         {navLinks.map((item) => (
           <li key={item.url}>
             <ReactScrollLink
               to={item.url}
               smooth
               spy
-              tabIndex={0}
+              tabIndex={-1}
               onClick={() => {
                 setActive(item.url);
                 handleNavigationMenuOpen();
               }}
-              className={`mb-10 lg:mb-0 pb-5 lg:p-2.5 flex items-center gap-2 cursor-pointer max-lg:rounded-none lg:rounded-full border-b-[1px] border-solid border-b-gray-50/10 lg:border-none hover:text-gray-50 group transition-colors duration-200 ease-linear ${
+              className={`mb-10 lg:mb-0 pb-5 lg:pb-0 flex items-center gap-2 cursor-pointer border-b-[1px] border-solid border-b-gray-50/10 lg:border-none hover:text-gray-50 group transition-colors duration-200 ease-linear ${
                 active === item.url ? "text-primary" : "text-gray-50/50"
               }`}
             >
