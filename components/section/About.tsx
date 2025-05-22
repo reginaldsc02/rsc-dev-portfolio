@@ -52,7 +52,7 @@ export const About = () => {
 
         <div className="mt-5 lg:mt-6 flex flex-col sm:flex-row sm:items-center gap-5">
           <Link
-            href={"/documents/resume.pdf"}
+            href={"/documents/resume-reginald-chand.pdf"}
             download={true}
             className="block w-fit rounded-full"
           >

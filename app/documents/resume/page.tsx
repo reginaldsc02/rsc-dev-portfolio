@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { FaArrowLeft } from "react-icons/fa";
 
-export default function Test() {
+export default function ResumePreview() {
   return (
     <main className="w-full p-1.5 min-h-screen">
       <Link
@@ -15,7 +15,7 @@ export default function Test() {
       </Link>
 
       <iframe
-        src="/documents/resume.pdf"
+        src="/documents/resume-reginald-chand.pdf"
         className="w-full h-screen rounded-lg"
       ></iframe>
     </main>
