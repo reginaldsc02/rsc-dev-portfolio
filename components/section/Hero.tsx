@@ -1,7 +1,7 @@
 "use client";
 
 import { FaSearch } from "react-icons/fa";
-import { PrimaryButton } from "../ui/Buttons";
+import { Buttons } from "../ui/Buttons";
 import { Link } from "react-scroll";
 import { Dispatch, SetStateAction } from "react";
 
@@ -55,10 +55,7 @@ export const Hero = ({
               spy
               onClick={() => setActive("projects")}
             >
-              <PrimaryButton
-                buttonText="View Projects"
-                buttonIcon={<FaSearch />}
-              />
+              <Buttons buttonText="View Projects" buttonIcon={<FaSearch />} />
             </Link>
           </div>
         </div>

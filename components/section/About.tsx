@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { FaDownload, FaFilePdf, FaUser } from "react-icons/fa";
-import { PrimaryButton } from "../ui/Buttons";
+import { Buttons } from "../ui/Buttons";
 import Link from "next/link";
 
 export const About = () => {
@@ -56,16 +56,17 @@ export const About = () => {
             download={true}
             className="block w-fit"
           >
-            <PrimaryButton
+            <Buttons
               buttonText={"Download Resume"}
               buttonIcon={<FaDownload />}
             />
           </Link>
 
           <Link href={"/documents/resume/"} className="block w-fit">
-            <PrimaryButton
+            <Buttons
               buttonText={"Preview Resume"}
               buttonIcon={<FaFilePdf />}
+              isPrimary={false}
             />
           </Link>
         </div>

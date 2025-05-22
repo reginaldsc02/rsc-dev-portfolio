@@ -1,5 +1,5 @@
 import { FaMailBulk, FaPhoneAlt } from "react-icons/fa";
-import { PrimaryButton } from "../ui/Buttons";
+import { Buttons } from "../ui/Buttons";
 import Link from "next/link";
 import { useState } from "react";
 import toast from "react-hot-toast";
@@ -79,7 +79,7 @@ export const Contact = () => {
             aria-label="Copy email to clipboard"
             className="w-fit"
           >
-            <PrimaryButton
+            <Buttons
               buttonText={"Let’s Build Something"}
               buttonIcon={<FaMailBulk />}
             />

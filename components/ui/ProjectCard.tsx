@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { PrimaryButton } from "./Buttons";
+import { Buttons } from "./Buttons";
 import { FaBriefcase, FaGithub, FaLink } from "react-icons/fa";
 
 type Props = {
@@ -67,10 +67,7 @@ export const ProjectCard = ({
           rel="noreferrer"
           className="w-fit rounded-full"
         >
-          <PrimaryButton
-            buttonIcon={<FaGithub />}
-            buttonText="View Source Code"
-          />
+          <Buttons buttonIcon={<FaGithub />} buttonText="View Source Code" />
         </Link>
 
         <div className="flex items-center gap-1.5">
