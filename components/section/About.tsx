@@ -1,5 +1,7 @@
 import Image from "next/image";
-import { FaUser } from "react-icons/fa";
+import { FaDownload, FaFilePdf, FaUser } from "react-icons/fa";
+import { PrimaryButton } from "../ui/Buttons";
+import Link from "next/link";
 
 export const About = () => {
   return (
@@ -7,7 +9,7 @@ export const About = () => {
       id="about"
       className="my-5 p-2.5 flex flex-col lg:flex-row lg:items-start justify-between gap-2.5 border-y-[1px] border-solid border-y-gray-50/10"
     >
-      <div className="lg:w-1/2 lg:min-h-[500px] p-5 border-[1px] border-solid border-gray-50/10 rounded-lg">
+      <div className="lg:w-1/2 lg:min-h-[600px] p-5 border-[1px] border-solid border-gray-50/10 rounded-lg">
         <div className="mb-2.5 flex items-center gap-1.5 text-balance capitalize text-4xl font-bold">
           <span className="hidden md:block">
             <FaUser />
@@ -15,11 +17,9 @@ export const About = () => {
 
           <span className="font-medium">Between Logic & Lore</span>
         </div>
-
         <p className="mb-5 tracking-wide text-gray-50/50">
           The Brain Behind the Backend
         </p>
-
         <div className="xl:w-[500px] text-gray-50/50 tracking-wide grid gap-2.5">
           <p>
             I’m a backend focused but full-stack developer with a poetic heart
@@ -49,9 +49,29 @@ export const About = () => {
             </i>
           </p>
         </div>
+
+        <div className="mt-5 lg:mt-6 flex flex-col sm:flex-row sm:items-center gap-5">
+          <Link
+            href={"/documents/resume.pdf"}
+            download={true}
+            className="block w-fit"
+          >
+            <PrimaryButton
+              buttonText={"Download Resume"}
+              buttonIcon={<FaDownload />}
+            />
+          </Link>
+
+          <Link href={"/documents/resume/"} className="block w-fit">
+            <PrimaryButton
+              buttonText={"Preview Resume"}
+              buttonIcon={<FaFilePdf />}
+            />
+          </Link>
+        </div>
       </div>
 
-      <div className="lg:w-1/2 h-[500px] p-1 border-[1px] border-solid border-gray-50/10 rounded-lg">
+      <div className="lg:w-1/2 h-[600px] p-1 border-[1px] border-solid border-gray-50/10 rounded-lg">
         <Image
           src={"/images/personal/personal-pic.jpg"}
           alt="Reginald Sahil Chand"
