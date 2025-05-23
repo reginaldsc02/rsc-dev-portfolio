@@ -40,7 +40,7 @@ export const Contact = () => {
 
         <hr className="my-5" />
 
-        <p className="tracking-wide">
+        <p className="md:max-w-[95%] tracking-wide text-gray-50/50">
           Whether your thoughts are tangled in code or dancing on the edge of a
           dream, my inbox is a soft place to land - a haven for ideas waiting to
           bloom. Send me your sparks, your half-built hopes, your backend blues
