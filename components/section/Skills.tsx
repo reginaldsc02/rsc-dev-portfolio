@@ -26,8 +26,8 @@ export const Skills = () => {
           APIs, my skills are the sparks that ignite innovation and keep the
           engine roaring - precise, polished, and powerful. These are the
           languages, tools, and frameworks I bend to my will, crafting solutions
-          that don't just work, but resonate. Ready to dive in? Here's what's in
-          my arsenal.
+          that don&apos;t just work, but resonate. Ready to dive in? Here&apos;s
+          what&apos;s in my arsenal.
         </p>
       </div>
 

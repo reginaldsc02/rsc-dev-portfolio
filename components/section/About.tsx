@@ -20,10 +20,10 @@ export const About = () => {
 
         <div className="xl:w-[500px] text-gray-50/50 tracking-wide grid gap-2.5">
           <p>
-            I'm a backend focused but full-stack developer with a poetic heart
-            and a strategic mind. Someone who finds beauty in clean
+            I&apos;m a backend focused but full-stack developer with a poetic
+            heart and a strategic mind. Someone who finds beauty in clean
             architecture, scalable microservices, and code that does its job so
-            flawlessly, no one notices it's even there.
+            flawlessly, no one notices it&apos;s even there.
           </p>
 
           <p className="text-gray-50">
@@ -33,14 +33,14 @@ export const About = () => {
           </p>
 
           <p className="text-gray-50/30">
-            When I'm not orchestrating logic flows and designing robust APIs,
-            you'll find me soaking in sad songs, stargazing with sci-fi
-            classics, or leveling up in fantasy realms.
+            When I&apos;m not orchestrating logic flows and designing robust
+            APIs, you&apos;ll find me soaking in sad songs, stargazing with
+            sci-fi classics, or leveling up in fantasy realms.
           </p>
 
           <p>
-            My work is deeply intentional - I don't just write code, I craft
-            systems with purpose.{" "}
+            My work is deeply intentional - I don&apos;t just write code, I
+            craft systems with purpose.{" "}
             <i>
               I believe in the quiet power of infrastructure: invisible,
               essential, and always evolving.
