@@ -20,7 +20,7 @@ export const Skills = () => {
           </p>
         </div>
 
-        <p className="mt-5 tracking-wide">
+        <p className="md:max-w-[95%] mt-5 tracking-wide text-gray-50/50">
           Behind every flawless system is a toolbox wielded with mastery and
           heart. From the quiet hum of backend servers to the rhythmic pulse of
           APIs, my skills are the sparks that ignite innovation and keep the
