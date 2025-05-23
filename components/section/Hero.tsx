@@ -1,7 +1,7 @@
 "use client";
 
 import { FaSearch } from "react-icons/fa";
-import { Buttons } from "../ui/Buttons";
+import { Button } from "../ui/Button";
 import { Link } from "react-scroll";
 import { Dispatch, SetStateAction } from "react";
 
@@ -14,14 +14,19 @@ export const Hero = ({
     <section id="hero">
       <div className="pt-14 grid gap-2.5">
         <div className="p-5 py-2 flex md:items-center justify-between flex-col md:flex-row text-gray-50/50 tracking-tighter border-y-[1px] border-solid border-y-gray-50/10">
-          <div className=" lowercase">
+          <div className="lowercase">
             Meet Reginald Chand - full-stack developer, UX Enthusiast and
             experience architect.
           </div>
 
           <div className="lowercase font-medium text-sm flex items-center gap-1.5">
             <div className="text-gray-50 md:text-gray-50/50">#Open to work</div>
-            <div className="w-4 h-4 flex items-center justify-center border-[1px] border-solid border-gray-50 rounded-full animate-pulse">
+
+            <div
+              aria-label="Open to work indicator"
+              title="Open to work indicator"
+              className="w-4 h-4 flex items-center justify-center border-[1px] border-solid border-gray-50 rounded-full animate-pulse"
+            >
               <div className="w-2 h-2 bg-white rounded-full animate-ping"></div>
             </div>
           </div>
@@ -37,13 +42,15 @@ export const Hero = ({
             With a passion for elegant code and user-first design, I engineer
             full-stack solutions that are as scalable as they are seamless.
           </p>
+
           <p>
             Every project I build is crafted with intention - blending clean
             architecture, intuitive interfaces, and a touch of creative soul.
           </p>
+
           <p>
-            Whether it&apos;s backend logic or frontend finesse, I deliver
-            software that feels as good as it functions.
+            Whether it's backend logic or frontend finesse, I deliver software
+            that feels as good as it functions.
           </p>
         </div>
 
@@ -55,7 +62,7 @@ export const Hero = ({
               spy
               onClick={() => setActive("projects")}
             >
-              <Buttons buttonText="View Projects" buttonIcon={<FaSearch />} />
+              <Button buttonIcon={<FaSearch />} buttonText="View Projects" />
             </Link>
           </div>
         </div>

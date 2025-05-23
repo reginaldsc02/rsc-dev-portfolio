@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { FaDownload, FaFilePdf, FaUser } from "react-icons/fa";
-import { Buttons } from "../ui/Buttons";
-import Link from "next/link";
+import { Button } from "../ui/Button";
 
 export const About = () => {
   return (
@@ -11,21 +10,20 @@ export const About = () => {
     >
       <div className="lg:w-1/2 lg:min-h-[600px] p-5 border-[1px] border-solid border-gray-50/10 rounded-lg">
         <div className="mb-2.5 flex items-center gap-1.5 text-balance capitalize text-4xl font-bold">
-          <span className="hidden md:block">
-            <FaUser />
-          </span>
-
-          <span className="font-medium">Between Logic & Lore</span>
+          <FaUser className="hidden md:block" />
+          <div className="font-medium">Between Logic & Lore</div>
         </div>
+
         <p className="mb-5 tracking-wide text-gray-50/50">
           The Brain Behind the Backend
         </p>
+
         <div className="xl:w-[500px] text-gray-50/50 tracking-wide grid gap-2.5">
           <p>
-            I’m a backend focused but full-stack developer with a poetic heart
+            I'm a backend focused but full-stack developer with a poetic heart
             and a strategic mind. Someone who finds beauty in clean
             architecture, scalable microservices, and code that does its job so
-            flawlessly, no one notices it’s even there.
+            flawlessly, no one notices it's even there.
           </p>
 
           <p className="text-gray-50">
@@ -35,13 +33,13 @@ export const About = () => {
           </p>
 
           <p className="text-gray-50/30">
-            When I’m not orchestrating logic flows and designing robust APIs,
-            you’ll find me soaking in sad songs, stargazing with sci-fi
+            When I'm not orchestrating logic flows and designing robust APIs,
+            you'll find me soaking in sad songs, stargazing with sci-fi
             classics, or leveling up in fantasy realms.
           </p>
 
           <p>
-            My work is deeply intentional - I don’t just write code, I craft
+            My work is deeply intentional - I don't just write code, I craft
             systems with purpose.{" "}
             <i>
               I believe in the quiet power of infrastructure: invisible,
@@ -51,27 +49,21 @@ export const About = () => {
         </div>
 
         <div className="mt-5 lg:mt-6 flex flex-col sm:flex-row sm:items-center gap-5">
-          <Link
-            href={"/documents/resume-reginald-chand.pdf"}
-            download={true}
-            className="block w-fit rounded-full"
-          >
-            <Buttons
-              buttonText={"Download Resume"}
-              buttonIcon={<FaDownload />}
-            />
-          </Link>
+          <Button
+            buttonIcon={<FaDownload />}
+            buttonText="Download Resume"
+            buttonIsLink
+            buttonHref="/documents/resume-reginald-chand.pdf"
+            download
+          />
 
-          <Link
-            href={"/documents/resume/"}
-            className="block w-fit rounded-full"
-          >
-            <Buttons
-              buttonText={"Preview Resume"}
-              buttonIcon={<FaFilePdf />}
-              isPrimary={false}
-            />
-          </Link>
+          <Button
+            buttonIcon={<FaFilePdf />}
+            buttonText="Preview Resume"
+            buttonIsLink
+            buttonHref="/documents/resume/"
+            buttonIsPrimary={false}
+          />
         </div>
       </div>
 

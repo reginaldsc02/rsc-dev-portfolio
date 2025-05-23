@@ -34,10 +34,9 @@ export const Navigation = ({
       } overflow-y-auto lg:overflow-y-hidden`}
     >
       <div className="mb-5 py-2.5 px-5 pr-2.5 flex items-center justify-between border-b-[1px] border-solid border-b-gray-50/10 lg:hidden">
-        <span className="text-lg">Menu</span>
+        <div className="text-lg">Menu</div>
 
         <button
-          tabIndex={0}
           onClick={handleNavigationMenuOpen}
           className="lg:hidden p-2.5 cursor-pointer rounded-full hover:text-red-500 transition-colors duration-200 ease-linear"
         >
@@ -60,7 +59,7 @@ export const Navigation = ({
                 active === item.url ? "text-primary" : "text-gray-50/50"
               }`}
             >
-              <div>{item.icon}</div>
+              {item.icon}
               <div className="group-active:scale-95">{item.title}</div>
             </ReactScrollLink>
           </li>
@@ -76,7 +75,7 @@ export const Navigation = ({
             className="flex items-center gap-2 text-gray-50/50 hover:text-gray-50 transition-colors duration-200 ease-linear lg:block cursor-pointer rounded-full"
           >
             <FaGithub className="text-2xl" />
-            <span className="lg:hidden">GitHub</span>
+            <div className="lg:hidden">GitHub</div>
           </Link>
         </li>
       </ul>

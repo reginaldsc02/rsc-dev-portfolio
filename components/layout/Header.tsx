@@ -43,8 +43,7 @@ export const Header = ({
         </ReactScrollLink>
 
         <div className="px-2 py-1 text-xs font-semibold text-gray-50/80 tracking-wide bg-gray-50/10 rounded-full">
-          <span>v</span>
-          {websiteVersion || "Website Version"}
+          v{websiteVersion || "Website Version"}
         </div>
       </div>
 

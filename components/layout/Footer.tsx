@@ -50,10 +50,8 @@ export const Footer = ({
             }}
             className="flex items-center gap-1.5 cursor-pointer text-xs font-bold uppercase"
           >
-            <span>
-              <FaArrowUp className="group-hover:animate-bounce" />
-            </span>
-            <span>Scroll to top</span>
+            <FaArrowUp className="group-hover:animate-bounce" />
+            Scroll to top
           </ReactScrollLink>
         </div>
 
@@ -65,7 +63,7 @@ export const Footer = ({
             className="flex items-center gap-1.5 hover:text-gray-50 transition-colors duration-200 ease-linear rounded-md"
           >
             <FaLinkedin />
-            <span className="active:scale-95">LinkedIn</span>
+            <div className="active:scale-95">LinkedIn</div>
           </Link>
 
           <Link
@@ -75,7 +73,7 @@ export const Footer = ({
             className="flex items-center gap-1.5 hover:text-gray-50 transition-colors duration-200 ease-linear rounded-md"
           >
             <FaGithub />
-            <span className="active:scale-95">GitHub</span>
+            <div className="active:scale-95">GitHub</div>
           </Link>
 
           <Link
@@ -85,7 +83,7 @@ export const Footer = ({
             className="flex items-center gap-1.5 hover:text-gray-50 transition-colors duration-200 ease-linear rounded-md"
           >
             <FaFacebook />
-            <span className="active:scale-95">Facebook</span>
+            <div className="active:scale-95">Facebook</div>
           </Link>
         </div>
       </div>

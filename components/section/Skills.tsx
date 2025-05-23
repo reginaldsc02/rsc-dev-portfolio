@@ -10,15 +10,9 @@ export const Skills = () => {
       <div className="w-full flex items-start justify-center flex-col p-2.5 border-y-[1px] border-solid border-y-gray-50/10">
         <div className="flex flex-col lg:flex-row lg:items-center justify-center gap-2.5">
           <div className="flex items-center gap-1.5 text-balance capitalize text-4xl font-bold">
-            <span className="hidden md:block animate-spin">
-              <FaReact />
-            </span>
-
+            <FaReact className="hidden md:block animate-spin" />
             <span className="font-medium">The Arsenal of Alchemy</span>
-
-            <span className="hidden md:block animate-spin">
-              <FaReact />
-            </span>
+            <FaReact className="hidden md:block animate-spin" />
           </div>
 
           <p className="italic tracking-wide text-gray-50/50">
@@ -32,7 +26,7 @@ export const Skills = () => {
           APIs, my skills are the sparks that ignite innovation and keep the
           engine roaring - precise, polished, and powerful. These are the
           languages, tools, and frameworks I bend to my will, crafting solutions
-          that don’t just work, but resonate. Ready to dive in? Here’s what’s in
+          that don't just work, but resonate. Ready to dive in? Here's what's in
           my arsenal.
         </p>
       </div>
