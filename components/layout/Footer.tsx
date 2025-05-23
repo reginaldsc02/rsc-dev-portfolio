@@ -1,7 +1,7 @@
 import { Link as ReactScrollLink } from "react-scroll";
 import Link from "next/link";
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
-import { FaArrowUp } from "react-icons/fa";
+import { FaArrowUp, FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
 import toast from "react-hot-toast";
 
 export const Footer = ({
@@ -38,23 +38,56 @@ export const Footer = ({
         </p>
       </div>
 
-      <div className="mt-5 group">
-        <hr className="opacity-10" />
-        <ReactScrollLink
-          to="hero"
-          smooth
-          spy
-          onClick={() => {
-            setActive("hero");
-            toast.success("Yeeted to the top ✨");
-          }}
-          className="mt-2.5 flex items-center gap-1.5 cursor-pointer text-xs font-bold uppercase"
-        >
-          <span>
-            <FaArrowUp className="group-hover:animate-bounce" />
-          </span>
-          <span>Scroll to top</span>
-        </ReactScrollLink>
+      <div className="w-full mt-5 py-5 pb-0 flex flex-col md:flex-row md:items-center md:justify-between gap-5 border-t-[1px] border-solid border-t-gray-50/10">
+        <div className="group">
+          <ReactScrollLink
+            to="hero"
+            smooth
+            spy
+            onClick={() => {
+              setActive("hero");
+              toast.success("Yeeted to the top ✨");
+            }}
+            className="flex items-center gap-1.5 cursor-pointer text-xs font-bold uppercase"
+          >
+            <span>
+              <FaArrowUp className="group-hover:animate-bounce" />
+            </span>
+            <span>Scroll to top</span>
+          </ReactScrollLink>
+        </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-5 text-gray-50/50">
+          <Link
+            href={"https://www.linkedin.com/in/reginaldsc02/"}
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-1.5 hover:text-gray-50 transition-colors duration-200 ease-linear rounded-md"
+          >
+            <FaLinkedin />
+            <span className="active:scale-95">LinkedIn</span>
+          </Link>
+
+          <Link
+            href={"https://github.com/reginaldsc02"}
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-1.5 hover:text-gray-50 transition-colors duration-200 ease-linear rounded-md"
+          >
+            <FaGithub />
+            <span className="active:scale-95">GitHub</span>
+          </Link>
+
+          <Link
+            href={"https://www.facebook.com/reginaldsc02/"}
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-1.5 hover:text-gray-50 transition-colors duration-200 ease-linear rounded-md"
+          >
+            <FaFacebook />
+            <span className="active:scale-95">Facebook</span>
+          </Link>
+        </div>
       </div>
     </footer>
   );
