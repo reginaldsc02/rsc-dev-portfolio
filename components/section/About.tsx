@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { FaDownload, FaFilePdf, FaUser } from "react-icons/fa";
-import { Button } from "../ui/Button";
+import { LinkButton } from "../ui/LinkButton";
 
 export const About = () => {
   return (
@@ -49,18 +49,16 @@ export const About = () => {
         </div>
 
         <div className="mt-5 lg:mt-6 flex flex-col sm:flex-row sm:items-center gap-5">
-          <Button
+          <LinkButton
             buttonIcon={<FaDownload />}
             buttonText="Download Resume"
-            buttonIsLink
             buttonHref="/documents/resume-reginald-chand.pdf"
             download
           />
 
-          <Button
+          <LinkButton
             buttonIcon={<FaFilePdf />}
             buttonText="Preview Resume"
-            buttonIsLink
             buttonHref="/documents/resume/"
             buttonIsPrimary={false}
           />

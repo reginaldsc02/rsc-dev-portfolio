@@ -1,17 +1,20 @@
+import Link from "next/link";
 import { BiError } from "react-icons/bi";
 
-type ButtonProps = {
+type LinkButtonProps = {
   buttonIcon: React.ReactNode;
   buttonText: string;
+  buttonHref: string;
   buttonIsPrimary?: boolean;
-} & React.ComponentProps<"button">;
+} & React.ComponentProps<"a">;
 
-export const Button = ({
+export const LinkButton = ({
   buttonIcon = <BiError />,
   buttonText = "Button Text",
+  buttonHref = "/",
   buttonIsPrimary = true,
   ...rest
-}: ButtonProps) => {
+}: LinkButtonProps) => {
   const primaryButtonStyle =
     "text-gray-50 bg-primary hover:bg-gray-50 hover:text-gray-950 border-transparent";
 
@@ -22,10 +25,18 @@ export const Button = ({
     buttonIsPrimary ? primaryButtonStyle : secondaryButtonStyle
   }`;
 
+  const safeHref = buttonHref ?? "/";
+
   return (
-    <button type="button" className={buttonClass} {...rest}>
+    <Link
+      href={safeHref}
+      target="_blank"
+      rel="noreferrer"
+      className={`w-fit ${buttonClass}`}
+      {...rest}
+    >
       <div className="max-[375px]:hidden animate-pulse">{buttonIcon}</div>
       {buttonText}
-    </button>
+    </Link>
   );
 };

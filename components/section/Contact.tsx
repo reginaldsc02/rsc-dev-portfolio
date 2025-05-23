@@ -71,7 +71,7 @@ export const Contact = () => {
           <Button
             buttonIcon={<FaMailBulk />}
             buttonText={"Let's Build Something"}
-            buttonOnClickFunction={copyEmailToClipboard}
+            onClick={copyEmailToClipboard}
           />
         </div>
       </div>

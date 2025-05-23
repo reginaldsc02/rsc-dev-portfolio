@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Button } from "./Button";
 import { FaBriefcase, FaGithub, FaLink } from "react-icons/fa";
+import { LinkButton } from "./LinkButton";
 
 type ProjectCardProps = {
   projectImageSrc: string;
@@ -58,10 +58,9 @@ export const ProjectCard = ({
           {projectDescription || "Project Description"}
         </p>
 
-        <Button
+        <LinkButton
           buttonIcon={<FaGithub />}
           buttonText="View Source Code"
-          buttonIsLink
           buttonHref={projectLink}
         />
 
