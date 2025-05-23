@@ -14,7 +14,7 @@ export const Projects = () => {
 
             <div className="flex flex-col md:flex-row md:items-center gap-2.5">
               <span className="font-medium">Engine Room Highlights</span>
-              <span className="text-sm font-black uppercase">
+              <span className="text-sm font-bold uppercase">
                 Featured Projects
               </span>
             </div>
