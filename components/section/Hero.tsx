@@ -23,6 +23,7 @@ export const Hero = ({
             <div className="text-gray-50 md:text-gray-50/50">#Open to work</div>
 
             <div
+              role="img"
               aria-label="Open to work indicator"
               title="Open to work indicator"
               className="w-4 h-4 flex items-center justify-center border-[1px] border-solid border-gray-50 rounded-full animate-pulse"
