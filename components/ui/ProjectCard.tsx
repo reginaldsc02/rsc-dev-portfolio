@@ -54,7 +54,7 @@ export const ProjectCard = ({
           </Link>
         </div>
 
-        <p className="lg:max-w-[800px] xl:max-w-[420px] tracking-wide">
+        <p className="lg:max-w-[800px] xl:max-w-[420px] xl:h-[100px]">
           {projectDescription || "Project Description"}
         </p>
 
