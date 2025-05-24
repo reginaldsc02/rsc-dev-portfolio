@@ -8,11 +8,13 @@
 }
 
 @theme inline {
-  --color-primary: var(--rsc-primary);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* Custom Styles & Colors */
+  --color-primary: var(--rsc-primary);
 }
 
 body {
