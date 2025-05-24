@@ -16,7 +16,7 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 
-  /* Custom Styles & Colors */
+  /* Custom Styles */
   --color-primary: var(--rsc-primary);
 }
 
@@ -25,42 +25,4 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
-}
-
-/* Custom CSS Styles */
-.border-x-default {
-  border-left: 1px solid var(--rsc-tw-gray-50-opacity-10);
-  border-right: 1px solid var(--rsc-tw-gray-50-opacity-10);
-}
-
-.border-y-default {
-  border-top: 1px solid var(--rsc-tw-gray-50-opacity-10);
-  border-bottom: 1px solid var(--rsc-tw-gray-50-opacity-10);
-}
-
-.border-full-default {
-  border: 1px solid var(--rsc-tw-gray-50-opacity-10);
-}
-
-.border-t-default {
-  border-top: 1px solid var(--rsc-tw-gray-50-opacity-10);
-}
-
-.border-b-default {
-  border-bottom: 1px solid var(--rsc-tw-gray-50-opacity-10);
-}
-
-.border-l-default {
-  border-left: 1px solid var(--rsc-tw-gray-50-opacity-10);
-}
-
-.border-r-default {
-  border-right: 1px solid var(--rsc-tw-gray-50-opacity-10);
-}
-
-/* Custom CSS Styles - Responsive Design */
-@media (width >= 64rem /* 1024px */) {
-  .lg\:border-none {
-    border: none !important;
-  }
 }
