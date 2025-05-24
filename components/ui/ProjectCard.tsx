@@ -23,7 +23,7 @@ export const ProjectCard = ({
   projectProgrammingLanguage,
 }: ProjectCardProps) => {
   return (
-    <div className="pb-2d group bg-gray-900 rounded-lg">
+    <div className="group bg-gray-900 rounded-lg">
       <div className="w-full aspect-video relative">
         <Image
           src={projectImageSrc}
