@@ -31,7 +31,7 @@ export const NavigationOnScrolledIntersectionObserver = ({
     <div
       ref={navigationScrolledHelperRef}
       id="navigation-scrolled-helper"
-      className="w-full h-16 absolute top-0 left-0 pointer-events-none -z-50"
+      className="w-full h-16 absolute top-0 left-0 pointer-events-none bg-transparent -z-30"
     ></div>
   );
 };

@@ -28,7 +28,7 @@ export const Navigation = ({
   return (
     <Tag
       aria-label={ariaLabel}
-      className={`w-full lg:w-auto h-screen lg:h-auto fixed top-0 left-0 bg-gray-950 lg:bg-transparent lg:static z-50 lg:z-auto lg:translate-x-0 transition-transform duration-200 ease-linear ${
+      className={`w-full lg:w-auto h-screen lg:h-auto fixed top-0 left-0 bg-gray-950 lg:bg-transparent lg:static z-40 lg:z-auto lg:translate-x-0 transition-transform duration-200 ease-linear ${
         isNavigationMenuOpen ? "translate-x-0" : "translate-x-full"
       } overflow-y-auto lg:overflow-y-hidden`}
     >
