@@ -27,14 +27,14 @@ export const Header = ({
     <header className="w-full py-2.5 pl-5 pr-2.5 lg:pr-0 flex items-center justify-between border-b-default">
       <div className="flex items-center gap-3.5">
         <ReactScrollLink
-          to="hero"
+          to="about"
           smooth
-          onClick={() => setActive("hero")}
+          onClick={() => setActive("about")}
           className="cursor-pointer group"
         >
           <div className="flex items-center gap-2">
             <div className="p-2.5 border-[1px] border-solid border-gray-100/25 rounded-full">
-              <FaUser className="scale-110 group-hover:text-primary transition-colors duration-200 ease-linear" />
+              <FaUser className="group-hover:text-primary transition-colors duration-200 ease-linear" />
             </div>
 
             <div className="text-xl font-medium lowercase">
