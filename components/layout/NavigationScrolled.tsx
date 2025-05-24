@@ -1,6 +1,7 @@
 import { Dispatch, SetStateAction } from "react";
 import { Navigation } from "./Navigation";
 import { FaBars } from "react-icons/fa";
+import { HamburgerButton } from "../ui/HamburgerButton";
 
 export const NavigationScrolled = ({
   isIntersecting,
@@ -25,13 +26,11 @@ export const NavigationScrolled = ({
           : "opacity-0 pointer-events-none"
       } fixed bottom-5 lg:left-0 right-5 lg:right-0 border-2 border-solid border-gray-50/10 bg-gray-950 rounded-lg z-40 transition-opacity duration-200 ease-linear`}
     >
-      <button
-        tabIndex={1}
+      <HamburgerButton
+        buttonIcon={<FaBars />}
+        aria-label="Open Menu"
         onClick={handleNavigationMenuOpen}
-        className="lg:hidden p-2.5 cursor-pointer rounded-full hover:text-primary transition-colors duration-200 ease-linear"
-      >
-        <FaBars className="text-2xl" />
-      </button>
+      />
 
       <div className="hidden md:block">
         <Navigation

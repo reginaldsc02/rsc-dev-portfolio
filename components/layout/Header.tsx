@@ -4,6 +4,7 @@ import { FaBars, FaUser } from "react-icons/fa";
 import { Link as ReactScrollLink } from "react-scroll";
 import { Dispatch, SetStateAction } from "react";
 import { Navigation } from "./Navigation";
+import { HamburgerButton } from "../ui/HamburgerButton";
 
 export const Header = ({
   active,
@@ -57,13 +58,11 @@ export const Header = ({
         gitHubAccountLink={gitHubAccountLink}
       />
 
-      <button
-        tabIndex={1}
+      <HamburgerButton
+        buttonIcon={<FaBars />}
+        aria-label="Open Menu"
         onClick={handleNavigationMenuOpen}
-        className="lg:hidden p-2.5 cursor-pointer rounded-full hover:text-primary transition-colors duration-200 ease-linear"
-      >
-        <FaBars className="text-2xl" />
-      </button>
+      />
     </header>
   );
 };

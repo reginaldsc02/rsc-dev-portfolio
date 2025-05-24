@@ -6,6 +6,7 @@ import { navLinks } from "../data/navLinks";
 import { Dispatch, SetStateAction } from "react";
 import Link from "next/link";
 import { MdClose } from "react-icons/md";
+import { HamburgerButton } from "../ui/HamburgerButton";
 
 export const Navigation = ({
   tag = "nav",
@@ -36,12 +37,11 @@ export const Navigation = ({
       <div className="mb-5 py-2.5 px-5 pr-2.5 flex items-center justify-between border-b-[1px] border-solid border-b-gray-50/10 lg:hidden">
         <div className="text-lg">Menu</div>
 
-        <button
+        <HamburgerButton
+          buttonIcon={<MdClose />}
+          aria-label="Close Menu"
           onClick={handleNavigationMenuOpen}
-          className="lg:hidden p-2.5 cursor-pointer rounded-full hover:text-red-500 transition-colors duration-200 ease-linear"
-        >
-          <MdClose className="text-2xl" />
-        </button>
+        />
       </div>
 
       <ul className="h-screen lg:h-auto p-5 lg:p-0 lg:py-2.5 lg:pr-5 lg:flex lg:items-center lg:gap-5 text-2xl lg:text-base overflow-y-auto lg:overflow-hidden">
