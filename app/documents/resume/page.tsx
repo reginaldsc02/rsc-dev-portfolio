@@ -5,7 +5,7 @@ export default function ResumePreview() {
   return (
     <main className="w-full p-1.5 min-h-screen">
       <Link
-        href={"/#about"}
+        href={"/"}
         className="w-full mb-1.5 p-5 flex items-center gap-2.5 text-gray-50/50 hover:text-gray-50 transition-colors duration-200 ease-linear group border-full-default rounded-lg"
       >
         <span>
