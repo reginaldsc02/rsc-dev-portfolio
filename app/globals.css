@@ -57,3 +57,10 @@ body {
 .border-r-default {
   border-right: 1px solid var(--rsc-tw-gray-50-opacity-10);
 }
+
+/* Custom CSS Styles - Responsive Design */
+@media (width >= 64rem /* 1024px */) {
+  .lg\:border-none {
+    border: none !important;
+  }
+}
