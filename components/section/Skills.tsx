@@ -1,5 +1,5 @@
 import { FaReact } from "react-icons/fa";
-import { knownSkills } from "../data/knownSkills";
+import { knownSkills } from "@/data/knownSkills";
 
 export const Skills = () => {
   return (

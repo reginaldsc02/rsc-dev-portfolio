@@ -2,7 +2,7 @@
 
 import { FaGithub } from "react-icons/fa";
 import { Link as ReactScrollLink } from "react-scroll";
-import { navLinks } from "../data/navLinks";
+import { navLinks } from "@/data/navLinks";
 import { Dispatch, SetStateAction } from "react";
 import Link from "next/link";
 import { MdClose } from "react-icons/md";
