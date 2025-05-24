@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useState } from "react";
 import { About } from "../section/About";
 import { Contact } from "../section/Contact";
 import { Hero } from "../section/Hero";
@@ -9,45 +9,22 @@ import { Skills } from "../section/Skills";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
 import { NavigationScrolled } from "./NavigationScrolled";
+import { NavigationOnScrolledIntersectionObserver } from "../ui/NavigationOnScrolledIntersectionObserver";
 
 export const MainLayout = () => {
   const [active, setActive] = useState("");
   const [isIntersecting, setIsIntersecting] = useState(false);
   const [isNavigationMenuOpen, setIsNavigationMenuOpen] = useState(false);
-  const navigationScrolledHelperRef = useRef<HTMLDivElement>(null);
 
   const handleNavigationMenuOpen = () => {
     setIsNavigationMenuOpen(!isNavigationMenuOpen);
   };
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (!entry.isIntersecting) {
-          setIsIntersecting(true);
-        } else {
-          setIsIntersecting(false);
-        }
-      },
-
-      {
-        root: null,
-        threshold: 0.01,
-      }
-    );
-
-    if (navigationScrolledHelperRef.current) {
-      observer.observe(navigationScrolledHelperRef.current);
-    }
-  }, []);
-
   return (
     <div className="min-w-full min-h-screen grid grid-cols-1 grid-rows-[auto_1fr_auto]">
-      <div
-        ref={navigationScrolledHelperRef}
-        id="navigation-scrolled-helper"
-        className="w-full h-16 absolute top-0 left-0 pointer-events-none -z-50"
-      ></div>
+      <NavigationOnScrolledIntersectionObserver
+        setIsIntersecting={setIsIntersecting}
+      />
 
       <Header
         active={active}
