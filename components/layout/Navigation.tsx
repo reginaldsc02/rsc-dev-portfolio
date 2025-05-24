@@ -1,5 +1,3 @@
-"use client";
-
 import { FaGithub } from "react-icons/fa";
 import { Link as ReactScrollLink } from "react-scroll";
 import { navLinks } from "@/data/navLinks";

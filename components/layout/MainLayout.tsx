@@ -1,5 +1,3 @@
-"use client";
-
 import { useState } from "react";
 import { About } from "../section/About";
 import { Contact } from "../section/Contact";

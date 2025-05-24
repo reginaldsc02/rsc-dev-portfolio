@@ -1,5 +1,3 @@
-"use client";
-
 import { FaSearch } from "react-icons/fa";
 import { Button } from "../ui/Button";
 import { Link } from "react-scroll";

@@ -1,5 +1,3 @@
-"use client";
-
 import { FaBars, FaUser } from "react-icons/fa";
 import { Link as ReactScrollLink } from "react-scroll";
 import { Dispatch, SetStateAction } from "react";
