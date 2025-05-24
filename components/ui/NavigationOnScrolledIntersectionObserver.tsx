@@ -26,7 +26,7 @@ export const NavigationOnScrolledIntersectionObserver = ({
     if (navigationScrolledHelperRef.current) {
       observer.observe(navigationScrolledHelperRef.current);
     }
-  }, []);
+  }, [setIsIntersecting]);
   return (
     <div
       ref={navigationScrolledHelperRef}
