@@ -19,7 +19,7 @@ export const MainLayout = () => {
   };
 
   return (
-    <div className="min-w-full min-h-screen grid grid-cols-1 grid-rows-[auto_1fr_auto]">
+    <div className="min-w-full min-h-screen grid grid-cols-1 grid-rows-[auto_1fr_auto] opacity-0 animate-fade-in">
       <NavigationOnScrolledIntersectionObserver
         setIsIntersecting={setIsIntersecting}
       />
