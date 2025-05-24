@@ -51,7 +51,7 @@ export const Footer = ({
             className="flex items-center gap-1.5 cursor-pointer text-xs font-bold uppercase"
           >
             <FaArrowUp className="group-hover:animate-bounce" />
-            Scroll to top
+            <div className="group-active:scale-95">Scroll to top</div>
           </ReactScrollLink>
         </div>
 
@@ -60,7 +60,7 @@ export const Footer = ({
             href={"https://www.linkedin.com/in/reginaldsc02/"}
             target="_blank"
             rel="noreferrer"
-            className="flex items-center gap-1.5 hover:text-gray-50 transition-colors duration-200 ease-linear rounded-md"
+            className="flex items-center gap-2 hover:text-gray-50 transition-colors duration-200 ease-linear rounded-md"
           >
             <FaLinkedin />
             <div className="active:scale-95">LinkedIn</div>
@@ -70,7 +70,7 @@ export const Footer = ({
             href={"https://github.com/reginaldsc02"}
             target="_blank"
             rel="noreferrer"
-            className="flex items-center gap-1.5 hover:text-gray-50 transition-colors duration-200 ease-linear rounded-md"
+            className="flex items-center gap-2 hover:text-gray-50 transition-colors duration-200 ease-linear rounded-md"
           >
             <FaGithub />
             <div className="active:scale-95">GitHub</div>
@@ -80,7 +80,7 @@ export const Footer = ({
             href={"https://www.facebook.com/reginaldsc02/"}
             target="_blank"
             rel="noreferrer"
-            className="flex items-center gap-1.5 hover:text-gray-50 transition-colors duration-200 ease-linear rounded-md"
+            className="flex items-center gap-2 hover:text-gray-50 transition-colors duration-200 ease-linear rounded-md"
           >
             <FaFacebook />
             <div className="active:scale-95">Facebook</div>
