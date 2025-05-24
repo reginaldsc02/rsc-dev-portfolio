@@ -34,7 +34,7 @@ export const Header = ({
         >
           <div className="flex items-center gap-2">
             <div className="p-2.5 border-[1px] border-solid border-gray-100/25 rounded-full">
-              <FaUser className="group-hover:text-primary transition-colors duration-200 ease-linear" />
+              <FaUser className="text-gray-50/50 group-hover:text-gray-50 transition-colors duration-200 ease-linear" />
             </div>
 
             <div className="text-xl font-medium lowercase">
