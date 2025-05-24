@@ -61,6 +61,7 @@ export const About = () => {
             buttonText="Preview Resume"
             buttonHref="/documents/resume/"
             buttonIsPrimary={false}
+            target="_self"
           />
         </div>
       </div>
