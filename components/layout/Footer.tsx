@@ -19,8 +19,6 @@ export const Footer = ({
   const [currentDate, setCurrentDate] = useState<number | null>(null);
   const response = useGitHubApi();
 
-  console.log(response);
-
   useEffect(() => {
     const date = new Date().getFullYear();
     setCurrentDate(date);
