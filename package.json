@@ -17,6 +17,7 @@
     "next": "15.3.2",
     "nextjs-toploader": "^3.8.16",
     "nodemailer": "^7.0.3",
+    "octokit": "^5.0.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-hot-toast": "^2.5.2",
