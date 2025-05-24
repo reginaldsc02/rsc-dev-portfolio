@@ -55,7 +55,7 @@ export const Footer = ({
           </ReactScrollLink>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-5 text-gray-50/50">
+        <div className="mt-2 md:mt-0 grid grid-cols-2 md:grid-cols-3 gap-5 text-gray-50/50">
           <Link
             href={"https://www.linkedin.com/in/reginaldsc02/"}
             target="_blank"
