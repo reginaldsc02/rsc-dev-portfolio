@@ -23,12 +23,13 @@ export const ProjectCard = ({
   projectProgrammingLanguage,
 }: ProjectCardProps) => {
   return (
-    <div className="pb-2 group bg-gray-900 rounded-lg">
+    <div className="pb-2d group bg-gray-900 rounded-lg">
       <div className="w-full aspect-video relative">
         <Image
           src={projectImageSrc}
           alt={projectImageAltText || "Alt text is not available"}
           fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-cover object-top rounded-t-lg filter group-hover:saturate-200 transition-all duration-200 ease-linear"
         />
       </div>
