@@ -24,7 +24,7 @@ export const Header = ({
   websiteVersion: string;
 }) => {
   return (
-    <header className="w-full py-2.5 pl-5 pr-2.5 lg:pr-0 flex items-center justify-between border-b-[1px] border-solid border-b-gray-100/10">
+    <header className="w-full py-2.5 pl-5 pr-2.5 lg:pr-0 flex items-center justify-between border-b-default">
       <div className="flex items-center gap-3.5">
         <ReactScrollLink
           to="hero"

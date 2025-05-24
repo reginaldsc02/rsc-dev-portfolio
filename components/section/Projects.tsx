@@ -7,7 +7,7 @@ export const Projects = () => {
       id="projects"
       className="mt-16 p-2.5 border-t-[1px] border-solid border-t-gray-50/10"
     >
-      <div className="my-5 flex justify-between gap-10 text-balance border-[1px] border-solid border-gray-50/10 rounded-lg">
+      <div className="my-5 flex justify-between gap-10 text-balance border-full-default rounded-lg">
         <div className="p-5">
           <div className="mb-2.5 flex items-center gap-1.5 capitalize text-3xl md:text-4xl font-bold">
             <FaBriefcase className="hidden md:block" />

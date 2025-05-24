@@ -1,10 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --rsc-primary: #4f46e5;
   --background: #030712;
   --foreground: #f9fafb;
   color-scheme: dark;
+
+  /* Custom Variables */
+  --rsc-primary: #4f46e5;
+  --rsc-tw-gray-50-opacity-10: #f9fafb10;
 }
 
 @theme inline {
@@ -22,4 +25,35 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Custom CSS Styles */
+.border-x-default {
+  border-left: 1px solid var(--rsc-tw-gray-50-opacity-10);
+  border-right: 1px solid var(--rsc-tw-gray-50-opacity-10);
+}
+
+.border-y-default {
+  border-top: 1px solid var(--rsc-tw-gray-50-opacity-10);
+  border-bottom: 1px solid var(--rsc-tw-gray-50-opacity-10);
+}
+
+.border-full-default {
+  border: 1px solid var(--rsc-tw-gray-50-opacity-10);
+}
+
+.border-t-default {
+  border-top: 1px solid var(--rsc-tw-gray-50-opacity-10);
+}
+
+.border-b-default {
+  border-bottom: 1px solid var(--rsc-tw-gray-50-opacity-10);
+}
+
+.border-l-default {
+  border-left: 1px solid var(--rsc-tw-gray-50-opacity-10);
+}
+
+.border-r-default {
+  border-right: 1px solid var(--rsc-tw-gray-50-opacity-10);
 }

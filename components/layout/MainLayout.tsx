@@ -69,7 +69,7 @@ export const MainLayout = () => {
       />
 
       <main className="w-full 2xl:max-w-7xl mx-auto">
-        <div className="w-[calc(100%-1rem)] md:w-[calc(100%-5rem)] mx-auto min-h-screen border-x-[1px] border-solid border-x-gray-50/10">
+        <div className="w-[calc(100%-1rem)] md:w-[calc(100%-5rem)] mx-auto min-h-screen border-x-default">
           <Hero setActive={setActive} />
           <Projects />
           <About />

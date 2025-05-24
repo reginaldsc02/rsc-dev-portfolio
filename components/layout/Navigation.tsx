@@ -34,7 +34,7 @@ export const Navigation = ({
         isNavigationMenuOpen ? "translate-x-0" : "translate-x-full"
       } overflow-y-auto lg:overflow-y-hidden`}
     >
-      <div className="mb-5 py-2.5 px-5 pr-2.5 flex items-center justify-between border-b-[1px] border-solid border-b-gray-50/10 lg:hidden">
+      <div className="mb-5 py-2.5 px-5 pr-2.5 flex items-center justify-between border-b-default lg:hidden">
         <div className="text-lg">Menu</div>
 
         <HamburgerButton
@@ -55,7 +55,7 @@ export const Navigation = ({
                 setActive(item.url);
                 handleNavigationMenuOpen();
               }}
-              className={`mb-10 lg:mb-0 pb-5 lg:pb-0 flex items-center gap-2 cursor-pointer border-b-[1px] border-solid border-b-gray-50/10 lg:border-none hover:text-gray-50 group transition-colors duration-200 ease-linear ${
+              className={`mb-10 lg:mb-0 pb-5 lg:pb-0 flex items-center gap-2 cursor-pointer border-b-default lg:border-none hover:text-gray-50 group transition-colors duration-200 ease-linear ${
                 active === item.url ? "text-primary" : "text-gray-50/50"
               }`}
             >

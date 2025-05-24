@@ -3,11 +3,8 @@ import { knownSkills } from "../data/knownSkills";
 
 export const Skills = () => {
   return (
-    <section
-      id="skills"
-      className="my-5 p-2.5 border-y-[1px] border-solid border-y-gray-50/10"
-    >
-      <div className="w-full flex items-start justify-center flex-col p-2.5 border-y-[1px] border-solid border-y-gray-50/10">
+    <section id="skills" className="my-5 p-2.5 border-y-default">
+      <div className="w-full flex items-start justify-center flex-col p-2.5 border-y-default">
         <div className="flex flex-col lg:flex-row lg:items-center justify-center gap-2.5">
           <div className="flex items-center gap-1.5 text-balance capitalize text-4xl font-bold">
             <FaReact className="hidden md:block animate-spin" />
@@ -31,11 +28,11 @@ export const Skills = () => {
         </p>
       </div>
 
-      <div className="mt-5 p-2.5 grid border-[1px] border-solid border-gray-50/10 rounded-lg">
+      <div className="mt-5 p-2.5 grid border-full-default rounded-lg">
         <ul className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2.5">
           {knownSkills.map((skill) => (
             <li
-              className={`w-full p-5 flex items-center gap-2 border-[1px] border-solid border-gray-50/10 rounded-lg`}
+              className={`w-full p-5 flex items-center gap-2 border-full-default rounded-lg`}
               key={skill.id}
             >
               <span className="scale-125">{skill.icon}</span>

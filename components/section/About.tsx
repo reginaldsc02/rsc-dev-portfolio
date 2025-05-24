@@ -6,9 +6,9 @@ export const About = () => {
   return (
     <section
       id="about"
-      className="my-5 p-2.5 flex flex-col lg:flex-row lg:items-start justify-between gap-2.5 border-y-[1px] border-solid border-y-gray-50/10"
+      className="my-5 p-2.5 flex flex-col lg:flex-row lg:items-start justify-between gap-2.5 border-y-default"
     >
-      <div className="lg:w-1/2 lg:min-h-[600px] p-5 border-[1px] border-solid border-gray-50/10 rounded-lg">
+      <div className="lg:w-1/2 lg:min-h-[600px] p-5 border-full-default rounded-lg">
         <div className="mb-2.5 flex items-center gap-1.5 text-balance capitalize text-4xl font-bold">
           <FaUser className="hidden md:block" />
           <div className="font-medium">Between Logic & Lore</div>
@@ -65,7 +65,7 @@ export const About = () => {
         </div>
       </div>
 
-      <div className="lg:w-1/2 h-[600px] p-1 border-[1px] border-solid border-gray-50/10 rounded-lg">
+      <div className="lg:w-1/2 h-[600px] p-1 border-full-default rounded-lg">
         <Image
           src={"/images/personal/personal-pic.jpg"}
           alt="Reginald Sahil Chand"

@@ -22,11 +22,8 @@ export const Contact = () => {
   };
 
   return (
-    <section
-      id="contact"
-      className="mt-16 p-5 border-t-[1px] border-solid border-t-gray-50/10"
-    >
-      <div className="p-5 border-[1px] border-solid border-gray-50/10 rounded-lg">
+    <section id="contact" className="mt-16 p-5 border-t-default">
+      <div className="p-5 border-full-default rounded-lg">
         <div>
           <div className="flex items-center gap-1.5 capitalize text-4xl font-bold">
             <FaPhoneAlt className="hidden md:block" />
@@ -52,7 +49,7 @@ export const Contact = () => {
         </p>
 
         <div className="mt-5">
-          <div className="mb-5 p-5 flex items-center gap-2 sm:text-2xl border-y-[1px] border-solid border-y-gray-50/10">
+          <div className="mb-5 p-5 flex items-center gap-2 sm:text-2xl border-y-default">
             <FaMailBulk className="hidden sm:block" />
 
             <div>
