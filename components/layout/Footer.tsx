@@ -1,8 +1,15 @@
 import { Link as ReactScrollLink } from "react-scroll";
 import Link from "next/link";
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
-import { FaArrowUp, FaFacebook, FaGithub, FaLinkedin } from "react-icons/fa";
+import {
+  FaArrowUp,
+  FaCode,
+  FaFacebook,
+  FaGithub,
+  FaLinkedin,
+} from "react-icons/fa";
 import toast from "react-hot-toast";
+import { useGitHubApi } from "@/api/useGitHubApi";
 
 export const Footer = ({
   setActive,
@@ -10,6 +17,9 @@ export const Footer = ({
   setActive: Dispatch<SetStateAction<string>>;
 }) => {
   const [currentDate, setCurrentDate] = useState<number | null>(null);
+  const response = useGitHubApi();
+
+  console.log(response);
 
   useEffect(() => {
     const date = new Date().getFullYear();
@@ -38,7 +48,7 @@ export const Footer = ({
         </p>
       </div>
 
-      <div className="w-full mt-5 py-5 pb-0 flex flex-col md:flex-row md:items-center md:justify-between gap-5 border-t-default">
+      <div className="w-full mt-5 py-5 flex flex-col md:flex-row md:items-center md:justify-between gap-5 border-y-default">
         <div className="group">
           <ReactScrollLink
             to="hero"
@@ -86,6 +96,25 @@ export const Footer = ({
             <div className="active:scale-95">Facebook</div>
           </Link>
         </div>
+      </div>
+
+      <div className="mt-5 pt-5 lowercase text-balance border-t-default">
+        <div className="flex items-center gap-2 text-sm text-gray-50/50">
+          This website was last updated on:{" "}
+          {response.data.updated_at
+            ? new Date(response?.data?.updated_at).toLocaleString()
+            : "Information currently unavailable"}
+        </div>
+
+        <Link
+          href={"https://github.com/reginaldsc02/rsc-dev-portfolio"}
+          target="_blank"
+          rel="noreferrer"
+          className="w-fit flex items-center gap-2 lowercase group"
+        >
+          <FaCode className="group-hover:animate-pulse" />
+          <div className="group-active:scale-95"> View source code</div>
+        </Link>
       </div>
     </footer>
   );
