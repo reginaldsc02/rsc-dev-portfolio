@@ -4,6 +4,7 @@ import "./globals.css";
 import "./border.css";
 import "./scrollbar.css";
 import NextTopLoader from "nextjs-toploader";
+import { Analytics } from "@vercel/analytics/next";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -31,6 +32,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Analytics />
         <NextTopLoader
           color="var(--rsc-primary)"
           showSpinner={false}
