@@ -32,13 +32,13 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Analytics />
         <NextTopLoader
           color="var(--rsc-primary)"
           showSpinner={false}
           showForHashAnchor={true}
         />
         {children}
+        <Analytics />
       </body>
     </html>
   );
