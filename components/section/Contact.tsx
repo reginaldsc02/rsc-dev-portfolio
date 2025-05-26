@@ -33,8 +33,6 @@ export const Contact = () => {
           subtitle="Whispers of Code, Calls of Collaboration"
         />
 
-        <hr className="my-5" />
-
         <SectionParagraph>
           <Paragraph
             paragraph="Whether your thoughts are tangled in code or dancing on the edge of a
