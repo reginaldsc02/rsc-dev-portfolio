@@ -6,11 +6,12 @@ import { SectionHeader } from "./SectionHeader";
 import { SectionParagraph } from "./SectionParagraph";
 import { ThreeColumnGrid } from "./ThreeColumnGrid";
 import { PaddingInner } from "./PaddingInner";
+import { BorderControl } from "./BorderControl";
 
 export const BackendProjects = () => {
   return (
-    <>
-      <div className="mb-2.5 border-full-default rounded-lg">
+    <div className="grid gap-2.5">
+      <BorderControl borderFull isRounded>
         <PaddingInner>
           <SectionHeader
             icon={<FaBriefcase />}
@@ -29,7 +30,7 @@ export const BackendProjects = () => {
             />
           </SectionParagraph>
         </PaddingInner>
-      </div>
+      </BorderControl>
 
       <ThreeColumnGrid>
         {backendProjectsList.map((project) => (
@@ -46,6 +47,6 @@ export const BackendProjects = () => {
           </div>
         ))}
       </ThreeColumnGrid>
-    </>
+    </div>
   );
 };
