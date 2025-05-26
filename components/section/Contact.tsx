@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import toast from "react-hot-toast";
 import { Title } from "../ui/Title";
+import { Subtitle } from "../ui/Subtitle";
 
 export const Contact = () => {
   const [, setCopied] = useState(false);
@@ -27,10 +28,7 @@ export const Contact = () => {
       <div className="p-5 border-full-default rounded-lg">
         <div>
           <Title icon={<FaPhoneAlt />} title="The Connection Code" />
-
-          <p className="tracking-wide text-gray-50/50">
-            Whispers of Code, Calls of Collaboration
-          </p>
+          <Subtitle subtitle="Whispers of Code, Calls of Collaboration" />
         </div>
 
         <hr className="my-5" />

@@ -2,6 +2,7 @@ import { FaBriefcase } from "react-icons/fa";
 import { ProjectCard } from "./ProjectCard";
 import { backendProjectsList } from "@/data/backendProjectsList";
 import { Title } from "./Title";
+import { Subtitle } from "./Subtitle";
 
 export const BackendProjects = () => {
   return (
@@ -9,8 +10,7 @@ export const BackendProjects = () => {
       <div className="my-5 flex justify-between gap-10 text-balance border-full-default rounded-lg">
         <div className="p-5">
           <Title icon={<FaBriefcase />} title="Engine Room Highlights" />
-
-          <p className="mb-5 tracking-wide font-bold">Featured Projects</p>
+          <Subtitle subtitle="Featured Projects" />
 
           <p className="tracking-wide text-gray-50/50">
             A collection of robust backend microservices and management systems

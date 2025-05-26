@@ -1,16 +1,14 @@
 import { FaReact } from "react-icons/fa";
 import { knownSkills } from "@/data/knownSkills";
 import { Title } from "../ui/Title";
+import { Subtitle } from "../ui/Subtitle";
 
 export const Skills = () => {
   return (
     <section id="skills" className="my-5 p-2.5 border-y-default">
       <div className="w-full flex items-start justify-center flex-col p-2.5 border-y-default">
         <Title icon={<FaReact />} title="The Arsenal of Alchemy" />
-
-        <p className="mb-5 tracking-wide text-gray-50/50">
-          Crafting Magic with Code & Craft
-        </p>
+        <Subtitle subtitle="Crafting Magic with Code & Craft" />
 
         <p className="md:max-w-[95%] tracking-wide text-gray-50/50">
           Behind every flawless system is a toolbox wielded with mastery and

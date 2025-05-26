@@ -2,6 +2,7 @@ import Image from "next/image";
 import { FaDownload, FaFilePdf, FaUser } from "react-icons/fa";
 import { LinkButton } from "../ui/LinkButton";
 import { Title } from "../ui/Title";
+import { Subtitle } from "../ui/Subtitle";
 
 export const About = () => {
   return (
@@ -11,10 +12,7 @@ export const About = () => {
     >
       <div className="lg:w-1/2 lg:min-h-[600px] p-5 border-full-default rounded-lg">
         <Title icon={<FaUser />} title="Between Logic & Lore" />
-
-        <p className="mb-5 tracking-wide text-gray-50/50">
-          The Brain Behind the Backend
-        </p>
+        <Subtitle subtitle="The Brain Behind the Backend" />
 
         <div className="xl:w-[500px] text-gray-50/50 tracking-wide grid gap-2.5">
           <p>
