@@ -7,8 +7,8 @@ type ButtonProps = {
 } & React.ComponentProps<"button">;
 
 export const Button = ({
-  buttonIcon = <BiError />,
-  buttonText = "Button Text",
+  buttonIcon,
+  buttonText,
   buttonIsPrimary = true,
   ...rest
 }: ButtonProps) => {
@@ -24,8 +24,10 @@ export const Button = ({
 
   return (
     <button type="button" className={buttonClass} {...rest}>
-      <div className="max-[375px]:hidden animate-pulse">{buttonIcon}</div>
-      {buttonText}
+      <div className="max-[375px]:hidden animate-pulse">
+        {buttonIcon || <BiError />}
+      </div>
+      {buttonText || "Button Text"}
     </button>
   );
 };

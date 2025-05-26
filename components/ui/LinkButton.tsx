@@ -9,9 +9,9 @@ type LinkButtonProps = {
 } & React.ComponentProps<"a">;
 
 export const LinkButton = ({
-  buttonIcon = <BiError />,
-  buttonText = "Button Text",
-  buttonHref = "/",
+  buttonIcon,
+  buttonText,
+  buttonHref,
   buttonIsPrimary = true,
   ...rest
 }: LinkButtonProps) => {
@@ -25,18 +25,18 @@ export const LinkButton = ({
     buttonIsPrimary ? primaryButtonStyle : secondaryButtonStyle
   }`;
 
-  const safeHref = buttonHref ?? "/";
-
   return (
     <Link
-      href={safeHref}
+      href={buttonHref || "/"}
       target="_blank"
       rel="noreferrer"
       className={`w-fit ${buttonClass}`}
       {...rest}
     >
-      <div className="max-[375px]:hidden animate-pulse">{buttonIcon}</div>
-      {buttonText}
+      <div className="max-[375px]:hidden animate-pulse">
+        {buttonIcon || <BiError />}
+      </div>
+      {buttonText || "Button Text"}
     </Link>
   );
 };
