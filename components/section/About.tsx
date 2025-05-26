@@ -1,10 +1,8 @@
 import Image from "next/image";
 import { FaDownload, FaFilePdf, FaUser } from "react-icons/fa";
 import { LinkButton } from "../ui/LinkButton";
-import { Title } from "../ui/Title";
-import { Subtitle } from "../ui/Subtitle";
 import { Paragraph } from "../ui/Paragraph";
-import { Divider } from "../ui/Divider";
+import { SectionHeader } from "../ui/SectionHeader";
 
 export const About = () => {
   return (
@@ -13,10 +11,11 @@ export const About = () => {
       className="my-5 p-2.5 flex flex-col lg:flex-row lg:items-start justify-between gap-2.5 border-y-default"
     >
       <div className="lg:w-1/2 lg:min-h-[600px] p-5 border-full-default rounded-lg">
-        <Title icon={<FaUser />} title="Between Logic & Lore" />
-        <Divider mb={8} />
-        <Subtitle subtitle="The Brain Behind the Backend" />
-        <Divider my={20} />
+        <SectionHeader
+          icon={<FaUser />}
+          title="Between Logic & Lore"
+          subtitle="The Brain Behind the Backend"
+        />
 
         <div className="xl:w-[500px] grid gap-2.5">
           <Paragraph

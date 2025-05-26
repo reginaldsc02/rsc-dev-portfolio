@@ -1,20 +1,20 @@
 import { FaBriefcase } from "react-icons/fa";
 import { ProjectCard } from "./ProjectCard";
 import { backendProjectsList } from "@/data/backendProjectsList";
-import { Title } from "./Title";
-import { Subtitle } from "./Subtitle";
 import { Paragraph } from "./Paragraph";
-import { Divider } from "./Divider";
+import { SectionHeader } from "./SectionHeader";
 
 export const BackendProjects = () => {
   return (
     <>
       <div className="my-5 flex justify-between gap-10 text-balance border-full-default rounded-lg">
         <div className="p-5">
-          <Title icon={<FaBriefcase />} title="Engine Room Highlights" />
-          <Divider mb={8} />
-          <Subtitle subtitle="Featured Projects" />
-          <Divider mb={20} />
+          <SectionHeader
+            icon={<FaBriefcase />}
+            title="Engine Room Highlights"
+            subtitle="Featured Projects"
+          />
+
           <Paragraph
             paragraph="A collection of robust backend microservices and management systems
             that power smooth, scalable, and efficient digital experiences

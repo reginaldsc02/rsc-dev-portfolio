@@ -3,9 +3,8 @@ import { Button } from "../ui/Button";
 import Link from "next/link";
 import { useState } from "react";
 import toast from "react-hot-toast";
-import { Title } from "../ui/Title";
-import { Subtitle } from "../ui/Subtitle";
 import { Paragraph } from "../ui/Paragraph";
+import { SectionHeader } from "../ui/SectionHeader";
 
 export const Contact = () => {
   const [, setCopied] = useState(false);
@@ -27,10 +26,11 @@ export const Contact = () => {
   return (
     <section id="contact" className="mt-16 p-5 border-t-default">
       <div className="p-5 border-full-default rounded-lg">
-        <div>
-          <Title icon={<FaPhoneAlt />} title="The Connection Code" />
-          <Subtitle subtitle="Whispers of Code, Calls of Collaboration" />
-        </div>
+        <SectionHeader
+          icon={<FaPhoneAlt />}
+          title="The Connection Code"
+          subtitle="Whispers of Code, Calls of Collaboration"
+        />
 
         <hr className="my-5" />
 
