@@ -9,7 +9,7 @@ export const Title = ({
   title: string;
 }) => {
   return (
-    <h2 className="font-medium text-balance capitalize text-4xl">
+    <h2 className="font-medium text-balance capitalize text-2xl sm:text-3xl md:text-4xl">
       <LabeledIcon icon={icon || <BiError />} label={title || "Title"} />
     </h2>
   );
