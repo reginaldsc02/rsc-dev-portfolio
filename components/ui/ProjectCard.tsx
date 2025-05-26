@@ -39,7 +39,7 @@ export const ProjectCard = ({
       <PaddingInner>
         <div className="grid gap-5">
           <div>
-            <div className="text-xl font-bold capitalize">
+            <div className="text-xl font-semibold capitalize">
               <LabeledIcon
                 icon={<FaBriefcase />}
                 label={title || "Project title"}
