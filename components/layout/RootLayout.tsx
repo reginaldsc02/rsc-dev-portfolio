@@ -5,7 +5,6 @@ import { Toaster } from "react-hot-toast";
 import { CustomCursor } from "../ui/CustomCursor";
 import { Loader } from "../ui/Loader";
 import { MainLayout } from "./MainLayout";
-import { RootBackground } from "../ui/RootBackground";
 
 export const RootLayout = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -21,7 +20,6 @@ export const RootLayout = () => {
     <Loader />
   ) : (
     <Suspense fallback={<Loader />}>
-      <RootBackground />
       <Toaster position="top-center" reverseOrder={false} />
       <CustomCursor />
       <MainLayout />
