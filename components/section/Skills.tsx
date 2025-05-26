@@ -12,27 +12,25 @@ export const Skills = () => {
       <BorderControl borderY>
         <PaddingOuter>
           <BorderControl borderY>
-            <div className="w-full flex items-start justify-center flex-col">
-              <PaddingOuter>
-                <SectionHeader
-                  icon={<FaReact />}
-                  title="The Arsenal of Alchemy"
-                  subtitle="Crafting Magic with Code & Craft"
-                />
+            <PaddingOuter>
+              <SectionHeader
+                icon={<FaReact />}
+                title="The Arsenal of Alchemy"
+                subtitle="Crafting Magic with Code & Craft"
+              />
 
-                <SectionParagraph>
-                  <Paragraph
-                    paragraph="Behind every flawless system is a toolbox wielded with mastery and
+              <SectionParagraph>
+                <Paragraph
+                  paragraph="Behind every flawless system is a toolbox wielded with mastery and
           heart. From the quiet hum of backend servers to the rhythmic pulse of
           APIs, my skills are the sparks that ignite innovation and keep the
           engine roaring - precise, polished, and powerful. These are the
           languages, tools, and frameworks I bend to my will, crafting solutions
           that don't just work, but resonate. Ready to dive in? Here's
           what's in my arsenal."
-                  />
-                </SectionParagraph>
-              </PaddingOuter>
-            </div>
+                />
+              </SectionParagraph>
+            </PaddingOuter>
           </BorderControl>
 
           <div className="mt-2.5">
