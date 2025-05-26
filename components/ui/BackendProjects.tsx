@@ -35,18 +35,16 @@ export const BackendProjects = () => {
       </div>
 
       <div className="grid xl:grid-cols-3 gap-2.5">
-        {backendProjectsList.map((projectItem) => (
-          <div key={projectItem.projectId}>
+        {backendProjectsList.map((project) => (
+          <div key={project.id}>
             <ProjectCard
-              projectImageSrc={projectItem.projectImageSrc}
-              projectImageAltText={projectItem.projectImageAltText}
-              projectTitle={projectItem.projectTitle}
-              projectLink={projectItem.projectLink}
-              projectRepoName={projectItem.projectRepoName}
-              projectDescription={projectItem.projectDescription}
-              projectProgrammingLanguage={
-                projectItem.projectProgrammingLanguage
-              }
+              imageSrc={project.imageSrc}
+              imageAltText={project.imageAltText}
+              title={project.title}
+              link={project.link}
+              repoName={project.repoName}
+              description={project.description}
+              programmingLanguage={project.programmingLanguage}
             />
           </div>
         ))}

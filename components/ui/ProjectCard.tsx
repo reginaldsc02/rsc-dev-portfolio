@@ -4,30 +4,30 @@ import { FaBriefcase, FaGithub, FaLink } from "react-icons/fa";
 import { LinkButton } from "./LinkButton";
 
 type ProjectCardProps = {
-  projectImageSrc: string;
-  projectImageAltText: string;
-  projectTitle: string;
-  projectLink: string;
-  projectRepoName: string;
-  projectDescription: string;
-  projectProgrammingLanguage: string;
+  imageSrc: string;
+  imageAltText: string;
+  title: string;
+  link: string;
+  repoName: string;
+  description: string;
+  programmingLanguage: string;
 };
 
 export const ProjectCard = ({
-  projectImageSrc,
-  projectImageAltText,
-  projectTitle,
-  projectLink,
-  projectRepoName,
-  projectDescription,
-  projectProgrammingLanguage,
+  imageSrc,
+  imageAltText,
+  title,
+  link,
+  repoName,
+  description,
+  programmingLanguage,
 }: ProjectCardProps) => {
   return (
     <div className="group bg-gray-900 rounded-lg">
       <div className="w-full aspect-video relative">
         <Image
-          src={projectImageSrc}
-          alt={projectImageAltText || "Alt text is not available"}
+          src={imageSrc}
+          alt={imageAltText || "Image description not available"}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           className="object-cover object-top rounded-t-lg filter group-hover:saturate-200 transition-all duration-200 ease-linear"
@@ -38,11 +38,11 @@ export const ProjectCard = ({
         <div>
           <div className="flex items-center gap-1.5 text-xl font-bold capitalize">
             <FaBriefcase className="max-[375px]:hidden" />
-            {projectTitle || "Project Title"}
+            {title || "Project title"}
           </div>
 
           <Link
-            href={projectLink || "/"}
+            href={link || "/"}
             target="_blank"
             rel="noreferrer"
             className="flex items-center gap-1.5 lowercase tracking-tighter font-medium text-gray-50/50 rounded-md"
@@ -50,35 +50,35 @@ export const ProjectCard = ({
             <FaLink />
 
             <div className="hover:text-gray-50 transition-colors duration-200 ease-linear">
-              {projectRepoName || "project-repository-name"}
+              {repoName || "project-repository-name"}
             </div>
           </Link>
         </div>
 
         <p className="lg:max-w-[800px] xl:max-w-[420px] xl:h-[100px]">
-          {projectDescription || "Project Description"}
+          {description || "Project description"}
         </p>
 
         <LinkButton
           buttonIcon={<FaGithub />}
           buttonText="View Source Code"
-          buttonHref={projectLink}
+          buttonHref={link}
         />
 
         <div className="flex items-center gap-1.5">
           <div
             role="img"
             aria-label={`Project language: ${
-              projectProgrammingLanguage || "unknown"
+              programmingLanguage || "Unknown programming language"
             }`}
             title={`Project language: ${
-              projectProgrammingLanguage || "unknown"
+              programmingLanguage || "Unknown programming language"
             }`}
             className="w-4 h-4 bg-amber-300 rounded-full"
           ></div>
 
           <div className="tracking-wide capitalize font-light">
-            {projectProgrammingLanguage || "Project Programming Language"}
+            {programmingLanguage || "Project programming language"}
           </div>
         </div>
       </div>
