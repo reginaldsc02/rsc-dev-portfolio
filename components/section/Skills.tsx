@@ -3,13 +3,16 @@ import { knownSkills } from "@/data/knownSkills";
 import { Title } from "../ui/Title";
 import { Subtitle } from "../ui/Subtitle";
 import { Paragraph } from "../ui/Paragraph";
+import { Divider } from "../ui/Divider";
 
 export const Skills = () => {
   return (
     <section id="skills" className="my-5 p-2.5 border-y-default">
       <div className="w-full flex items-start justify-center flex-col p-2.5 border-y-default">
         <Title icon={<FaReact />} title="The Arsenal of Alchemy" />
+        <Divider mb={8} />
         <Subtitle subtitle="Crafting Magic with Code & Craft" />
+        <Divider mb={20} />
 
         <div className="md:max-w-[95%]">
           <Paragraph

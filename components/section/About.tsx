@@ -4,6 +4,7 @@ import { LinkButton } from "../ui/LinkButton";
 import { Title } from "../ui/Title";
 import { Subtitle } from "../ui/Subtitle";
 import { Paragraph } from "../ui/Paragraph";
+import { Divider } from "../ui/Divider";
 
 export const About = () => {
   return (
@@ -13,7 +14,9 @@ export const About = () => {
     >
       <div className="lg:w-1/2 lg:min-h-[600px] p-5 border-full-default rounded-lg">
         <Title icon={<FaUser />} title="Between Logic & Lore" />
+        <Divider mb={8} />
         <Subtitle subtitle="The Brain Behind the Backend" />
+        <Divider my={20} />
 
         <div className="xl:w-[500px] grid gap-2.5">
           <Paragraph

@@ -4,6 +4,7 @@ import { backendProjectsList } from "@/data/backendProjectsList";
 import { Title } from "./Title";
 import { Subtitle } from "./Subtitle";
 import { Paragraph } from "./Paragraph";
+import { Divider } from "./Divider";
 
 export const BackendProjects = () => {
   return (
@@ -11,7 +12,9 @@ export const BackendProjects = () => {
       <div className="my-5 flex justify-between gap-10 text-balance border-full-default rounded-lg">
         <div className="p-5">
           <Title icon={<FaBriefcase />} title="Engine Room Highlights" />
+          <Divider mb={8} />
           <Subtitle subtitle="Featured Projects" />
+          <Divider mb={20} />
           <Paragraph
             paragraph="A collection of robust backend microservices and management systems
             that power smooth, scalable, and efficient digital experiences
