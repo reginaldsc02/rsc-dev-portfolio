@@ -1,4 +1,3 @@
-import { ReactNode } from "react";
 import { Subtitle } from "./Subtitle";
 import { Title } from "./Title";
 
@@ -7,7 +6,7 @@ export const SectionHeader = ({
   title,
   subtitle,
 }: {
-  icon: ReactNode;
+  icon: React.ReactNode;
   title: string;
   subtitle: string;
 }) => {
