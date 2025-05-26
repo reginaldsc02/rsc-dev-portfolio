@@ -53,7 +53,7 @@ export const Navigation = ({
                 setActive(item.url);
                 handleNavigationMenuOpen();
               }}
-              className={`mb-10 lg:mb-0 pb-5 lg:pb-0 flex items-center gap-2 cursor-pointer border-b-default lg:border-none hover:text-gray-50 group transition-colors duration-200 ease-linear ${
+              className={`mb-10 lg:mb-0 pb-5 lg:pb-0 flex items-center gap-1.5 cursor-pointer border-b-default lg:border-none hover:text-gray-50 group transition-colors duration-200 ease-linear ${
                 active === item.url ? "text-primary" : "text-gray-50/50"
               }`}
             >
@@ -70,7 +70,7 @@ export const Navigation = ({
             target="_blank"
             rel="noreferrer"
             aria-label="Visit GitHub Profile"
-            className="flex items-center gap-2 text-gray-50/50 hover:text-gray-50 transition-colors duration-200 ease-linear lg:block cursor-pointer rounded-full"
+            className="flex items-center gap-1.5 text-gray-50/50 hover:text-gray-50 transition-colors duration-200 ease-linear lg:block cursor-pointer rounded-full"
           >
             <FaGithub className="text-2xl" />
             <div className="lg:hidden">GitHub</div>

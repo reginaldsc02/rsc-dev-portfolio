@@ -56,7 +56,7 @@ export const Contact = () => {
                 <div className="mb-5">
                   <BorderControl borderY>
                     <PaddingInner>
-                      <div className="flex items-center gap-2 sm:text-2xl">
+                      <div className="flex items-center gap-1.5 sm:text-2xl">
                         <FaMailBulk className="hidden sm:block" />
 
                         <div>

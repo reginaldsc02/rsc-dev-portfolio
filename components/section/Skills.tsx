@@ -39,7 +39,7 @@ export const Skills = () => {
                 <ul className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2.5">
                   {knownSkills.map((skill) => (
                     <li
-                      className={`w-full p-5 flex items-center gap-2 border-full-default rounded-lg`}
+                      className={`w-full p-5 flex items-center gap-1.5 border-full-default rounded-lg`}
                       key={skill.id}
                     >
                       <div className="text-2xl">{skill.icon}</div>
