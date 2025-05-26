@@ -5,6 +5,7 @@ import { SectionHeader } from "../ui/SectionHeader";
 import { SectionParagraph } from "../ui/SectionParagraph";
 import { PaddingOuter } from "../ui/PaddingOuter";
 import { BorderControl } from "../ui/BorderControl";
+import { LabeledIcon } from "../ui/LabeledIcon";
 
 export const Skills = () => {
   return (
@@ -39,11 +40,14 @@ export const Skills = () => {
                 <ul className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2.5">
                   {knownSkills.map((skill) => (
                     <li
-                      className={`w-full p-5 flex items-center gap-1.5 border-full-default rounded-lg`}
+                      className={`w-full p-5 border-full-default rounded-lg`}
                       key={skill.id}
                     >
-                      <div className="text-2xl">{skill.icon}</div>
-                      <div className="capitalize">{skill.title}</div>
+                      <LabeledIcon
+                        icon={skill.icon}
+                        label={skill.title}
+                        isLargeIcon
+                      />
                     </li>
                   ))}
                 </ul>

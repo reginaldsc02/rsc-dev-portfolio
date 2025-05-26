@@ -3,6 +3,7 @@ import Link from "next/link";
 import { FaBriefcase, FaGithub, FaLink } from "react-icons/fa";
 import { LinkButton } from "./LinkButton";
 import { PaddingInner } from "./PaddingInner";
+import { LabeledIcon } from "./LabeledIcon";
 
 type ProjectCardProps = {
   imageSrc: string;
@@ -38,9 +39,11 @@ export const ProjectCard = ({
       <PaddingInner>
         <div className="grid gap-5">
           <div>
-            <div className="flex items-center gap-1.5 text-xl font-bold capitalize">
-              <FaBriefcase className="max-[375px]:hidden" />
-              {title || "Project title"}
+            <div className="text-xl font-bold capitalize">
+              <LabeledIcon
+                icon={<FaBriefcase />}
+                label={title || "Project title"}
+              />
             </div>
 
             <Link

@@ -1,4 +1,5 @@
 import { BiError } from "react-icons/bi";
+import { LabeledIcon } from "./LabeledIcon";
 
 export const Title = ({
   icon,
@@ -8,9 +9,8 @@ export const Title = ({
   title: string;
 }) => {
   return (
-    <div className="flex items-center gap-1.5 text-balance capitalize text-4xl font-bold">
-      <div className="hidden md:block">{icon || <BiError />}</div>
-      <h2 className="font-medium">{title || "Title"}</h2>
-    </div>
+    <h2 className="font-medium text-balance capitalize text-4xl">
+      <LabeledIcon icon={icon || <BiError />} label={title || "Title"} />
+    </h2>
   );
 };

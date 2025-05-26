@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { BiError } from "react-icons/bi";
+import { LabeledIcon } from "./LabeledIcon";
 
 type LinkButtonProps = {
   buttonIcon: React.ReactNode;
@@ -33,10 +34,11 @@ export const LinkButton = ({
       className={`w-fit ${buttonClass}`}
       {...rest}
     >
-      <div className="max-[375px]:hidden animate-pulse">
-        {buttonIcon || <BiError />}
-      </div>
-      {buttonText || "Button Text"}
+      <LabeledIcon
+        icon={buttonIcon || <BiError />}
+        label={buttonText || "Button Text"}
+        animateIcon
+      />
     </Link>
   );
 };

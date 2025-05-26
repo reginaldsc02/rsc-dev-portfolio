@@ -74,12 +74,12 @@ export const Footer = ({
                     </ReactScrollLink>
                   </div>
 
-                  <div className="mt-2 md:mt-0 grid grid-cols-2 md:grid-cols-3 gap-5 text-gray-50/50">
+                  <div className="mt-2 md:mt-0 grid grid-cols-2 md:grid-cols-3 gap-2.5 text-gray-50/50">
                     <Link
                       href={"https://www.linkedin.com/in/reginaldsc02/"}
                       target="_blank"
                       rel="noreferrer"
-                      className="flex items-center gap-2 hover:text-gray-50 transition-colors duration-200 ease-linear rounded-md"
+                      className="flex items-center gap-1.5 hover:text-gray-50 transition-colors duration-200 ease-linear rounded-md"
                     >
                       <FaLinkedin />
                       <div className="active:scale-95">LinkedIn</div>
@@ -89,7 +89,7 @@ export const Footer = ({
                       href={"https://github.com/reginaldsc02"}
                       target="_blank"
                       rel="noreferrer"
-                      className="flex items-center gap-2 hover:text-gray-50 transition-colors duration-200 ease-linear rounded-md"
+                      className="flex items-center gap-1.5 hover:text-gray-50 transition-colors duration-200 ease-linear rounded-md"
                     >
                       <FaGithub />
                       <div className="active:scale-95">GitHub</div>
@@ -99,7 +99,7 @@ export const Footer = ({
                       href={"https://www.facebook.com/reginaldsc02/"}
                       target="_blank"
                       rel="noreferrer"
-                      className="flex items-center gap-2 hover:text-gray-50 transition-colors duration-200 ease-linear rounded-md"
+                      className="flex items-center gap-1.5 hover:text-gray-50 transition-colors duration-200 ease-linear rounded-md"
                     >
                       <FaFacebook />
                       <div className="active:scale-95">Facebook</div>
@@ -124,7 +124,7 @@ export const Footer = ({
               href={"https://github.com/reginaldsc02/rsc-dev-portfolio"}
               target="_blank"
               rel="noreferrer"
-              className="w-fit flex items-center gap-2 lowercase group"
+              className="w-fit flex items-center gap-1.5 lowercase group"
             >
               <FaCode className="group-hover:animate-pulse" />
               <div className="group-active:scale-95"> View source code</div>
