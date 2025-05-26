@@ -1,10 +1,10 @@
-import { FaSearch } from "react-icons/fa";
 import { Button } from "../ui/Button";
 import { Link } from "react-scroll";
 import { Dispatch, SetStateAction } from "react";
 import { Paragraph } from "../ui/Paragraph";
 import { PaddingInner } from "../ui/PaddingInner";
 import { BorderControl } from "../ui/BorderControl";
+import { BiSearch } from "react-icons/bi";
 
 export const Hero = ({
   setActive,
@@ -78,7 +78,7 @@ export const Hero = ({
                 spy
                 onClick={() => setActive("projects")}
               >
-                <Button buttonIcon={<FaSearch />} buttonText="View Projects" />
+                <Button buttonIcon={<BiSearch />} buttonText="View Projects" />
               </Link>
             </div>
           </BorderControl>

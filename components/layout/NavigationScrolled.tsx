@@ -1,7 +1,7 @@
 import { Dispatch, SetStateAction } from "react";
 import { Navigation } from "./Navigation";
-import { FaBars } from "react-icons/fa";
 import { HamburgerButton } from "../ui/HamburgerButton";
+import { BiSolidDashboard } from "react-icons/bi";
 
 export const NavigationScrolled = ({
   isIntersecting,
@@ -27,7 +27,7 @@ export const NavigationScrolled = ({
       } fixed bottom-5 lg:left-0 right-5 lg:right-0 border-2 border-solid border-gray-50/10 bg-gray-950 rounded-lg z-30 transition-opacity duration-200 ease-linear`}
     >
       <HamburgerButton
-        buttonIcon={<FaBars />}
+        buttonIcon={<BiSolidDashboard />}
         aria-label="Open Menu"
         onClick={handleNavigationMenuOpen}
       />

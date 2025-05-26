@@ -1,9 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
-import { FaBriefcase, FaGithub, FaLink } from "react-icons/fa";
 import { LinkButton } from "./LinkButton";
 import { PaddingInner } from "./PaddingInner";
 import { LabeledIcon } from "./LabeledIcon";
+import { BiLinkExternal, BiLogoGithub, BiSolidBriefcase } from "react-icons/bi";
 
 type ProjectCardProps = {
   imageSrc: string;
@@ -41,7 +41,7 @@ export const ProjectCard = ({
           <div>
             <div className="text-xl font-semibold capitalize">
               <LabeledIcon
-                icon={<FaBriefcase />}
+                icon={<BiSolidBriefcase />}
                 label={title || "Project title"}
               />
             </div>
@@ -50,13 +50,12 @@ export const ProjectCard = ({
               href={link || "/"}
               target="_blank"
               rel="noreferrer"
-              className="flex items-center gap-1.5 lowercase tracking-tighter font-medium text-gray-50/50 rounded-md"
+              className="lowercase font-medium text-gray-50/50 hover:text-gray-50 transition-colors duration-200 ease-linear"
             >
-              <FaLink />
-
-              <div className="hover:text-gray-50 transition-colors duration-200 ease-linear">
-                {repoName || "project-repository-name"}
-              </div>
+              <LabeledIcon
+                icon={<BiLinkExternal />}
+                label={repoName || "project-repository-name"}
+              />
             </Link>
           </div>
 
@@ -65,7 +64,7 @@ export const ProjectCard = ({
           </p>
 
           <LinkButton
-            buttonIcon={<FaGithub />}
+            buttonIcon={<BiLogoGithub />}
             buttonText="View Source Code"
             buttonHref={link}
           />

@@ -1,4 +1,3 @@
-import { FaBriefcase } from "react-icons/fa";
 import { ProjectCard } from "./ProjectCard";
 import { backendProjectsList } from "@/data/backendProjectsList";
 import { Paragraph } from "./Paragraph";
@@ -7,6 +6,7 @@ import { SectionParagraph } from "./SectionParagraph";
 import { ThreeColumnGrid } from "./ThreeColumnGrid";
 import { PaddingInner } from "./PaddingInner";
 import { BorderControl } from "./BorderControl";
+import { BiSolidBriefcase } from "react-icons/bi";
 
 export const BackendProjects = () => {
   return (
@@ -14,7 +14,7 @@ export const BackendProjects = () => {
       <BorderControl borderFull isRounded>
         <PaddingInner>
           <SectionHeader
-            icon={<FaBriefcase />}
+            icon={<BiSolidBriefcase />}
             title="Engine Room Highlights"
             subtitle="Featured Projects"
           />

@@ -1,4 +1,4 @@
-import { BsExclamationTriangleFill } from "react-icons/bs";
+import { BiError } from "react-icons/bi";
 
 export const LabeledIcon = ({
   icon,
@@ -17,7 +17,7 @@ export const LabeledIcon = ({
 
   return (
     <div className="flex items-center gap-1.5">
-      <div className={iconClass}>{icon || <BsExclamationTriangleFill />}</div>
+      <div className={iconClass}>{icon || <BiError />}</div>
       <div>{label || "Icon Label"}</div>
     </div>
   );

@@ -1,3 +1,21 @@
+import {
+  BiLogoCPlusPlus,
+  BiLogoCss3,
+  BiLogoFigma,
+  BiLogoGit,
+  BiLogoGithub,
+  BiLogoHtml5,
+  BiLogoJavascript,
+  BiLogoMicrosoftTeams,
+  BiLogoMongodb,
+  BiLogoNodejs,
+  BiLogoReact,
+  BiLogoTailwindCss,
+  BiLogoTypescript,
+  BiLogoVisualStudio,
+  BiLogoWindows,
+  BiSolidPencil,
+} from "react-icons/bi";
 import { PiMicrosoftWordLogo, PiWindowsLogo } from "react-icons/pi";
 import {
   RiCodeFill,
@@ -29,31 +47,31 @@ import {
 export const knownSkills = [
   {
     title: "HTML 5",
-    icon: <RiHtml5Fill />,
+    icon: <BiLogoHtml5 />,
     id: "@html5",
   },
 
   {
     title: "CSS 3",
-    icon: <RiCss3Fill />,
+    icon: <BiLogoCss3 />,
     id: "@css3",
   },
 
   {
     title: "JavaScript",
-    icon: <RiJavascriptFill />,
+    icon: <BiLogoJavascript />,
     id: "@javascript",
   },
 
   {
     title: "TypeScript",
-    icon: <SiTypescript />,
+    icon: <BiLogoTypescript />,
     id: "@typescript",
   },
 
   {
     title: "React.js",
-    icon: <RiReactjsFill />,
+    icon: <BiLogoReact />,
     id: "@reactjs",
   },
 
@@ -65,7 +83,7 @@ export const knownSkills = [
 
   {
     title: "TailwindCSS",
-    icon: <RiTailwindCssFill />,
+    icon: <BiLogoTailwindCss />,
     id: "@tailwindcss",
   },
 
@@ -77,7 +95,7 @@ export const knownSkills = [
 
   {
     title: "Node.js",
-    icon: <RiNodejsFill />,
+    icon: <BiLogoNodejs />,
     id: "@nodejs",
   },
 
@@ -95,31 +113,37 @@ export const knownSkills = [
 
   {
     title: "MongoDB",
-    icon: <SiMongodb />,
+    icon: <BiLogoMongodb />,
     id: "@mongodb",
   },
 
   {
     title: "C++",
-    icon: <SiCplusplus />,
+    icon: <BiLogoCPlusPlus />,
     id: "@cpp",
   },
 
   {
-    title: "Git & GitHub",
-    icon: <RiGithubFill />,
-    id: "@gitgithub",
+    title: "Git",
+    icon: <BiLogoGit />,
+    id: "@git",
+  },
+
+  {
+    title: "GitHub",
+    icon: <BiLogoGithub />,
+    id: "@github",
   },
 
   {
     title: "Visual Studio Code",
-    icon: <RiCodeFill />,
+    icon: <BiLogoVisualStudio />,
     id: "@vscode",
   },
 
   {
     title: "Windows Operating System",
-    icon: <PiWindowsLogo />,
+    icon: <BiLogoWindows />,
     id: "@mswindowsos",
   },
 
@@ -149,13 +173,13 @@ export const knownSkills = [
 
   {
     title: "UI & UX Design",
-    icon: <RiPencilFill />,
+    icon: <BiSolidPencil />,
     id: "@uiux",
   },
 
   {
     title: "Figma",
-    icon: <SiFigma />,
+    icon: <BiLogoFigma />,
     id: "@figma",
   },
 
@@ -167,7 +191,7 @@ export const knownSkills = [
 
   {
     title: "Microsoft Office 365",
-    icon: <PiMicrosoftWordLogo />,
+    icon: <BiLogoMicrosoftTeams />,
     id: "@msoffice365",
   },
 ];

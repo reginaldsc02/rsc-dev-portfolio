@@ -1,8 +1,8 @@
-import { FaBars, FaUser } from "react-icons/fa";
 import { Link as ReactScrollLink } from "react-scroll";
 import { Dispatch, SetStateAction } from "react";
 import { Navigation } from "./Navigation";
 import { HamburgerButton } from "../ui/HamburgerButton";
+import { BiSolidDashboard, BiSolidUserAccount } from "react-icons/bi";
 
 export const Header = ({
   active,
@@ -32,7 +32,7 @@ export const Header = ({
         >
           <div className="flex items-center gap-2">
             <div className="p-2.5 border-[1px] border-solid border-gray-100/25 rounded-full">
-              <FaUser className="text-gray-50/50 group-hover:text-gray-50 transition-colors duration-200 ease-linear" />
+              <BiSolidUserAccount className="text-gray-50/50 group-hover:text-gray-50 transition-colors duration-200 ease-linear" />
             </div>
 
             <div className="text-xl font-medium lowercase">
@@ -57,7 +57,7 @@ export const Header = ({
       />
 
       <HamburgerButton
-        buttonIcon={<FaBars />}
+        buttonIcon={<BiSolidDashboard />}
         aria-label="Open Menu"
         onClick={handleNavigationMenuOpen}
       />

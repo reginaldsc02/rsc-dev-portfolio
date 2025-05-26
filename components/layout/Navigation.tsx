@@ -1,10 +1,9 @@
-import { FaGithub } from "react-icons/fa";
 import { Link as ReactScrollLink } from "react-scroll";
 import { navLinks } from "@/data/navLinks";
 import { Dispatch, SetStateAction } from "react";
 import Link from "next/link";
-import { MdClose } from "react-icons/md";
 import { HamburgerButton } from "../ui/HamburgerButton";
+import { BiCross, BiLogoGithub } from "react-icons/bi";
 
 export const Navigation = ({
   tag = "nav",
@@ -36,7 +35,7 @@ export const Navigation = ({
         <div className="text-lg">Menu</div>
 
         <HamburgerButton
-          buttonIcon={<MdClose />}
+          buttonIcon={<BiCross />}
           aria-label="Close Menu"
           onClick={handleNavigationMenuOpen}
         />
@@ -72,7 +71,7 @@ export const Navigation = ({
             aria-label="Visit GitHub Profile"
             className="flex items-center gap-1.5 text-gray-50/50 hover:text-gray-50 transition-colors duration-200 ease-linear lg:block cursor-pointer rounded-full"
           >
-            <FaGithub className="text-2xl" />
+            <BiLogoGithub className="text-2xl" />
             <div className="lg:hidden">GitHub</div>
           </Link>
         </li>

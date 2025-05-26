@@ -1,19 +1,20 @@
 import { Link as ReactScrollLink } from "react-scroll";
 import Link from "next/link";
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
-import {
-  FaArrowUp,
-  FaCode,
-  FaFacebook,
-  FaGithub,
-  FaLinkedin,
-} from "react-icons/fa";
 import toast from "react-hot-toast";
 import { useGitHubApi } from "@/api/useGitHubApi";
 import { BorderControl } from "../ui/BorderControl";
 import { PaddingInner } from "../ui/PaddingInner";
 import { Paragraph } from "../ui/Paragraph";
 import { PaddingOuter } from "../ui/PaddingOuter";
+import { LabeledIcon } from "../ui/LabeledIcon";
+import {
+  BiCode,
+  BiLogoFacebook,
+  BiLogoGithub,
+  BiLogoLinkedin,
+  BiUpArrow,
+} from "react-icons/bi";
 
 export const Footer = ({
   setActive,
@@ -58,21 +59,18 @@ export const Footer = ({
             <BorderControl borderFull isRounded>
               <PaddingInner>
                 <div className="w-full flex flex-col md:flex-row md:items-center md:justify-between gap-5">
-                  <div className="group">
-                    <ReactScrollLink
-                      to="hero"
-                      smooth
-                      spy
-                      onClick={() => {
-                        setActive("hero");
-                        toast.success("Yeeted to the top ✨");
-                      }}
-                      className="flex items-center gap-1.5 cursor-pointer text-xs font-bold uppercase"
-                    >
-                      <FaArrowUp className="group-hover:animate-bounce" />
-                      <div className="group-active:scale-95">Scroll to top</div>
-                    </ReactScrollLink>
-                  </div>
+                  <ReactScrollLink
+                    to="hero"
+                    smooth
+                    spy
+                    onClick={() => {
+                      setActive("hero");
+                      toast.success("Yeeted to the top ✨");
+                    }}
+                    className="cursor-pointer text-xs font-bold uppercase"
+                  >
+                    <LabeledIcon icon={<BiUpArrow />} label="Scroll to top" />
+                  </ReactScrollLink>
 
                   <div className="mt-2 md:mt-0 grid grid-cols-2 md:grid-cols-3 gap-2.5 text-gray-50/50">
                     <Link
@@ -81,7 +79,7 @@ export const Footer = ({
                       rel="noreferrer"
                       className="flex items-center gap-1.5 hover:text-gray-50 transition-colors duration-200 ease-linear rounded-md"
                     >
-                      <FaLinkedin />
+                      <BiLogoLinkedin />
                       <div className="active:scale-95">LinkedIn</div>
                     </Link>
 
@@ -91,7 +89,7 @@ export const Footer = ({
                       rel="noreferrer"
                       className="flex items-center gap-1.5 hover:text-gray-50 transition-colors duration-200 ease-linear rounded-md"
                     >
-                      <FaGithub />
+                      <BiLogoGithub />
                       <div className="active:scale-95">GitHub</div>
                     </Link>
 
@@ -101,7 +99,7 @@ export const Footer = ({
                       rel="noreferrer"
                       className="flex items-center gap-1.5 hover:text-gray-50 transition-colors duration-200 ease-linear rounded-md"
                     >
-                      <FaFacebook />
+                      <BiLogoFacebook />
                       <div className="active:scale-95">Facebook</div>
                     </Link>
                   </div>
@@ -126,7 +124,7 @@ export const Footer = ({
               rel="noreferrer"
               className="w-fit flex items-center gap-1.5 lowercase group"
             >
-              <FaCode className="group-hover:animate-pulse" />
+              <BiCode className="group-hover:animate-pulse" />
               <div className="group-active:scale-95"> View source code</div>
             </Link>
           </div>

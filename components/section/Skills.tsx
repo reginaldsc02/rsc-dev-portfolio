@@ -1,4 +1,3 @@
-import { FaReact } from "react-icons/fa";
 import { knownSkills } from "@/data/knownSkills";
 import { Paragraph } from "../ui/Paragraph";
 import { SectionHeader } from "../ui/SectionHeader";
@@ -6,6 +5,7 @@ import { SectionParagraph } from "../ui/SectionParagraph";
 import { PaddingOuter } from "../ui/PaddingOuter";
 import { BorderControl } from "../ui/BorderControl";
 import { LabeledIcon } from "../ui/LabeledIcon";
+import { BiLogoReact } from "react-icons/bi";
 
 export const Skills = () => {
   return (
@@ -15,7 +15,7 @@ export const Skills = () => {
           <BorderControl borderY>
             <PaddingOuter>
               <SectionHeader
-                icon={<FaReact />}
+                icon={<BiLogoReact />}
                 title="The Arsenal of Alchemy"
                 subtitle="Crafting Magic with Code & Craft"
               />

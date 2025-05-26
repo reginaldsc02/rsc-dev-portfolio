@@ -1,4 +1,3 @@
-import { FaMailBulk, FaPhoneAlt } from "react-icons/fa";
 import { Button } from "../ui/Button";
 import Link from "next/link";
 import { useState } from "react";
@@ -9,6 +8,8 @@ import { SectionParagraph } from "../ui/SectionParagraph";
 import { PaddingOuter } from "../ui/PaddingOuter";
 import { PaddingInner } from "../ui/PaddingInner";
 import { BorderControl } from "../ui/BorderControl";
+import { LabeledIcon } from "../ui/LabeledIcon";
+import { BiSolidEnvelope, BiSolidPhone } from "react-icons/bi";
 
 export const Contact = () => {
   const [, setCopied] = useState(false);
@@ -34,7 +35,7 @@ export const Contact = () => {
           <BorderControl borderFull isRounded>
             <PaddingInner>
               <SectionHeader
-                icon={<FaPhoneAlt />}
+                icon={<BiSolidPhone />}
                 title="The Connection Code"
                 subtitle="Whispers of Code, Calls of Collaboration"
               />
@@ -56,26 +57,24 @@ export const Contact = () => {
                 <div className="mb-5">
                   <BorderControl borderY>
                     <PaddingInner>
-                      <div className="flex items-center gap-1.5 sm:text-2xl">
-                        <FaMailBulk className="hidden sm:block" />
-
-                        <div>
-                          Email Me:{" "}
-                          <Link
-                            href={`mailto: ${email}`}
-                            rel="noreferrer"
-                            className="underline font-bold text-gray-50/50 inline-block transition-all duration-200 ease-linear hover:text-gray-50 rounded-md"
-                          >
-                            {email}
-                          </Link>
-                        </div>
+                      <div className="sm:text-2xl">
+                        <Link
+                          href={`mailto: ${email}`}
+                          rel="noreferrer"
+                          className="font-medium text-gray-50/50 inline-block transition-all duration-200 ease-linear hover:text-gray-50 rounded-md"
+                        >
+                          <LabeledIcon
+                            icon={<BiSolidEnvelope />}
+                            label={email}
+                          />
+                        </Link>
                       </div>
                     </PaddingInner>
                   </BorderControl>
                 </div>
 
                 <Button
-                  buttonIcon={<FaMailBulk />}
+                  buttonIcon={<BiSolidEnvelope />}
                   buttonText={"Let's Build Something"}
                   onClick={copyEmailToClipboard}
                 />

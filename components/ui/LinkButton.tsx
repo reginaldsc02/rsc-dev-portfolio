@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { BiError } from "react-icons/bi";
 import { LabeledIcon } from "./LabeledIcon";
+import { BiError } from "react-icons/bi";
 
 type LinkButtonProps = {
   buttonIcon: React.ReactNode;

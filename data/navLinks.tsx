@@ -1,39 +1,39 @@
 import {
-  FaBriefcase,
-  FaHome,
-  FaPhoneAlt,
-  FaReact,
-  FaUser,
-} from "react-icons/fa";
+  BiHomeSmile,
+  BiLogoReact,
+  BiSolidBriefcase,
+  BiSolidPhone,
+  BiSolidUserAccount,
+} from "react-icons/bi";
 
 export const navLinks = [
   {
     title: "Home",
     url: "hero",
-    icon: <FaHome />,
+    icon: <BiHomeSmile />,
   },
 
   {
     title: "Projects",
     url: "projects",
-    icon: <FaBriefcase />,
+    icon: <BiSolidBriefcase />,
   },
 
   {
     title: "About",
     url: "about",
-    icon: <FaUser />,
+    icon: <BiSolidUserAccount />,
   },
 
   {
     title: "Skills",
     url: "skills",
-    icon: <FaReact />,
+    icon: <BiLogoReact />,
   },
 
   {
     title: "Contact",
     url: "contact",
-    icon: <FaPhoneAlt />,
+    icon: <BiSolidPhone />,
   },
 ];

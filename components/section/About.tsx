@@ -1,11 +1,11 @@
 import Image from "next/image";
-import { FaDownload, FaFilePdf, FaUser } from "react-icons/fa";
 import { LinkButton } from "../ui/LinkButton";
 import { Paragraph } from "../ui/Paragraph";
 import { SectionHeader } from "../ui/SectionHeader";
 import { PaddingOuter } from "../ui/PaddingOuter";
 import { PaddingInner } from "../ui/PaddingInner";
 import { BorderControl } from "../ui/BorderControl";
+import { BiDownload, BiSolidFilePdf, BiSolidUser } from "react-icons/bi";
 
 export const About = () => {
   return (
@@ -15,7 +15,7 @@ export const About = () => {
           <BorderControl borderFull isRounded>
             <PaddingInner>
               <SectionHeader
-                icon={<FaUser />}
+                icon={<BiSolidUser />}
                 title="Between Logic & Lore"
                 subtitle="The Brain Behind the Backend"
               />
@@ -50,14 +50,14 @@ export const About = () => {
 
               <div className="mt-5 flex flex-col sm:flex-row sm:items-center gap-5">
                 <LinkButton
-                  buttonIcon={<FaDownload />}
+                  buttonIcon={<BiDownload />}
                   buttonText="Download Resume"
                   buttonHref="/documents/resume-reginald-chand.pdf"
                   download
                 />
 
                 <LinkButton
-                  buttonIcon={<FaFilePdf />}
+                  buttonIcon={<BiSolidFilePdf />}
                   buttonText="Preview Resume"
                   buttonHref="/documents/resume/"
                   buttonIsPrimary={false}
