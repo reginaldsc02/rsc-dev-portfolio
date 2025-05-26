@@ -8,13 +8,8 @@ import { PaddingInner } from "../ui/PaddingInner";
 import { Paragraph } from "../ui/Paragraph";
 import { PaddingOuter } from "../ui/PaddingOuter";
 import { LabeledIcon } from "../ui/LabeledIcon";
-import {
-  BiCode,
-  BiLogoFacebook,
-  BiLogoGithub,
-  BiLogoLinkedin,
-  BiUpArrow,
-} from "react-icons/bi";
+import { BiCode, BiUpArrow } from "react-icons/bi";
+import { socialMediaLinks } from "@/data/socialMediaLinks";
 
 export const Footer = ({
   setActive,
@@ -34,13 +29,13 @@ export const Footer = ({
       <BorderControl borderY>
         <PaddingInner>
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-2.5">
-            <p>
+            <p className="text-gray-50/50">
               &copy;{" "}
               <Link
                 href={"https://github.com/reginaldsc02"}
                 target="_blank"
                 rel="noreferrer"
-                className="underline font-bold text-gray-50/50 hover:text-gray-50 transition-colors duration-200 ease-linear rounded-sm"
+                className="font-semibold hover:text-gray-50 transition-colors duration-200 ease-linear"
               >
                 Reginald Sahil Chand
               </Link>{" "}
@@ -73,35 +68,17 @@ export const Footer = ({
                   </ReactScrollLink>
 
                   <div className="mt-2 md:mt-0 grid grid-cols-2 md:grid-cols-3 gap-2.5 text-gray-50/50">
-                    <Link
-                      href={"https://www.linkedin.com/in/reginaldsc02/"}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="flex items-center gap-1.5 hover:text-gray-50 transition-colors duration-200 ease-linear rounded-md"
-                    >
-                      <BiLogoLinkedin />
-                      <div className="active:scale-95">LinkedIn</div>
-                    </Link>
-
-                    <Link
-                      href={"https://github.com/reginaldsc02"}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="flex items-center gap-1.5 hover:text-gray-50 transition-colors duration-200 ease-linear rounded-md"
-                    >
-                      <BiLogoGithub />
-                      <div className="active:scale-95">GitHub</div>
-                    </Link>
-
-                    <Link
-                      href={"https://www.facebook.com/reginaldsc02/"}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="flex items-center gap-1.5 hover:text-gray-50 transition-colors duration-200 ease-linear rounded-md"
-                    >
-                      <BiLogoFacebook />
-                      <div className="active:scale-95">Facebook</div>
-                    </Link>
+                    {socialMediaLinks.map((item) => (
+                      <Link
+                        href={item.link}
+                        target="_blank"
+                        rel="noreferrer"
+                        key={item.id}
+                        className="hover:text-gray-50 transition-colors duration-200 ease-linear"
+                      >
+                        <LabeledIcon icon={item.icon} label={item.title} />
+                      </Link>
+                    ))}
                   </div>
                 </div>
               </PaddingInner>
@@ -111,7 +88,7 @@ export const Footer = ({
 
         <PaddingOuter>
           <div className="lowercase text-balance">
-            <div className="flex items-center gap-2 text-sm text-gray-50/50">
+            <div className="text-sm text-gray-50/50">
               This website was last updated on:{" "}
               {response.data.updated_at
                 ? new Date(response?.data?.updated_at).toLocaleString()
@@ -122,10 +99,9 @@ export const Footer = ({
               href={"https://github.com/reginaldsc02/rsc-dev-portfolio"}
               target="_blank"
               rel="noreferrer"
-              className="w-fit flex items-center gap-1.5 lowercase group"
+              className="w-fit block"
             >
-              <BiCode className="group-hover:animate-pulse" />
-              <div className="group-active:scale-95"> View source code</div>
+              <LabeledIcon icon={<BiCode />} label="View source code" />
             </Link>
           </div>
         </PaddingOuter>
