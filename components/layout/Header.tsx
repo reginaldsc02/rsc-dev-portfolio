@@ -23,7 +23,7 @@ export const Header = ({
 }) => {
   return (
     <header className="w-full py-2.5 pl-5 pr-2.5 lg:pr-0 flex items-center justify-between border-b-default">
-      <div className="flex items-center gap-3.5">
+      <div className="flex items-center gap-5">
         <ReactScrollLink
           to="about"
           smooth
