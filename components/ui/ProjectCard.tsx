@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FaBriefcase, FaGithub, FaLink } from "react-icons/fa";
 import { LinkButton } from "./LinkButton";
+import { PaddingInner } from "./PaddingInner";
 
 type ProjectCardProps = {
   imageSrc: string;
@@ -34,54 +35,56 @@ export const ProjectCard = ({
         />
       </div>
 
-      <div className="p-5 grid gap-5">
-        <div>
-          <div className="flex items-center gap-1.5 text-xl font-bold capitalize">
-            <FaBriefcase className="max-[375px]:hidden" />
-            {title || "Project title"}
-          </div>
-
-          <Link
-            href={link || "/"}
-            target="_blank"
-            rel="noreferrer"
-            className="flex items-center gap-1.5 lowercase tracking-tighter font-medium text-gray-50/50 rounded-md"
-          >
-            <FaLink />
-
-            <div className="hover:text-gray-50 transition-colors duration-200 ease-linear">
-              {repoName || "project-repository-name"}
+      <PaddingInner>
+        <div className="grid gap-5">
+          <div>
+            <div className="flex items-center gap-1.5 text-xl font-bold capitalize">
+              <FaBriefcase className="max-[375px]:hidden" />
+              {title || "Project title"}
             </div>
-          </Link>
-        </div>
 
-        <p className="lg:max-w-[800px] xl:max-w-[420px] xl:h-[100px]">
-          {description || "Project description"}
-        </p>
+            <Link
+              href={link || "/"}
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-1.5 lowercase tracking-tighter font-medium text-gray-50/50 rounded-md"
+            >
+              <FaLink />
 
-        <LinkButton
-          buttonIcon={<FaGithub />}
-          buttonText="View Source Code"
-          buttonHref={link}
-        />
+              <div className="hover:text-gray-50 transition-colors duration-200 ease-linear">
+                {repoName || "project-repository-name"}
+              </div>
+            </Link>
+          </div>
 
-        <div className="flex items-center gap-1.5">
-          <div
-            role="img"
-            aria-label={`Project language: ${
-              programmingLanguage || "Unknown programming language"
-            }`}
-            title={`Project language: ${
-              programmingLanguage || "Unknown programming language"
-            }`}
-            className="w-4 h-4 bg-amber-300 rounded-full"
-          ></div>
+          <p className="lg:max-w-[800px] xl:max-w-[420px] xl:h-[100px]">
+            {description || "Project description"}
+          </p>
 
-          <div className="tracking-wide capitalize font-light">
-            {programmingLanguage || "Project programming language"}
+          <LinkButton
+            buttonIcon={<FaGithub />}
+            buttonText="View Source Code"
+            buttonHref={link}
+          />
+
+          <div className="flex items-center gap-1.5">
+            <div
+              role="img"
+              aria-label={`Project language: ${
+                programmingLanguage || "Unknown programming language"
+              }`}
+              title={`Project language: ${
+                programmingLanguage || "Unknown programming language"
+              }`}
+              className="w-4 h-4 bg-amber-300 rounded-full"
+            ></div>
+
+            <div className="tracking-wide capitalize font-light">
+              {programmingLanguage || "Project programming language"}
+            </div>
           </div>
         </div>
-      </div>
+      </PaddingInner>
     </div>
   );
 };
