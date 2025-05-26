@@ -4,11 +4,12 @@ import { backendProjectsList } from "@/data/backendProjectsList";
 import { Paragraph } from "./Paragraph";
 import { SectionHeader } from "./SectionHeader";
 import { SectionParagraph } from "./SectionParagraph";
+import { ThreeColumnGrid } from "./ThreeColumnGrid";
 
 export const BackendProjects = () => {
   return (
     <>
-      <div className="p-5 border-full-default rounded-lg">
+      <div className="mb-2.5 p-5 border-full-default rounded-lg">
         <SectionHeader
           icon={<FaBriefcase />}
           title="Engine Room Highlights"
@@ -27,7 +28,7 @@ export const BackendProjects = () => {
         </SectionParagraph>
       </div>
 
-      <div className="grid xl:grid-cols-3 gap-2.5">
+      <ThreeColumnGrid>
         {backendProjectsList.map((project) => (
           <div key={project.id}>
             <ProjectCard
@@ -41,7 +42,7 @@ export const BackendProjects = () => {
             />
           </div>
         ))}
-      </div>
+      </ThreeColumnGrid>
     </>
   );
 };
