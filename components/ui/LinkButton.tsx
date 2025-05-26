@@ -22,7 +22,7 @@ export const LinkButton = ({
   const secondaryButtonStyle =
     "text-gray-50/50 bg-transparent hover:border-gray-50 hover:text-gray-50 border-gray-50/50";
 
-  const buttonClass = `p-5 flex items-center justify-center gap-1.5 font-medium text-xl lowercase border-2 border-solid rounded-full transition-all duration-200 ease-linear cursor-pointer active:scale-95 ${
+  const buttonClass = `p-5 flex items-center justify-center gap-1.5 text-xl lowercase border-2 border-solid rounded-full transition-all duration-200 ease-linear cursor-pointer ${
     buttonIsPrimary ? primaryButtonStyle : secondaryButtonStyle
   }`;
 

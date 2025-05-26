@@ -3,7 +3,12 @@ import Link from "next/link";
 import { LinkButton } from "./LinkButton";
 import { PaddingInner } from "./PaddingInner";
 import { LabeledIcon } from "./LabeledIcon";
-import { BiLinkExternal, BiLogoGithub, BiSolidBriefcase } from "react-icons/bi";
+import {
+  BiLinkExternal,
+  BiLogoGithub,
+  BiLogoJavascript,
+  BiSolidBriefcase,
+} from "react-icons/bi";
 
 type ProjectCardProps = {
   imageSrc: string;
@@ -39,7 +44,7 @@ export const ProjectCard = ({
       <PaddingInner>
         <div className="grid gap-5">
           <div>
-            <div className="text-xl font-semibold capitalize">
+            <div className="text-xl font-bold capitalize">
               <LabeledIcon
                 icon={<BiSolidBriefcase />}
                 label={title || "Project title"}
@@ -50,7 +55,7 @@ export const ProjectCard = ({
               href={link || "/"}
               target="_blank"
               rel="noreferrer"
-              className="lowercase font-medium text-gray-50/50 hover:text-gray-50 transition-colors duration-200 ease-linear"
+              className="lowercase text-gray-50/50 hover:text-gray-50 transition-colors duration-200 ease-linear"
             >
               <LabeledIcon
                 icon={<BiLinkExternal />}
@@ -78,10 +83,12 @@ export const ProjectCard = ({
               title={`Project language: ${
                 programmingLanguage || "Unknown programming language"
               }`}
-              className="w-4 h-4 bg-amber-300 rounded-full"
-            ></div>
+              className="p-0.5 bg-amber-300 rounded-sm"
+            >
+              <BiLogoJavascript className="text-2xl text-gray-950" />
+            </div>
 
-            <div className="tracking-wide capitalize font-light">
+            <div className="tracking-wide capitalize">
               {programmingLanguage || "Project programming language"}
             </div>
           </div>
