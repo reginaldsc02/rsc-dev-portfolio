@@ -5,6 +5,7 @@ import { useState } from "react";
 import toast from "react-hot-toast";
 import { Paragraph } from "../ui/Paragraph";
 import { SectionHeader } from "../ui/SectionHeader";
+import { SectionParagraph } from "../ui/SectionParagraph";
 
 export const Contact = () => {
   const [, setCopied] = useState(false);
@@ -34,9 +35,9 @@ export const Contact = () => {
 
         <hr className="my-5" />
 
-        <div className="md:max-w-[95%]">
+        <SectionParagraph>
           <Paragraph
-            paragraph="  Whether your thoughts are tangled in code or dancing on the edge of a
+            paragraph="Whether your thoughts are tangled in code or dancing on the edge of a
           dream, my inbox is a soft place to land - a haven for ideas waiting to
           bloom. Send me your sparks, your half-built hopes, your backend blues
           or frontend fire - I'll meet you there, with fingers poised like
@@ -45,7 +46,7 @@ export const Contact = () => {
           So whisper into the wires, and I'll answer with heart. Let's
           not just connect. Let's compose."
           />
-        </div>
+        </SectionParagraph>
 
         <div className="mt-5">
           <div className="mb-5 p-5 flex items-center gap-2 sm:text-2xl border-y-default">

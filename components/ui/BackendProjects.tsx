@@ -3,6 +3,7 @@ import { ProjectCard } from "./ProjectCard";
 import { backendProjectsList } from "@/data/backendProjectsList";
 import { Paragraph } from "./Paragraph";
 import { SectionHeader } from "./SectionHeader";
+import { SectionParagraph } from "./SectionParagraph";
 
 export const BackendProjects = () => {
   return (
@@ -15,14 +16,16 @@ export const BackendProjects = () => {
             subtitle="Featured Projects"
           />
 
-          <Paragraph
-            paragraph="A collection of robust backend microservices and management systems
+          <SectionParagraph>
+            <Paragraph
+              paragraph="A collection of robust backend microservices and management systems
             that power smooth, scalable, and efficient digital experiences
             behind the scenes. From notification management to file uploads and
             content handling, these projects showcase my knack for building
             solid foundations that keep everything running like clockwork - no
             drama, just dependable code doing its thing."
-          />
+            />
+          </SectionParagraph>
         </div>
 
         <div

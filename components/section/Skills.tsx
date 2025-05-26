@@ -2,6 +2,7 @@ import { FaReact } from "react-icons/fa";
 import { knownSkills } from "@/data/knownSkills";
 import { Paragraph } from "../ui/Paragraph";
 import { SectionHeader } from "../ui/SectionHeader";
+import { SectionParagraph } from "../ui/SectionParagraph";
 
 export const Skills = () => {
   return (
@@ -13,7 +14,7 @@ export const Skills = () => {
           subtitle="Crafting Magic with Code & Craft"
         />
 
-        <div className="md:max-w-[95%]">
+        <SectionParagraph>
           <Paragraph
             paragraph="Behind every flawless system is a toolbox wielded with mastery and
           heart. From the quiet hum of backend servers to the rhythmic pulse of
@@ -23,7 +24,7 @@ export const Skills = () => {
           that don't just work, but resonate. Ready to dive in? Here's
           what's in my arsenal."
           />
-        </div>
+        </SectionParagraph>
       </div>
 
       <div className="mt-5 p-2.5 grid border-full-default rounded-lg">
