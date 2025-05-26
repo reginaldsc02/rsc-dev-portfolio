@@ -32,7 +32,7 @@ export const BorderControl = ({
   };
 
   const borderActiveProp = Object.entries(borderMap)
-    .filter(([_, value]) => value)
+    .filter(([, value]) => value)
     .map(([key]) => key);
 
   if (borderActiveProp.length > 1) {
