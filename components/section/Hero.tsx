@@ -2,6 +2,7 @@ import { FaSearch } from "react-icons/fa";
 import { Button } from "../ui/Button";
 import { Link } from "react-scroll";
 import { Dispatch, SetStateAction } from "react";
+import { Paragraph } from "../ui/Paragraph";
 
 export const Hero = ({
   setActive,
@@ -36,21 +37,22 @@ export const Hero = ({
           thoughtful code meets elegant design and real human need.
         </h1>
 
-        <div className="p-5 lowercase text-balance tracking-wide border-y-default">
-          <p>
-            With a passion for elegant code and user-first design, I engineer
-            full-stack solutions that are as scalable as they are seamless.
-          </p>
+        <div className="p-5 lowercase text-balance border-y-default">
+          <Paragraph
+            paragraph=" With a passion for elegant code and user-first design, I engineer
+            full-stack solutions that are as scalable as they are seamless."
+          />
 
-          <p>
-            Every project I build is crafted with intention, blending clean
-            architecture, intuitive interfaces, and a touch of creative soul.
-          </p>
+          <Paragraph
+            paragraph="Every project I build is crafted with intention, blending clean
+            architecture, intuitive interfaces, and a touch of creative soul."
+            isImportant
+          />
 
-          <p>
-            Whether it&apos;s backend logic or frontend finesse, I deliver
-            software that feels as good as it functions.
-          </p>
+          <Paragraph
+            paragraph=" Whether it's backend logic or frontend finesse, I deliver
+            software that feels as good as it functions."
+          />
         </div>
 
         <div className="my-5 border-y-default">

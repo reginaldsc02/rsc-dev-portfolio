@@ -2,6 +2,7 @@ import { FaReact } from "react-icons/fa";
 import { knownSkills } from "@/data/knownSkills";
 import { Title } from "../ui/Title";
 import { Subtitle } from "../ui/Subtitle";
+import { Paragraph } from "../ui/Paragraph";
 
 export const Skills = () => {
   return (
@@ -10,15 +11,17 @@ export const Skills = () => {
         <Title icon={<FaReact />} title="The Arsenal of Alchemy" />
         <Subtitle subtitle="Crafting Magic with Code & Craft" />
 
-        <p className="md:max-w-[95%] tracking-wide text-gray-50/50">
-          Behind every flawless system is a toolbox wielded with mastery and
+        <div className="md:max-w-[95%]">
+          <Paragraph
+            paragraph=" Behind every flawless system is a toolbox wielded with mastery and
           heart. From the quiet hum of backend servers to the rhythmic pulse of
           APIs, my skills are the sparks that ignite innovation and keep the
           engine roaring - precise, polished, and powerful. These are the
           languages, tools, and frameworks I bend to my will, crafting solutions
-          that don&apos;t just work, but resonate. Ready to dive in? Here&apos;s
-          what&apos;s in my arsenal.
-        </p>
+          that don't just work, but resonate. Ready to dive in? Here's
+          what's in my arsenal."
+          />
+        </div>
       </div>
 
       <div className="mt-5 p-2.5 grid border-full-default rounded-lg">

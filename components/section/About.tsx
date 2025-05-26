@@ -3,6 +3,7 @@ import { FaDownload, FaFilePdf, FaUser } from "react-icons/fa";
 import { LinkButton } from "../ui/LinkButton";
 import { Title } from "../ui/Title";
 import { Subtitle } from "../ui/Subtitle";
+import { Paragraph } from "../ui/Paragraph";
 
 export const About = () => {
   return (
@@ -14,34 +15,32 @@ export const About = () => {
         <Title icon={<FaUser />} title="Between Logic & Lore" />
         <Subtitle subtitle="The Brain Behind the Backend" />
 
-        <div className="xl:w-[500px] text-gray-50/50 tracking-wide grid gap-2.5">
-          <p>
-            I&apos;m a backend focused but full-stack developer with a poetic
+        <div className="xl:w-[500px] grid gap-2.5">
+          <Paragraph
+            paragraph="I'm a backend focused but full-stack developer with a poetic
             heart and a strategic mind. Someone who finds beauty in clean
             architecture, scalable microservices, and code that does its job so
-            flawlessly, no one notices it&apos;s even there.
-          </p>
+            flawlessly, no one notices it's even there."
+          />
 
-          <p className="text-gray-50">
-            I specialize in building the sturdy skeletons of modern applications
+          <Paragraph
+            paragraph="I specialize in building the sturdy skeletons of modern applications
             such as Notification Management System, File Handling Mcroservices,
-            and Content Management Backends that hum like well-tuned machines.
-          </p>
+            and Content Management Backends that hum like well-tuned machines."
+            isImportant
+          />
 
-          <p className="text-gray-50/30">
-            When I&apos;m not orchestrating logic flows and designing robust
-            APIs, you&apos;ll find me soaking in sad songs, stargazing with
-            sci-fi classics, or leveling up in fantasy realms.
-          </p>
+          <Paragraph
+            paragraph="  When I'm not orchestrating logic flows and designing robust
+            APIs, you'll find me soaking in sad songs, stargazing with
+            sci-fi classics, or leveling up in fantasy realms."
+          />
 
-          <p>
-            My work is deeply intentional - I don&apos;t just write code, I
-            craft systems with purpose.{" "}
-            <i>
-              I believe in the quiet power of infrastructure: invisible,
-              essential, and always evolving.
-            </i>
-          </p>
+          <Paragraph
+            paragraph="My work is deeply intentional - I don't just write code, I
+            craft systems with purpose. I believe in the quiet power of
+            infrastructure: invisible, essential, and always evolving."
+          />
         </div>
 
         <div className="mt-5 lg:mt-6 flex flex-col sm:flex-row sm:items-center gap-5">

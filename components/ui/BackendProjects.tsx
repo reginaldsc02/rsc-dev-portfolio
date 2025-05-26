@@ -3,6 +3,7 @@ import { ProjectCard } from "./ProjectCard";
 import { backendProjectsList } from "@/data/backendProjectsList";
 import { Title } from "./Title";
 import { Subtitle } from "./Subtitle";
+import { Paragraph } from "./Paragraph";
 
 export const BackendProjects = () => {
   return (
@@ -11,15 +12,14 @@ export const BackendProjects = () => {
         <div className="p-5">
           <Title icon={<FaBriefcase />} title="Engine Room Highlights" />
           <Subtitle subtitle="Featured Projects" />
-
-          <p className="tracking-wide text-gray-50/50">
-            A collection of robust backend microservices and management systems
+          <Paragraph
+            paragraph="A collection of robust backend microservices and management systems
             that power smooth, scalable, and efficient digital experiences
             behind the scenes. From notification management to file uploads and
             content handling, these projects showcase my knack for building
             solid foundations that keep everything running like clockwork - no
-            drama, just dependable code doing its thing.
-          </p>
+            drama, just dependable code doing its thing."
+          />
         </div>
 
         <div

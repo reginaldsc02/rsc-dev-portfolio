@@ -5,6 +5,7 @@ import { useState } from "react";
 import toast from "react-hot-toast";
 import { Title } from "../ui/Title";
 import { Subtitle } from "../ui/Subtitle";
+import { Paragraph } from "../ui/Paragraph";
 
 export const Contact = () => {
   const [, setCopied] = useState(false);
@@ -33,16 +34,18 @@ export const Contact = () => {
 
         <hr className="my-5" />
 
-        <p className="md:max-w-[95%] tracking-wide text-gray-50/50">
-          Whether your thoughts are tangled in code or dancing on the edge of a
+        <div className="md:max-w-[95%]">
+          <Paragraph
+            paragraph="  Whether your thoughts are tangled in code or dancing on the edge of a
           dream, my inbox is a soft place to land - a haven for ideas waiting to
           bloom. Send me your sparks, your half-built hopes, your backend blues
-          or frontend fire - I&apos;ll meet you there, with fingers poised like
+          or frontend fire - I'll meet you there, with fingers poised like
           a pianist at dusk, ready to build, to solve, to create something that
-          hums with meaning. This isn&apos;t just contact - it&apos;s communion.
-          So whisper into the wires, and I&apos;ll answer with heart. Let&apos;s
-          not just connect. Let&apos;s compose.
-        </p>
+          hums with meaning. This isn't just contact - it's communion.
+          So whisper into the wires, and I'll answer with heart. Let's
+          not just connect. Let's compose."
+          />
+        </div>
 
         <div className="mt-5">
           <div className="mb-5 p-5 flex items-center gap-2 sm:text-2xl border-y-default">
