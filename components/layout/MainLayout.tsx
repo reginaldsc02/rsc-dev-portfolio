@@ -8,6 +8,7 @@ import { Footer } from "./Footer";
 import { Header } from "./Header";
 import { NavigationScrolled } from "./NavigationScrolled";
 import { NavigationOnScrolledIntersectionObserver } from "../ui/NavigationOnScrolledIntersectionObserver";
+import { BorderControl } from "../ui/BorderControl";
 
 export const MainLayout = () => {
   const [active, setActive] = useState("");
@@ -19,7 +20,7 @@ export const MainLayout = () => {
   };
 
   return (
-    <div className="min-w-full min-h-screen grid grid-cols-1 grid-rows-[auto_1fr_auto] opacity-0 animate-fade-in">
+    <div className="min-w-full min-h-screen grid grid-rows-[auto_1fr_auto] opacity-0 animate-fade-in">
       <NavigationOnScrolledIntersectionObserver
         setIsIntersecting={setIsIntersecting}
       />
@@ -44,12 +45,14 @@ export const MainLayout = () => {
       />
 
       <main className="w-full 2xl:max-w-[1600px] mx-auto">
-        <div className="w-[calc(100%-1rem)] md:w-[calc(100%-5rem)] mx-auto min-h-screen border-x-default">
-          <Hero setActive={setActive} />
-          <Projects />
-          <About />
-          <Skills />
-          <Contact />
+        <div className="w-[calc(100%-1rem)] md:w-[calc(100%-5rem)] mx-auto min-h-screen">
+          <BorderControl borderX>
+            <Hero setActive={setActive} />
+            <Projects />
+            <About />
+            <Skills />
+            <Contact />
+          </BorderControl>
         </div>
       </main>
 
