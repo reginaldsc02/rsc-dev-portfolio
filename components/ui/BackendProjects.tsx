@@ -5,27 +5,30 @@ import { Paragraph } from "./Paragraph";
 import { SectionHeader } from "./SectionHeader";
 import { SectionParagraph } from "./SectionParagraph";
 import { ThreeColumnGrid } from "./ThreeColumnGrid";
+import { PaddingInner } from "./PaddingInner";
 
 export const BackendProjects = () => {
   return (
     <>
-      <div className="mb-2.5 p-5 border-full-default rounded-lg">
-        <SectionHeader
-          icon={<FaBriefcase />}
-          title="Engine Room Highlights"
-          subtitle="Featured Projects"
-        />
+      <div className="mb-2.5 border-full-default rounded-lg">
+        <PaddingInner>
+          <SectionHeader
+            icon={<FaBriefcase />}
+            title="Engine Room Highlights"
+            subtitle="Featured Projects"
+          />
 
-        <SectionParagraph>
-          <Paragraph
-            paragraph="A collection of robust backend microservices and management systems
+          <SectionParagraph>
+            <Paragraph
+              paragraph="A collection of robust backend microservices and management systems
             that power smooth, scalable, and efficient digital experiences
             behind the scenes. From notification management to file uploads and
             content handling, these projects showcase my knack for building
             solid foundations that keep everything running like clockwork - no
             drama, just dependable code doing its thing."
-          />
-        </SectionParagraph>
+            />
+          </SectionParagraph>
+        </PaddingInner>
       </div>
 
       <ThreeColumnGrid>
