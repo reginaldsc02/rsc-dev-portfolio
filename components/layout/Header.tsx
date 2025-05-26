@@ -31,17 +31,15 @@ export const Header = ({
           className="cursor-pointer group"
         >
           <div className="flex items-center gap-2">
-            <div className="p-2.5 border-[1px] border-solid border-gray-100/25 rounded-full">
+            <div className="p-2.5 border-2 border-solid border-gray-100/25 group-hover:border-gray-50 rounded-full transition-all duration-200 ease-linear">
               <BiSolidUserAccount className="text-gray-50/50 group-hover:text-gray-50 transition-colors duration-200 ease-linear" />
             </div>
 
-            <div className="text-xl font-medium lowercase">
-              {logoName || "Logo Name"}
-            </div>
+            <div className="text-xl lowercase">{logoName || "Logo Name"}</div>
           </div>
         </ReactScrollLink>
 
-        <div className="px-2 py-1 text-xs font-semibold text-gray-50/80 tracking-wide bg-gray-50/10 rounded-full">
+        <div className="px-2 py-1 text-xs text-gray-50/80 tracking-wide bg-gray-50/10 rounded-full">
           v{websiteVersion || "Website Version"}
         </div>
       </div>
