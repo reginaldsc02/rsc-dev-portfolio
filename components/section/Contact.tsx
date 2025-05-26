@@ -3,6 +3,7 @@ import { Button } from "../ui/Button";
 import Link from "next/link";
 import { useState } from "react";
 import toast from "react-hot-toast";
+import { Title } from "../ui/Title";
 
 export const Contact = () => {
   const [, setCopied] = useState(false);
@@ -25,10 +26,7 @@ export const Contact = () => {
     <section id="contact" className="mt-16 p-5 border-t-default">
       <div className="p-5 border-full-default rounded-lg">
         <div>
-          <div className="flex items-center gap-1.5 capitalize text-4xl font-bold">
-            <FaPhoneAlt className="hidden md:block" />
-            <div className="font-medium text-balance">The Connection Code</div>
-          </div>
+          <Title icon={<FaPhoneAlt />} title="The Connection Code" />
 
           <p className="tracking-wide text-gray-50/50">
             Whispers of Code, Calls of Collaboration

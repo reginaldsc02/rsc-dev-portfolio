@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { FaDownload, FaFilePdf, FaUser } from "react-icons/fa";
 import { LinkButton } from "../ui/LinkButton";
+import { Title } from "../ui/Title";
 
 export const About = () => {
   return (
@@ -9,10 +10,7 @@ export const About = () => {
       className="my-5 p-2.5 flex flex-col lg:flex-row lg:items-start justify-between gap-2.5 border-y-default"
     >
       <div className="lg:w-1/2 lg:min-h-[600px] p-5 border-full-default rounded-lg">
-        <div className="mb-2.5 flex items-center gap-1.5 text-balance capitalize text-4xl font-bold">
-          <FaUser className="hidden md:block" />
-          <div className="font-medium">Between Logic & Lore</div>
-        </div>
+        <Title icon={<FaUser />} title="Between Logic & Lore" />
 
         <p className="mb-5 tracking-wide text-gray-50/50">
           The Brain Behind the Backend

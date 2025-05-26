@@ -1,23 +1,18 @@
 import { FaReact } from "react-icons/fa";
 import { knownSkills } from "@/data/knownSkills";
+import { Title } from "../ui/Title";
 
 export const Skills = () => {
   return (
     <section id="skills" className="my-5 p-2.5 border-y-default">
       <div className="w-full flex items-start justify-center flex-col p-2.5 border-y-default">
-        <div className="flex flex-col lg:flex-row lg:items-center justify-center gap-2.5">
-          <div className="flex items-center gap-1.5 text-balance capitalize text-4xl font-bold">
-            <FaReact className="hidden md:block animate-spin" />
-            <span className="font-medium">The Arsenal of Alchemy</span>
-            <FaReact className="hidden md:block animate-spin" />
-          </div>
+        <Title icon={<FaReact />} title="The Arsenal of Alchemy" />
 
-          <p className="italic tracking-wide text-gray-50/50">
-            Crafting Magic with Code & Craft
-          </p>
-        </div>
+        <p className="mb-5 tracking-wide text-gray-50/50">
+          Crafting Magic with Code & Craft
+        </p>
 
-        <p className="md:max-w-[95%] mt-5 tracking-wide text-gray-50/50">
+        <p className="md:max-w-[95%] tracking-wide text-gray-50/50">
           Behind every flawless system is a toolbox wielded with mastery and
           heart. From the quiet hum of backend servers to the rhythmic pulse of
           APIs, my skills are the sparks that ignite innovation and keep the

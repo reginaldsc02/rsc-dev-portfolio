@@ -1,22 +1,16 @@
 import { FaBriefcase } from "react-icons/fa";
 import { ProjectCard } from "./ProjectCard";
 import { backendProjectsList } from "@/data/backendProjectsList";
+import { Title } from "./Title";
 
 export const BackendProjects = () => {
   return (
     <>
       <div className="my-5 flex justify-between gap-10 text-balance border-full-default rounded-lg">
         <div className="p-5">
-          <div className="mb-2.5 flex items-center gap-1.5 capitalize text-3xl md:text-4xl font-bold">
-            <FaBriefcase className="hidden md:block" />
+          <Title icon={<FaBriefcase />} title="Engine Room Highlights" />
 
-            <div className="flex flex-col md:flex-row md:items-center gap-2.5">
-              <span className="font-medium">Engine Room Highlights</span>
-              <span className="text-sm font-bold uppercase">
-                Featured Projects
-              </span>
-            </div>
-          </div>
+          <p className="mb-5 tracking-wide font-bold">Featured Projects</p>
 
           <p className="tracking-wide text-gray-50/50">
             A collection of robust backend microservices and management systems
