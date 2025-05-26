@@ -4,6 +4,7 @@ import { Dispatch, SetStateAction } from "react";
 import Link from "next/link";
 import { HamburgerButton } from "../ui/HamburgerButton";
 import { BiCross, BiLogoGithub } from "react-icons/bi";
+import { LabeledIcon } from "../ui/LabeledIcon";
 
 export const Navigation = ({
   tag = "nav",
@@ -31,7 +32,7 @@ export const Navigation = ({
         isNavigationMenuOpen ? "translate-x-0" : "translate-x-full"
       } overflow-y-auto lg:overflow-y-hidden`}
     >
-      <div className="mb-5 py-2.5 px-5 pr-2.5 flex items-center justify-between border-b-default lg:hidden">
+      <div className="mb-5 py-2.5 px-5 pr-2.5 lg:hidden flex items-center justify-between border-b-default">
         <div className="text-lg">Menu</div>
 
         <HamburgerButton
@@ -52,12 +53,11 @@ export const Navigation = ({
                 setActive(item.url);
                 handleNavigationMenuOpen();
               }}
-              className={`mb-10 lg:mb-0 pb-5 lg:pb-0 flex items-center gap-1.5 cursor-pointer border-b-default lg:border-none hover:text-gray-50 group transition-colors duration-200 ease-linear ${
+              className={`mb-10 lg:mb-0 pb-5 lg:pb-0 block cursor-pointer border-b-default lg:border-none hover:text-gray-50 group transition-colors duration-200 ease-linear ${
                 active === item.url ? "text-primary" : "text-gray-50/50"
               }`}
             >
-              {item.icon}
-              <div className="group-active:scale-95">{item.title}</div>
+              <LabeledIcon icon={item.icon} label={item.title} />
             </ReactScrollLink>
           </li>
         ))}
