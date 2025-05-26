@@ -8,7 +8,7 @@ export const About = () => {
   return (
     <section
       id="about"
-      className="my-5 p-2.5 flex flex-col lg:flex-row lg:items-start justify-between gap-2.5 border-y-default"
+      className="p-2.5 flex flex-col lg:flex-row lg:items-start justify-between gap-2.5 border-y-default"
     >
       <div className="lg:w-1/2 lg:min-h-[600px] p-5 border-full-default rounded-lg">
         <SectionHeader

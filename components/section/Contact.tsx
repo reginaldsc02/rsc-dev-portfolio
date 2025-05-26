@@ -25,7 +25,7 @@ export const Contact = () => {
   };
 
   return (
-    <section id="contact" className="mt-16 p-5 border-t-default">
+    <section id="contact" className="mt-16 p-2.5 border-t-default">
       <div className="p-5 border-full-default rounded-lg">
         <SectionHeader
           icon={<FaPhoneAlt />}
