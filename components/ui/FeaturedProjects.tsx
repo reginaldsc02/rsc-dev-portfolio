@@ -8,7 +8,7 @@ import { PaddingInner } from "./PaddingInner";
 import { BorderControl } from "./BorderControl";
 import { BiSolidBriefcase } from "react-icons/bi";
 
-export const BackendProjects = () => {
+export const FeaturedProjects = () => {
   return (
     <div className="grid gap-2.5">
       <BorderControl borderFull isRounded>

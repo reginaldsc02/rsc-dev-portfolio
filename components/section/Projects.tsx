@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { BackendProjects } from "../ui/BackendProjects";
+import { FeaturedProjects } from "../ui/FeaturedProjects";
 import { BorderControl } from "../ui/BorderControl";
 import { PaddingOuter } from "../ui/PaddingOuter";
 import { PaddingInner } from "../ui/PaddingInner";
@@ -9,7 +9,7 @@ export const Projects = () => {
     <section id="projects" className="mt-16">
       <BorderControl borderY>
         <PaddingOuter>
-          <BackendProjects />
+          <FeaturedProjects />
 
           <div className="mt-2.5">
             <BorderControl borderFull isRounded>
