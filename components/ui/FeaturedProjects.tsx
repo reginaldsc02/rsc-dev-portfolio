@@ -43,6 +43,7 @@ export const FeaturedProjects = () => {
               repoName={project.repoName}
               description={project.description}
               programmingLanguage={project.programmingLanguage}
+              programmingLanguageIcon={project.programmingLanguageIcon}
             />
           </div>
         ))}
