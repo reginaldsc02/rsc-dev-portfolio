@@ -24,7 +24,7 @@ export const Button = ({
   }`;
 
   return (
-    <button type="button" className={buttonClass} {...rest}>
+    <button type="button" className={`w-fit ${buttonClass}`} {...rest}>
       <LabeledIcon
         icon={buttonIcon || <BiError />}
         label={buttonText || "Button Text"}
