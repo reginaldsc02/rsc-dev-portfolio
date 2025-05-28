@@ -85,7 +85,7 @@ export const ProjectCard = ({
               title={`Project language: ${
                 programmingLanguage || "Unknown programming language"
               }`}
-              className="p-0.5 bg-gray-300 rounded-sm"
+              className="p-0.5 bg-gray-50 rounded-sm"
             >
               <div className="text-2xl text-gray-950">
                 {programmingLanguageIcon || <BiError />}
