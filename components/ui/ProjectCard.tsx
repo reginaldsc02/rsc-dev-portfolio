@@ -4,9 +4,9 @@ import { LinkButton } from "./LinkButton";
 import { PaddingInner } from "./PaddingInner";
 import { LabeledIcon } from "./LabeledIcon";
 import {
+  BiError,
   BiLinkExternal,
   BiLogoGithub,
-  BiLogoJavascript,
   BiSolidBriefcase,
 } from "react-icons/bi";
 
@@ -18,6 +18,7 @@ type ProjectCardProps = {
   repoName: string;
   description: string;
   programmingLanguage: string;
+  programmingLanguageIcon?: React.ReactNode;
 };
 
 export const ProjectCard = ({
@@ -28,6 +29,7 @@ export const ProjectCard = ({
   repoName,
   description,
   programmingLanguage,
+  programmingLanguageIcon,
 }: ProjectCardProps) => {
   return (
     <div className="group bg-gray-900 rounded-lg">
@@ -83,9 +85,11 @@ export const ProjectCard = ({
               title={`Project language: ${
                 programmingLanguage || "Unknown programming language"
               }`}
-              className="p-0.5 bg-amber-300 rounded-sm"
+              className="p-0.5 bg-gray-300 rounded-sm"
             >
-              <BiLogoJavascript className="text-2xl text-gray-950" />
+              <div className="text-2xl text-gray-950">
+                {programmingLanguageIcon || <BiError />}
+              </div>
             </div>
 
             <div className="tracking-wide capitalize">
