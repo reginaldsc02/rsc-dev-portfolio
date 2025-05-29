@@ -1,4 +1,5 @@
 import { LabeledIcon } from "@/components/ui/LabeledIcon";
+import { MainContainer } from "@/components/ui/MainContainer";
 import { PaddingInner } from "@/components/ui/PaddingInner";
 import { PaddingOuter } from "@/components/ui/PaddingOuter";
 import Link from "next/link";
@@ -6,7 +7,7 @@ import { BiLeftArrow } from "react-icons/bi";
 
 export default function ResumePreview() {
   return (
-    <main className="w-full min-h-screen">
+    <MainContainer>
       <PaddingOuter>
         <Link
           href={"/"}
@@ -22,6 +23,6 @@ export default function ResumePreview() {
           className="w-full h-screen rounded-lg"
         ></iframe>
       </PaddingOuter>
-    </main>
+    </MainContainer>
   );
 }
