@@ -1,6 +1,7 @@
 import { BiError } from "react-icons/bi";
 import { LabeledIcon } from "./LabeledIcon";
 import { ButtonType } from "@/types/buttonType";
+import { buttonStyle } from "@/styles/buttonStyle";
 
 export const Button = ({
   buttonIcon,
@@ -8,18 +9,12 @@ export const Button = ({
   buttonIsPrimary = true,
   ...rest
 }: ButtonType & React.ComponentProps<"button">) => {
-  const primaryButtonStyle =
-    "text-gray-50 bg-primary hover:bg-gray-50 hover:text-gray-950 border-transparent";
-
-  const secondaryButtonStyle =
-    "text-gray-50/50 bg-transparent hover:border-gray-50 hover:text-gray-50 border-gray-50/50";
-
-  const buttonClass = `p-5 text-xl lowercase border-2 border-solid rounded-full transition-all duration-200 ease-linear cursor-pointer disabled:pointer-events-none disabled:opacity-25 ${
-    buttonIsPrimary ? primaryButtonStyle : secondaryButtonStyle
-  }`;
+  const buttonClass = buttonStyle.global.concat(
+    buttonIsPrimary ? buttonStyle.primary : buttonStyle.secondary
+  );
 
   return (
-    <button type="button" className={`w-fit ${buttonClass}`} {...rest}>
+    <button type="button" className={buttonClass} {...rest}>
       <LabeledIcon
         icon={buttonIcon || <BiError />}
         label={buttonText || "Button Text"}

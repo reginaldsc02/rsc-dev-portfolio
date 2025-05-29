@@ -2,6 +2,7 @@ import Link from "next/link";
 import { LabeledIcon } from "./LabeledIcon";
 import { BiError } from "react-icons/bi";
 import { ButtonType } from "@/types/buttonType";
+import { buttonStyle } from "@/styles/buttonStyle";
 
 export const LinkButton = ({
   buttonIcon,
@@ -10,22 +11,16 @@ export const LinkButton = ({
   buttonIsPrimary = true,
   ...rest
 }: ButtonType & React.ComponentProps<"a">) => {
-  const primaryButtonStyle =
-    "text-gray-50 bg-primary hover:bg-gray-50 hover:text-gray-950 border-transparent";
-
-  const secondaryButtonStyle =
-    "text-gray-50/50 bg-transparent hover:border-gray-50 hover:text-gray-50 border-gray-50/50";
-
-  const buttonClass = `p-5 text-xl lowercase border-2 border-solid rounded-full transition-all duration-200 ease-linear cursor-pointer disabled:pointer-events-none disabled:opacity-25 ${
-    buttonIsPrimary ? primaryButtonStyle : secondaryButtonStyle
-  }`;
+  const buttonClass = buttonStyle.global.concat(
+    buttonIsPrimary ? buttonStyle.primary : buttonStyle.secondary
+  );
 
   return (
     <Link
       href={buttonHref || "/"}
       target="_blank"
       rel="noreferrer"
-      className={`w-fit ${buttonClass}`}
+      className={buttonClass}
       {...rest}
     >
       <LabeledIcon
