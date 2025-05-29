@@ -1,13 +1,7 @@
 import Link from "next/link";
 import { LabeledIcon } from "./LabeledIcon";
 import { BiError } from "react-icons/bi";
-
-type LinkButtonProps = {
-  buttonIcon: React.ReactNode;
-  buttonText: string;
-  buttonHref: string;
-  buttonIsPrimary?: boolean;
-} & React.ComponentProps<"a">;
+import { ButtonType } from "@/types/buttonType";
 
 export const LinkButton = ({
   buttonIcon,
@@ -15,7 +9,7 @@ export const LinkButton = ({
   buttonHref,
   buttonIsPrimary = true,
   ...rest
-}: LinkButtonProps) => {
+}: ButtonType & React.ComponentProps<"a">) => {
   const primaryButtonStyle =
     "text-gray-50 bg-primary hover:bg-gray-50 hover:text-gray-950 border-transparent";
 

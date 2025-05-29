@@ -1,18 +1,13 @@
 import { BiError } from "react-icons/bi";
 import { LabeledIcon } from "./LabeledIcon";
-
-type ButtonProps = {
-  buttonIcon: React.ReactNode;
-  buttonText: string;
-  buttonIsPrimary?: boolean;
-} & React.ComponentProps<"button">;
+import { ButtonType } from "@/types/buttonType";
 
 export const Button = ({
   buttonIcon,
   buttonText,
   buttonIsPrimary = true,
   ...rest
-}: ButtonProps) => {
+}: ButtonType & React.ComponentProps<"button">) => {
   const primaryButtonStyle =
     "text-gray-50 bg-primary hover:bg-gray-50 hover:text-gray-950 border-transparent";
 
