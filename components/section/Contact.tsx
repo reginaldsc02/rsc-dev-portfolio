@@ -61,7 +61,7 @@ export const Contact = () => {
                         <Link
                           href={`mailto: ${email}`}
                           rel="noreferrer"
-                          className="font-medium text-gray-50/50 inline-block transition-all duration-200 ease-linear hover:text-gray-50 rounded-md"
+                          className="text-gray-50/50 inline-block transition-all duration-200 ease-linear hover:text-gray-50 rounded-md"
                         >
                           <LabeledIcon
                             icon={<BiSolidEnvelope />}
