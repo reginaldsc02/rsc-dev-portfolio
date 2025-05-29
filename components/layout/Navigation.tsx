@@ -36,7 +36,7 @@ export const Navigation = ({
         <div className="text-lg">Menu</div>
 
         <HamburgerButton
-          buttonIcon={<BiCross />}
+          icon={<BiCross />}
           aria-label="Close Menu"
           onClick={handleNavigationMenuOpen}
         />

@@ -55,7 +55,7 @@ export const Header = ({
       />
 
       <HamburgerButton
-        buttonIcon={<BiSolidDashboard />}
+        icon={<BiSolidDashboard />}
         aria-label="Open Menu"
         onClick={handleNavigationMenuOpen}
       />
