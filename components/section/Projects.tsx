@@ -3,6 +3,8 @@ import { FeaturedProjects } from "../ui/FeaturedProjects";
 import { BorderControl } from "../ui/BorderControl";
 import { PaddingOuter } from "../ui/PaddingOuter";
 import { PaddingInner } from "../ui/PaddingInner";
+import { LabeledIcon } from "../ui/LabeledIcon";
+import { BiBasket } from "react-icons/bi";
 
 export const Projects = () => {
   return (
@@ -17,7 +19,12 @@ export const Projects = () => {
                 href={"projects/all"}
                 className="flex items-center justify-center lowercase text-gray-50/50 hover:text-gray-50 transition-colors duration-200 ease-linear"
               >
-                <PaddingInner>View all projects</PaddingInner>
+                <PaddingInner>
+                  <LabeledIcon
+                    icon={<BiBasket />}
+                    label={"View all projects"}
+                  />
+                </PaddingInner>
               </Link>
             </BorderControl>
           </div>
