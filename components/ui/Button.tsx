@@ -6,12 +6,19 @@ import { buttonStyle } from "@/styles/buttonStyle";
 export const Button = ({
   icon,
   text,
+  isPill = false,
   isPrimary = true,
   ...rest
 }: ButtonType & React.ComponentProps<"button">) => {
-  const buttonClass = buttonStyle.global.concat(
+  const buttonIsMain = buttonStyle.global.main.concat(
     isPrimary ? buttonStyle.primary : buttonStyle.secondary
   );
+
+  const buttonIsPill = buttonStyle.global.pill.concat(
+    isPrimary ? buttonStyle.primary : buttonStyle.secondary
+  );
+
+  const buttonClass = isPill ? buttonIsPill : buttonIsMain;
 
   return (
     <button type="button" className={buttonClass} {...rest}>

@@ -8,13 +8,19 @@ export const LinkButton = ({
   icon,
   text,
   href,
+  isPill = false,
   isPrimary = true,
   ...rest
 }: ButtonType & React.ComponentProps<"a">) => {
-  const buttonClass = buttonStyle.global.concat(
+  const buttonIsMain = buttonStyle.global.main.concat(
     isPrimary ? buttonStyle.primary : buttonStyle.secondary
   );
 
+  const buttonIsPill = buttonStyle.global.pill.concat(
+    isPrimary ? buttonStyle.primary : buttonStyle.secondary
+  );
+
+  const buttonClass = isPill ? buttonIsPill : buttonIsMain;
   return (
     <Link
       href={href || "/"}
