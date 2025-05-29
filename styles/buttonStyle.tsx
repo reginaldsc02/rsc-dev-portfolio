@@ -1,8 +1,8 @@
 export const buttonStyle = {
   global: {
-    main: "w-fit p-5 text-xl lowercase border-2 border-solid rounded-full transition-all duration-200 ease-linear cursor-pointer disabled:pointer-events-none disabled:opacity-25",
+    main: "w-fit p-5 flex items-center text-xl lowercase border-2 border-solid rounded-full transition-all duration-200 ease-linear cursor-pointer disabled:pointer-events-none disabled:opacity-25",
 
-    pill: "w-fit py-2 px-2.5 text-xl lowercase border-2 border-solid rounded-full transition-all duration-200 ease-linear",
+    pill: "w-fit py-2 px-2.5 flex items-center text-xl lowercase border-2 border-solid rounded-full transition-all duration-200 ease-linear",
   },
 
   primary:
