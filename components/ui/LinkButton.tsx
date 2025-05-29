@@ -5,27 +5,27 @@ import { ButtonType } from "@/types/buttonType";
 import { buttonStyle } from "@/styles/buttonStyle";
 
 export const LinkButton = ({
-  buttonIcon,
-  buttonText,
-  buttonHref,
-  buttonIsPrimary = true,
+  icon,
+  text,
+  href,
+  isPrimary = true,
   ...rest
 }: ButtonType & React.ComponentProps<"a">) => {
   const buttonClass = buttonStyle.global.concat(
-    buttonIsPrimary ? buttonStyle.primary : buttonStyle.secondary
+    isPrimary ? buttonStyle.primary : buttonStyle.secondary
   );
 
   return (
     <Link
-      href={buttonHref || "/"}
+      href={href || "/"}
       target="_blank"
       rel="noreferrer"
       className={buttonClass}
       {...rest}
     >
       <LabeledIcon
-        icon={buttonIcon || <BiError />}
-        label={buttonText || "Button Text"}
+        icon={icon || <BiError />}
+        label={text || "Button Text"}
         animateIcon
       />
     </Link>

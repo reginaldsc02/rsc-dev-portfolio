@@ -74,8 +74,8 @@ export const Contact = () => {
                 </div>
 
                 <Button
-                  buttonIcon={<BiSolidEnvelope />}
-                  buttonText={"Let's Build Something"}
+                  icon={<BiSolidEnvelope />}
+                  text={"Let's Build Something"}
                   onClick={copyEmailToClipboard}
                 />
               </div>

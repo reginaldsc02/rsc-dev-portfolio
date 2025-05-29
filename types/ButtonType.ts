@@ -1,6 +1,6 @@
 export type ButtonType = {
-  buttonIcon: React.ReactNode;
-  buttonText: string;
-  buttonHref?: string;
-  buttonIsPrimary?: boolean;
+  icon: React.ReactNode;
+  text: string;
+  href?: string;
+  isPrimary?: boolean;
 };

@@ -50,17 +50,17 @@ export const About = () => {
 
               <div className="mt-5 flex flex-col sm:flex-row sm:items-center gap-5">
                 <LinkButton
-                  buttonIcon={<BiDownload />}
-                  buttonText="Download Resume"
-                  buttonHref="/documents/resume-reginald-chand.pdf"
+                  icon={<BiDownload />}
+                  text="Download Resume"
+                  href="/documents/resume-reginald-chand.pdf"
                   download
                 />
 
                 <LinkButton
-                  buttonIcon={<BiSolidFilePdf />}
-                  buttonText="Preview Resume"
-                  buttonHref="/documents/resume/"
-                  buttonIsPrimary={false}
+                  icon={<BiSolidFilePdf />}
+                  text="Preview Resume"
+                  href="/documents/resume/"
+                  isPrimary={false}
                   target="_self"
                 />
               </div>

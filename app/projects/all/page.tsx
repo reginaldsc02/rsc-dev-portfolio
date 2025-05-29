@@ -48,9 +48,9 @@ export default function AllProjects() {
                 <div className="w-fit max-[580px]:w-full sm:w-full flex max-[580px]:flex-col items-center justify-between gap-5">
                   <div className="w-fit flex flex-col lg:flex-row items-center gap-5">
                     <Button
-                      buttonIcon={<BiDesktop />}
-                      buttonText={"Frontend Projects"}
-                      buttonIsPrimary={false}
+                      icon={<BiDesktop />}
+                      text={"Frontend Projects"}
+                      isPrimary={false}
                       disabled={
                         projectCategory === projectCategories.frontendProjects
                       }
@@ -60,9 +60,9 @@ export default function AllProjects() {
                     />
 
                     <Button
-                      buttonIcon={<BiServer />}
-                      buttonText={"Backend Projects"}
-                      buttonIsPrimary={false}
+                      icon={<BiServer />}
+                      text={"Backend Projects"}
+                      isPrimary={false}
                       disabled={
                         projectCategory === projectCategories.backendProjects
                       }
@@ -73,10 +73,10 @@ export default function AllProjects() {
                   </div>
 
                   <LinkButton
-                    buttonIcon={<BiHomeSmile />}
-                    buttonText={"Go back to home"}
-                    buttonHref={"/"}
-                    buttonIsPrimary={false}
+                    icon={<BiHomeSmile />}
+                    text={"Go back to home"}
+                    href={"/"}
+                    isPrimary={false}
                     target="_self"
                   />
                 </div>

@@ -71,9 +71,9 @@ export const ProjectCard = ({
           </p>
 
           <LinkButton
-            buttonIcon={<BiLogoGithub />}
-            buttonText="View Source Code"
-            buttonHref={link}
+            icon={<BiLogoGithub />}
+            text="View Source Code"
+            href={link}
           />
 
           <div className="flex items-center gap-1.5">

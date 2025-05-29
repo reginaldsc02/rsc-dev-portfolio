@@ -4,20 +4,20 @@ import { ButtonType } from "@/types/buttonType";
 import { buttonStyle } from "@/styles/buttonStyle";
 
 export const Button = ({
-  buttonIcon,
-  buttonText,
-  buttonIsPrimary = true,
+  icon,
+  text,
+  isPrimary = true,
   ...rest
 }: ButtonType & React.ComponentProps<"button">) => {
   const buttonClass = buttonStyle.global.concat(
-    buttonIsPrimary ? buttonStyle.primary : buttonStyle.secondary
+    isPrimary ? buttonStyle.primary : buttonStyle.secondary
   );
 
   return (
     <button type="button" className={buttonClass} {...rest}>
       <LabeledIcon
-        icon={buttonIcon || <BiError />}
-        label={buttonText || "Button Text"}
+        icon={icon || <BiError />}
+        label={text || "Button Text"}
         animateIcon
       />
     </button>

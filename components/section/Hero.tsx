@@ -78,7 +78,7 @@ export const Hero = ({
                 spy
                 onClick={() => setActive("projects")}
               >
-                <Button buttonIcon={<BiSearch />} buttonText="View Projects" />
+                <Button icon={<BiSearch />} text="View Projects" />
               </Link>
             </div>
           </BorderControl>
