@@ -1,6 +1,6 @@
 import { BiError } from "react-icons/bi";
 import { LabeledIcon } from "./LabeledIcon";
-import { ButtonType } from "@/types/buttonType";
+import { ButtonType } from "@/custom_types/ButtonType";
 import { buttonStyle } from "@/styles/buttonStyle";
 
 export const Button = ({

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { LabeledIcon } from "./LabeledIcon";
 import { BiError } from "react-icons/bi";
-import { ButtonType } from "@/types/buttonType";
+import { ButtonType } from "@/custom_types/ButtonType";
 import { buttonStyle } from "@/styles/buttonStyle";
 
 export const LinkButton = ({
