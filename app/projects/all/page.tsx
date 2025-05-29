@@ -44,42 +44,47 @@ export default function AllProjects() {
         <PaddingOuter>
           <BorderControl borderFull isRounded>
             <PaddingOuter>
-              <div>
-                <div className="w-fit max-[580px]:w-full sm:w-full flex max-[580px]:flex-col items-center justify-between gap-5">
-                  <div className="w-fit flex flex-col lg:flex-row items-center gap-5">
-                    <Button
-                      icon={<BiDesktop />}
-                      text={"Frontend Projects"}
-                      isPrimary={false}
-                      disabled={
-                        projectCategory === projectCategories.frontendProjects
-                      }
-                      onClick={() =>
-                        setProjectCategory(projectCategories.frontendProjects)
-                      }
-                    />
+              <div className="flex max-[450px]:flex-col items-center md:justify-between gap-2.5">
+                <div className="w-[90%] flex items-center max-[450px]:justify-center flex-wrap gap-2.5">
+                  <Button
+                    icon={<BiDesktop />}
+                    text={"frontend"}
+                    isPill
+                    isPrimary={
+                      projectCategory !== projectCategories.frontendProjects
+                    }
+                    onClick={() =>
+                      setProjectCategory(projectCategories.frontendProjects)
+                    }
+                    disabled={
+                      projectCategory === projectCategories.frontendProjects
+                    }
+                  />
 
-                    <Button
-                      icon={<BiServer />}
-                      text={"Backend Projects"}
-                      isPrimary={false}
-                      disabled={
-                        projectCategory === projectCategories.backendProjects
-                      }
-                      onClick={() =>
-                        setProjectCategory(projectCategories.backendProjects)
-                      }
-                    />
-                  </div>
-
-                  <LinkButton
-                    icon={<BiHomeSmile />}
-                    text={"Go back to home"}
-                    href={"/"}
-                    isPrimary={false}
-                    target="_self"
+                  <Button
+                    icon={<BiServer />}
+                    text={"backend"}
+                    isPill
+                    isPrimary={
+                      projectCategory !== projectCategories.backendProjects
+                    }
+                    onClick={() =>
+                      setProjectCategory(projectCategories.backendProjects)
+                    }
+                    disabled={
+                      projectCategory === projectCategories.backendProjects
+                    }
                   />
                 </div>
+
+                <LinkButton
+                  icon={<BiHomeSmile />}
+                  text="home"
+                  href="/"
+                  isPill
+                  isPrimary={false}
+                  target="_self"
+                />
               </div>
             </PaddingOuter>
           </BorderControl>
