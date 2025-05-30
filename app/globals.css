@@ -3,24 +3,22 @@
 :root {
   --background: #030712;
   --foreground: #f9fafb;
-  color-scheme: dark;
-
-  /* Custom Variables */
   --rsc-primary: #4f46e5;
+  --rsc-spacing-default-10px: 0.625rem;
+  --rsc-spacing-default-50px: 3.125rem;
   --rsc-tw-gray-50-opacity-10: #f9fafb10;
+  color-scheme: dark;
 }
 
 @theme inline {
+  --color-primary: var(--rsc-primary);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --spacing-default-10px: var(--rsc-spacing-default-10px);
+  --spacing-default-50px: var(--rsc-spacing-default-50px);
 
-  /* Custom Styles */
-  /* Color Palettes */
-  --color-primary: var(--rsc-primary);
-
-  /* Animations */
   --animate-fade-in: fade-in 1s linear forwards;
 
   @keyframes fade-in {
