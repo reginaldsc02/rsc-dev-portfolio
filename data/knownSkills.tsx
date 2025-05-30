@@ -33,6 +33,7 @@ import {
 import {
   SiArchlinux,
   SiCanva,
+  SiClerk,
   SiCplusplus,
   SiExpress,
   SiFedora,
@@ -40,6 +41,8 @@ import {
   SiLinux,
   SiMongodb,
   SiMongoose,
+  SiMysql,
+  SiPrisma,
   SiStyledcomponents,
   SiTypescript,
 } from "react-icons/si";
@@ -115,6 +118,24 @@ export const knownSkills = [
     title: "MongoDB",
     icon: <BiLogoMongodb />,
     id: "@mongodb",
+  },
+
+  {
+    title: "MySQL",
+    icon: <SiMysql />,
+    id: "@mysql",
+  },
+
+  {
+    title: "Prisma ORM",
+    icon: <SiPrisma />,
+    id: "@prismaorm",
+  },
+
+  {
+    title: "Clerk",
+    icon: <SiClerk />,
+    id: "@clerk",
   },
 
   {
