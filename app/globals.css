@@ -30,8 +30,8 @@
   --spacing-spacing-default-10px: var(--rsc-spacing-default-10px);
   --spacing-spacing-default-20px: var(--rsc-spacing-default-20px);
 
-  --radius-card-default-8px: var(--rsc-border-radius-default-8px);
-  --radius-border-default-8px: var(--rsc-border-radius-default-8px);
+  --radius-default-8px: var(--rsc-border-radius-default-8px);
+  --radius-default-8px: var(--rsc-border-radius-default-8px);
 
   --default-transition-duration: 200ms;
   --default-transition-timing-function: linear;
