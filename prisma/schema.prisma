@@ -8,10 +8,11 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model TechJournalEntry {
+model techjournalentry {
   id         Int       @id @default(autoincrement())
   title      String    @db.VarChar(255)
   summary    String    @db.Text
   created_at DateTime? @default(now()) @db.Timestamp(0)
   updated_at DateTime? @default(now()) @db.Timestamp(0)
+  slug       String?   @db.VarChar(255)
 }
