@@ -13,7 +13,7 @@ export const Projects = () => {
 
       <Link
         href={"projects/all"}
-        className="mt-spacing-default-10px flex items-center justify-center lowercase border-full-default rounded-lg text-default-opacity-50 hover:text-default transition-colors duration-200 ease-linear"
+        className="mt-spacing-default-10px flex items-center justify-center lowercase border-full-default rounded-default-8px text-default-opacity-50 hover:text-default transition-colors"
       >
         <div className="p-spacing-default-20px">
           <LabeledIcon icon={<BiBasket />} label={"View all projects"} />

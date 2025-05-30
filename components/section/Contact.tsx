@@ -30,7 +30,7 @@ export const Contact = () => {
       id="contact"
       className="mt-16 p-spacing-default-10px border-t-default"
     >
-      <div className="p-spacing-default-20px border-full-default rounded-lg">
+      <div className="p-spacing-default-20px border-full-default rounded-default-8px">
         <SectionHeader
           icon={<BiSolidPhone />}
           title="The Connection Code"
@@ -54,7 +54,7 @@ export const Contact = () => {
           <Link
             href={`mailto: ${email}`}
             rel="noreferrer"
-            className="text-default-opacity-50 inline-block transition-all duration-200 ease-linear hover:text-default rounded-md"
+            className="text-default-opacity-50 inline-block transition-all hover:text-default rounded-md"
           >
             <LabeledIcon icon={<BiSolidEnvelope />} label={email} />
           </Link>

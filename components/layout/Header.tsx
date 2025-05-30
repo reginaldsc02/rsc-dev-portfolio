@@ -31,8 +31,8 @@ export const Header = ({
           className="cursor-pointer group"
         >
           <div className="flex items-center gap-2">
-            <div className="p-2.5 border-2 border-solid border-gray-100/25 group-hover:border-gray-50 rounded-full transition-all duration-200 ease-linear">
-              <BiSolidUserAccount className="text-gray-50/50 group-hover:text-gray-50 transition-colors duration-200 ease-linear" />
+            <div className="p-spacing-default-10px border-2 border-solid border-gray-100/25 group-hover:border-default rounded-full transition-all">
+              <BiSolidUserAccount className="text-default-opacity-50 group-hover:text-default transition-colors" />
             </div>
 
             <div className="text-xl lowercase">{logoName || "Logo Name"}</div>

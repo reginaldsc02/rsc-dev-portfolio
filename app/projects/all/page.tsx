@@ -39,7 +39,7 @@ export default function AllProjects() {
   return (
     <MainContainer>
       <div className="p-spacing-default-10px border-b-default">
-        <div className="p-spacing-default-10px flex max-[450px]:flex-col items-center md:justify-between gap-spacing-default-10px border-full-default rounded-lg">
+        <div className="p-spacing-default-10px flex max-[450px]:flex-col items-center md:justify-between gap-spacing-default-10px border-full-default rounded-default-8px">
           <div className="w-[90%] flex items-center max-[450px]:justify-center flex-wrap gap-spacing-default-10px">
             <Button
               icon={<BiDesktop />}

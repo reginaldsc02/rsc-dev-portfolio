@@ -30,7 +30,7 @@ export const Footer = ({
             href={"https://github.com/reginaldsc02"}
             target="_blank"
             rel="noreferrer"
-            className="font-semibold hover:text-default transition-colors duration-200 ease-linear"
+            className="font-semibold hover:text-default transition-colors"
           >
             Reginald Sahil Chand
           </Link>{" "}
@@ -44,7 +44,7 @@ export const Footer = ({
       </div>
 
       <div className="p-spacing-default-10px border-y-default">
-        <div className="w-full p-spacing-default-20px flex flex-col md:flex-row md:items-center md:justify-between gap-spacing-default-20px border-full-default rounded-lg">
+        <div className="w-full p-spacing-default-20px flex flex-col md:flex-row md:items-center md:justify-between gap-spacing-default-20px border-full-default rounded-default-8px">
           <ReactScrollLink
             to="hero"
             smooth
@@ -65,7 +65,7 @@ export const Footer = ({
                 target="_blank"
                 rel="noreferrer"
                 key={item.id}
-                className="hover:text-default transition-colors duration-200 ease-linear"
+                className="hover:text-default transition-colors"
               >
                 <LabeledIcon icon={item.icon} label={item.title} />
               </Link>

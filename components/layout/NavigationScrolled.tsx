@@ -20,11 +20,11 @@ export const NavigationScrolled = ({
 }) => {
   return (
     <div
-      className={`w-fit lg:mx-auto lg:py-2.5 lg:pl-5 ${
+      className={`w-fit lg:mx-auto lg:py-spacing-default-10px lg:pl-spacing-default-20px ${
         isIntersecting
           ? "opacity-100 pointer-events-auto"
           : "opacity-0 pointer-events-none"
-      } fixed bottom-5 lg:left-0 right-5 lg:right-0 border-2 border-solid border-gray-50/10 bg-gray-950 rounded-lg z-30 transition-opacity duration-200 ease-linear`}
+      } fixed bottom-spacing-default-20px lg:left-0 right-spacing-default-20px lg:right-0 border-2 border-solid border-gray-50/10 bg-gray-950 rounded-default-8px z-30 transition-opacity`}
     >
       <HamburgerButton
         icon={<BiSolidDashboard />}

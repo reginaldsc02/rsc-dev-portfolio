@@ -9,7 +9,7 @@ import { BiSolidBriefcase } from "react-icons/bi";
 export const FeaturedProjects = () => {
   return (
     <div className="grid gap-spacing-default-10px">
-      <div className="p-spacing-default-20px border-full-default rounded-lg">
+      <div className="p-spacing-default-20px border-full-default rounded-default-8px">
         <SectionHeader
           icon={<BiSolidBriefcase />}
           title="Engine Room Highlights"

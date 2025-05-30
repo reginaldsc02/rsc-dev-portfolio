@@ -10,7 +10,7 @@ export const About = () => {
       id="about"
       className="grid lg:grid-cols-2 gap-spacing-default-10px p-spacing-default-10px"
     >
-      <div className="p-spacing-default-20px border-full-default rounded-lg">
+      <div className="p-spacing-default-20px border-full-default rounded-default-8px">
         <SectionHeader
           icon={<BiSolidUser />}
           title="Between Logic & Lore"
@@ -69,7 +69,7 @@ export const About = () => {
           alt="Reginald Sahil Chand"
           width={500}
           height={500}
-          className="w-full h-full object-center object-cover filter grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all duration-200 ease-linear rounded-lg"
+          className="w-full h-full object-center object-cover filter grayscale opacity-40 hover:grayscale-0 hover:opacity-100 transition-all rounded-default-8px"
         />
       </div>
     </section>

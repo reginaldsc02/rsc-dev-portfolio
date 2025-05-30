@@ -19,7 +19,7 @@ export const CustomCursor = () => {
   return (
     <div
       ref={customCursorRef}
-      className="hidden md:block w-5 h-5 absolute bg-gray-600 rounded-full transition-all duration-200 ease-linear animate-bounce -z-10"
+      className="hidden md:block w-5 h-5 absolute bg-gray-600 rounded-full transition-all animate-bounce -z-10"
     >
       <div className="w-spacing-default-10px h-spacing-default-10px bg-gray-500 rounded-full animate-ping"></div>
     </div>

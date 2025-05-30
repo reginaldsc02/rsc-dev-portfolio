@@ -28,10 +28,10 @@ export const Skills = () => {
         </SectionParagraph>
       </div>
 
-      <ul className="mt-spacing-default-10px p-spacing-default-10px border-full-default rounded-lg grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-spacing-default-10px">
+      <ul className="mt-spacing-default-10px p-spacing-default-10px border-full-default rounded-default-8px grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-spacing-default-10px">
         {knownSkills.map((skill) => (
           <li
-            className={`w-full p-spacing-default-20px border-full-default rounded-lg`}
+            className={`w-full p-spacing-default-20px border-full-default rounded-default-8px`}
             key={skill.id}
           >
             <LabeledIcon icon={skill.icon} label={skill.title} isLargeIcon />

@@ -31,14 +31,14 @@ export const ProjectCard = ({
   programmingLanguageIcon,
 }: ProjectCardProps) => {
   return (
-    <div className="group bg-gray-900 rounded-lg">
+    <div className="group bg-gray-900 rounded-default-8px">
       <div className="w-full aspect-video relative">
         <Image
           src={imageSrc}
           alt={imageAltText || "Image description not available"}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          className="object-cover object-top rounded-t-lg filter group-hover:saturate-200 transition-all duration-200 ease-linear"
+          className="object-cover object-top rounded-t-lg filter group-hover:saturate-200 transition-all"
         />
       </div>
 
@@ -55,7 +55,7 @@ export const ProjectCard = ({
             href={link || "/"}
             target="_blank"
             rel="noreferrer"
-            className="lowercase text-default-opacity-50 hover:text-default transition-colors duration-200 ease-linear"
+            className="lowercase text-default-opacity-50 hover:text-default transition-colors"
           >
             <LabeledIcon
               icon={<BiLinkExternal />}
