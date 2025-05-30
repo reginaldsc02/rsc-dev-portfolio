@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --background: #030712;
-  --foreground: #f9fafb;
-  --rsc-primary: #4f46e5;
-  --rsc-tw-gray-50: #f9fafb;
-  --rsc-tw-gray-50-opacity-10: #f9fafb10;
-  --rsc-tw-gray-50-opacity-50: #f9fafb50;
+  --background: rgba(3, 7, 18, 1);
+  --foreground: rgba(249, 250, 251, 1);
+  --rsc-primary: rgba(79, 70, 229, 1);
+  --rsc-tw-gray-50: rgba(249, 250, 251, 1);
+  --rsc-tw-gray-50-opacity-10: rgba(249, 250, 251, 0.08);
+  --rsc-tw-gray-50-opacity-50: rgba(249, 250, 251, 0.5);
   color-scheme: dark;
 
   --rsc-spacing-default-6px: 0.375rem;
