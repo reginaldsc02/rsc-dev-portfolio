@@ -28,6 +28,9 @@
   --spacing-spacing-default-10px: var(--rsc-spacing-default-10px);
   --spacing-spacing-default-20px: var(--rsc-spacing-default-20px);
 
+  --default-transition-duration: 200ms;
+  --default-transition-timing-function: linear;
+
   --animate-fade-in: fade-in 1s linear forwards;
 
   @keyframes fade-in {
