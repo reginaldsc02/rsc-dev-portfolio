@@ -13,9 +13,9 @@ export const SectionHeader = ({
   return (
     <>
       <Title icon={icon} title={title} />
-      <div className="mb-2.5"></div>
+      <div className="mb-spacing-default-10px"></div>
       <Subtitle subtitle={subtitle} />
-      <div className="mb-5"></div>
+      <div className="mb-spacing-default-20px"></div>
     </>
   );
 };

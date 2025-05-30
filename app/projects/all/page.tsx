@@ -1,10 +1,8 @@
 "use client";
 
-import { BorderControl } from "@/components/ui/BorderControl";
 import { Button } from "@/components/ui/Button";
 import { LinkButton } from "@/components/ui/LinkButton";
 import { MainContainer } from "@/components/ui/MainContainer";
-import { PaddingOuter } from "@/components/ui/PaddingOuter";
 import { ProjectCard } from "@/components/ui/ProjectCard";
 import { ThreeColumnGrid } from "@/components/ui/ThreeColumnGrid";
 import { backendProjectsList } from "@/data/backendProjectsList";
@@ -40,58 +38,44 @@ export default function AllProjects() {
 
   return (
     <MainContainer>
-      <BorderControl borderBottom>
-        <PaddingOuter>
-          <BorderControl borderFull isRounded>
-            <PaddingOuter>
-              <div className="flex max-[450px]:flex-col items-center md:justify-between gap-2.5">
-                <div className="w-[90%] flex items-center max-[450px]:justify-center flex-wrap gap-2.5">
-                  <Button
-                    icon={<BiDesktop />}
-                    text={"frontend"}
-                    isPill
-                    isPrimary={
-                      projectCategory !== projectCategories.frontendProjects
-                    }
-                    onClick={() =>
-                      setProjectCategory(projectCategories.frontendProjects)
-                    }
-                    disabled={
-                      projectCategory === projectCategories.frontendProjects
-                    }
-                  />
+      <div className="p-spacing-default-10px border-b-default">
+        <div className="p-spacing-default-10px flex max-[450px]:flex-col items-center md:justify-between gap-spacing-default-10px border-full-default rounded-lg">
+          <div className="w-[90%] flex items-center max-[450px]:justify-center flex-wrap gap-spacing-default-10px">
+            <Button
+              icon={<BiDesktop />}
+              text={"frontend"}
+              isPill
+              isPrimary={projectCategory !== projectCategories.frontendProjects}
+              onClick={() =>
+                setProjectCategory(projectCategories.frontendProjects)
+              }
+              disabled={projectCategory === projectCategories.frontendProjects}
+            />
 
-                  <Button
-                    icon={<BiServer />}
-                    text={"backend"}
-                    isPill
-                    isPrimary={
-                      projectCategory !== projectCategories.backendProjects
-                    }
-                    onClick={() =>
-                      setProjectCategory(projectCategories.backendProjects)
-                    }
-                    disabled={
-                      projectCategory === projectCategories.backendProjects
-                    }
-                  />
-                </div>
+            <Button
+              icon={<BiServer />}
+              text={"backend"}
+              isPill
+              isPrimary={projectCategory !== projectCategories.backendProjects}
+              onClick={() =>
+                setProjectCategory(projectCategories.backendProjects)
+              }
+              disabled={projectCategory === projectCategories.backendProjects}
+            />
+          </div>
 
-                <LinkButton
-                  icon={<BiHomeSmile />}
-                  text="home"
-                  href="/"
-                  isPill
-                  isPrimary={false}
-                  target="_self"
-                />
-              </div>
-            </PaddingOuter>
-          </BorderControl>
-        </PaddingOuter>
-      </BorderControl>
+          <LinkButton
+            icon={<BiHomeSmile />}
+            text="home"
+            href="/"
+            isPill
+            isPrimary={false}
+            target="_self"
+          />
+        </div>
+      </div>
 
-      <PaddingOuter>
+      <div className="p-spacing-default-10px">
         <ThreeColumnGrid>
           {project.map((project) => (
             <div key={project.id}>
@@ -108,7 +92,7 @@ export default function AllProjects() {
             </div>
           ))}
         </ThreeColumnGrid>
-      </PaddingOuter>
+      </div>
     </MainContainer>
   );
 }

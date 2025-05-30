@@ -16,7 +16,7 @@ export const LabeledIcon = ({
   } ${isLargeIcon ? "text-2xl" : "text-inherit"}`;
 
   return (
-    <div className="flex items-center gap-1.5">
+    <div className="flex items-center gap-spacing-default-6px">
       <div className={iconClass}>{icon || <BiError />}</div>
       <div>{label || "Icon Label"}</div>
     </div>

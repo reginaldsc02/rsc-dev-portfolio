@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { LinkButton } from "./LinkButton";
-import { PaddingInner } from "./PaddingInner";
 import { LabeledIcon } from "./LabeledIcon";
 import {
   BiError,
@@ -43,61 +42,59 @@ export const ProjectCard = ({
         />
       </div>
 
-      <PaddingInner>
-        <div className="grid gap-5">
-          <div>
-            <div className="text-xl font-bold capitalize">
-              <LabeledIcon
-                icon={<BiSolidBriefcase />}
-                label={title || "Project title"}
-              />
-            </div>
-
-            <Link
-              href={link || "/"}
-              target="_blank"
-              rel="noreferrer"
-              className="lowercase text-gray-50/50 hover:text-gray-50 transition-colors duration-200 ease-linear"
-            >
-              <LabeledIcon
-                icon={<BiLinkExternal />}
-                label={repoName || "project-repository-name"}
-              />
-            </Link>
+      <div className="grid gap-spacing-default-20px p-spacing-default-20px">
+        <div>
+          <div className="text-xl font-bold capitalize">
+            <LabeledIcon
+              icon={<BiSolidBriefcase />}
+              label={title || "Project title"}
+            />
           </div>
 
-          <p className="lg:max-w-[800px] xl:max-w-[420px] xl:h-[100px] text-gray-50/70">
-            {description || "Project description"}
-          </p>
+          <Link
+            href={link || "/"}
+            target="_blank"
+            rel="noreferrer"
+            className="lowercase text-default-opacity-50 hover:text-default transition-colors duration-200 ease-linear"
+          >
+            <LabeledIcon
+              icon={<BiLinkExternal />}
+              label={repoName || "project-repository-name"}
+            />
+          </Link>
+        </div>
 
-          <LinkButton
-            icon={<BiLogoGithub />}
-            text="View Source Code"
-            href={link}
-          />
+        <p className="lg:max-w-[800px] xl:max-w-[420px] xl:h-[100px] text-gray-50/70">
+          {description || "Project description"}
+        </p>
 
-          <div className="flex items-center gap-1.5">
-            <div
-              role="img"
-              aria-label={`Project language: ${
-                programmingLanguage || "Unknown programming language"
-              }`}
-              title={`Project language: ${
-                programmingLanguage || "Unknown programming language"
-              }`}
-              className="p-0.5 bg-gray-50 rounded-sm"
-            >
-              <div className="text-2xl text-gray-950">
-                {programmingLanguageIcon || <BiError />}
-              </div>
+        <LinkButton
+          icon={<BiLogoGithub />}
+          text="View Source Code"
+          href={link}
+        />
+
+        <div className="flex items-center gap-spacing-default-6px">
+          <div
+            role="img"
+            aria-label={`Project language: ${
+              programmingLanguage || "Unknown programming language"
+            }`}
+            title={`Project language: ${
+              programmingLanguage || "Unknown programming language"
+            }`}
+            className="p-0.5 bg-default rounded-sm"
+          >
+            <div className="text-2xl text-gray-950">
+              {programmingLanguageIcon || <BiError />}
             </div>
+          </div>
 
-            <div className="tracking-wide capitalize">
-              {programmingLanguage || "Project programming language"}
-            </div>
+          <div className="tracking-wide capitalize">
+            {programmingLanguage || "Project programming language"}
           </div>
         </div>
-      </PaddingInner>
+      </div>
     </div>
   );
 };

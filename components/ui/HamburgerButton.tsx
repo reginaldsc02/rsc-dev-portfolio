@@ -8,7 +8,7 @@ export const HamburgerButton = ({ icon, ...rest }: HamburgerButtonProps) => {
   return (
     <button
       aria-label="Hamburger Button"
-      className="lg:hidden p-2.5 cursor-pointer rounded-full text-gray-50/50 hover:text-gray-50 transition-colors duration-200 ease-linear"
+      className="lg:hidden p-spacing-default-10px cursor-pointer rounded-full text-default-opacity-50 hover:text-default transition-colors duration-200 ease-linear"
       {...rest}
     >
       <div className="text-2xl">{icon || <BiError />}</div>
