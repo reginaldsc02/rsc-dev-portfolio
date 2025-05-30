@@ -10,7 +10,7 @@
   --rsc-spacing-default-1px: 0.0625rem;
   --rsc-spacing-default-6px: 0.375rem;
   --rsc-spacing-default-10px: 0.625rem;
-  --rsc-spacing-default-50px: 3.125rem;
+  --rsc-spacing-default-20px: 1.25rem;
 }
 
 @theme inline {
@@ -25,7 +25,7 @@
   --border-spacing-default-1px: var(--rsc-spacing-default-1px);
   --spacing-spacing-default-6px: var(--rsc-spacing-default-6px);
   --spacing-spacing-default-10px: var(--rsc-spacing-default-10px);
-  --spacing-spacing-default-50px: var(--rsc-spacing-default-50px);
+  --spacing-spacing-default-20px: var(--rsc-spacing-default-20px);
 
   --animate-fade-in: fade-in 1s linear forwards;
 
