@@ -16,8 +16,8 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-  --spacing-default-10px: var(--rsc-spacing-default-10px);
-  --spacing-default-50px: var(--rsc-spacing-default-50px);
+  --spacing-spacing-default-10px: var(--rsc-spacing-default-10px);
+  --spacing-spacing-default-50px: var(--rsc-spacing-default-50px);
 
   --animate-fade-in: fade-in 1s linear forwards;
 
