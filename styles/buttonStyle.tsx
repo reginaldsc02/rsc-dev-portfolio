@@ -1,6 +1,6 @@
 export const buttonStyle = {
   global: {
-    main: "w-fit p-spacing-default-20px flex items-center text-xl lowercase border-2 border-solid rounded-full transition-all duration-200 ease-linear cursor-pointer disabled:pointer-events-none disabled:opacity-25",
+    main: "w-fit px-spacing-default-20px md:py-spacing-default-20px py-spacing-default-10px flex items-center text-xl lowercase border-2 border-solid rounded-full transition-all duration-200 ease-linear cursor-pointer disabled:pointer-events-none disabled:opacity-25",
 
     pill: "w-fit py-2 px-spacing-default-10px flex items-center text-xl lowercase border-2 border-solid rounded-full transition-all duration-200 ease-linear",
   },
