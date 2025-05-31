@@ -10,9 +10,10 @@ export const SectionHeader = ({
 }) => {
   return (
     <>
-      <Title title={title} />
-      <div className="mb-spacing-default-10px"></div>
-      <Subtitle subtitle={subtitle} />
+      <div className="grid gap-0.5">
+        <Title title={title} />
+        <Subtitle subtitle={subtitle} />
+      </div>
       <div className="mb-spacing-default-20px"></div>
     </>
   );
