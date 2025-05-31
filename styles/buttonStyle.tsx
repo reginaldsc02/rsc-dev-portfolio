@@ -6,8 +6,8 @@ export const buttonStyle = {
   },
 
   primary:
-    "text-default bg-primary hover:bg-default hover:text-gray-950 border-transparent cursor-pointer disabled:pointer-events-none disabled:opacity-25",
+    "text-default bg-primary hover:bg-transparent hover:border-default border-transparent cursor-pointer disabled:pointer-events-none disabled:opacity-25",
 
   secondary:
-    "text-default-opacity-50 bg-transparent hover:border-default hover:text-default border-default-opacity-50 cursor-pointer disabled:pointer-events-none disabled:opacity-25",
+    "text-default-opacity-50 bg-transparent hover:border-primary hover:text-default border-default cursor-pointer disabled:pointer-events-none disabled:opacity-25",
 };
