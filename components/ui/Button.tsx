@@ -1,10 +1,7 @@
-import { BiError } from "react-icons/bi";
-import { LabeledIcon } from "./LabeledIcon";
 import { ButtonType } from "@/custom_types/ButtonType";
 import { buttonStyle } from "@/styles/buttonStyle";
 
 export const Button = ({
-  icon,
   text,
   isPill = false,
   isPrimary = true,
@@ -22,11 +19,7 @@ export const Button = ({
 
   return (
     <button type="button" className={buttonClass} {...rest}>
-      <LabeledIcon
-        icon={icon || <BiError />}
-        label={text || "Button Text"}
-        animateIcon
-      />
+      {text || "Button Text"}
     </button>
   );
 };

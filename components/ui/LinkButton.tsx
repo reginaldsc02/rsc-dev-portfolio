@@ -1,11 +1,8 @@
 import Link from "next/link";
-import { LabeledIcon } from "./LabeledIcon";
-import { BiError } from "react-icons/bi";
 import { ButtonType } from "@/custom_types/ButtonType";
 import { buttonStyle } from "@/styles/buttonStyle";
 
 export const LinkButton = ({
-  icon,
   text,
   href,
   isPill = false,
@@ -29,11 +26,7 @@ export const LinkButton = ({
       className={buttonClass}
       {...rest}
     >
-      <LabeledIcon
-        icon={icon || <BiError />}
-        label={text || "Button Text"}
-        animateIcon
-      />
+      {text || "Button Text"}
     </Link>
   );
 };

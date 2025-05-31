@@ -2,22 +2,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { LinkButton } from "./LinkButton";
 import { LabeledIcon } from "./LabeledIcon";
-import {
-  BiError,
-  BiLinkExternal,
-  BiLogoGithub,
-  BiSolidBriefcase,
-} from "react-icons/bi";
+import { BiLinkExternal } from "react-icons/bi";
 
-type ProjectCardProps = {
+type ProjectCardType = {
   imageSrc: string;
   imageAltText: string;
   title: string;
   link: string;
   repoName: string;
   description: string;
-  programmingLanguage: string;
-  programmingLanguageIcon?: React.ReactNode;
 };
 
 export const ProjectCard = ({
@@ -27,11 +20,9 @@ export const ProjectCard = ({
   link,
   repoName,
   description,
-  programmingLanguage,
-  programmingLanguageIcon,
-}: ProjectCardProps) => {
+}: ProjectCardType) => {
   return (
-    <div className="group bg-gray-900 rounded-default-8px">
+    <div className="group bg-gray-950 border-full-default rounded-default-8px">
       <div className="w-full aspect-video relative">
         <Image
           src={imageSrc}
@@ -45,10 +36,7 @@ export const ProjectCard = ({
       <div className="grid gap-spacing-default-20px p-spacing-default-20px">
         <div>
           <div className="text-xl font-bold capitalize">
-            <LabeledIcon
-              icon={<BiSolidBriefcase />}
-              label={title || "Project title"}
-            />
+            {title || "Project title"}
           </div>
 
           <Link
@@ -64,36 +52,11 @@ export const ProjectCard = ({
           </Link>
         </div>
 
-        <p className="lg:max-w-[800px] xl:max-w-[420px] xl:h-[100px] text-gray-50/70">
-          {description || "Project description"}
+        <p className="pb-spacing-default-20px border-b-default text-gray-50/70">
+          {description.substring(0, 90).concat("...") || "Project description"}
         </p>
 
-        <LinkButton
-          icon={<BiLogoGithub />}
-          text="View Source Code"
-          href={link}
-        />
-
-        <div className="flex items-center gap-spacing-default-6px">
-          <div
-            role="img"
-            aria-label={`Project language: ${
-              programmingLanguage || "Unknown programming language"
-            }`}
-            title={`Project language: ${
-              programmingLanguage || "Unknown programming language"
-            }`}
-            className="p-0.5 bg-default rounded-sm"
-          >
-            <div className="text-2xl text-gray-950">
-              {programmingLanguageIcon || <BiError />}
-            </div>
-          </div>
-
-          <div className="tracking-wide capitalize">
-            {programmingLanguage || "Project programming language"}
-          </div>
-        </div>
+        <LinkButton text="View Source Code" href={link} />
       </div>
     </div>
   );
