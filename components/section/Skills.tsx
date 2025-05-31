@@ -32,7 +32,7 @@ export const Skills = () => {
             className={`w-full p-spacing-default-20px border-full-default rounded-default-8px`}
             key={skill.id}
           >
-            <LabeledIcon icon={skill.icon} label={skill.title} isLargeIcon />
+            <LabeledIcon icon={skill.icon} label={skill.title} />
           </li>
         ))}
       </ul>

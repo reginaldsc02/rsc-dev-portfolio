@@ -2,7 +2,6 @@ import Image from "next/image";
 import { LinkButton } from "../ui/LinkButton";
 import { Paragraph } from "../ui/Paragraph";
 import { SectionHeader } from "../ui/SectionHeader";
-import { BiDownload, BiSolidFilePdf } from "react-icons/bi";
 
 export const About = () => {
   return (
@@ -46,14 +45,12 @@ export const About = () => {
 
         <div className="mt-spacing-default-20px flex flex-col sm:flex-row sm:items-center gap-spacing-default-20px">
           <LinkButton
-            icon={<BiDownload />}
             text="Download Resume"
             href="/documents/resume-reginald-chand.pdf"
             download
           />
 
           <LinkButton
-            icon={<BiSolidFilePdf />}
             text="Preview Resume"
             href="/documents/resume/"
             isPrimary={false}

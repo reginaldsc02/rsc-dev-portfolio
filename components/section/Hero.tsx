@@ -1,5 +1,4 @@
 import { Paragraph } from "../ui/Paragraph";
-import { BiSearch } from "react-icons/bi";
 import { LinkButton } from "../ui/LinkButton";
 
 export const Hero = () => {
@@ -54,7 +53,6 @@ export const Hero = () => {
 
       <div className="my-spacing-default-20px border-y-default">
         <LinkButton
-          icon={<BiSearch />}
           text="View all Projects"
           href="/projects/all"
           target="_self"

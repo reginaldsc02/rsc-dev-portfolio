@@ -1,25 +1,14 @@
-import { Link as ReactScrollLink } from "react-scroll";
+"use client";
+
 import Link from "next/link";
-import { Dispatch, SetStateAction, useEffect, useState } from "react";
-import toast from "react-hot-toast";
 import { useGitHubApi } from "@/api/useGitHubApi";
 import { Paragraph } from "../ui/Paragraph";
 import { LabeledIcon } from "../ui/LabeledIcon";
-import { BiCode, BiUpArrow } from "react-icons/bi";
+import { BiCode } from "react-icons/bi";
 import { socialMediaLinks } from "@/data/socialMediaLinks";
 
-export const Footer = ({
-  setActive,
-}: {
-  setActive: Dispatch<SetStateAction<string>>;
-}) => {
-  const [currentDate, setCurrentDate] = useState<number | null>(null);
+export const Footer = () => {
   const response = useGitHubApi();
-
-  useEffect(() => {
-    const date = new Date().getFullYear();
-    setCurrentDate(date);
-  }, []);
 
   return (
     <footer className="border-t-default">
@@ -30,11 +19,11 @@ export const Footer = ({
             href={"https://github.com/reginaldsc02"}
             target="_blank"
             rel="noreferrer"
-            className="font-semibold hover:text-default transition-colors"
+            className="hover:text-primary transition-colors"
           >
-            Reginald Sahil Chand
-          </Link>{" "}
-          - {currentDate}, All Rights Reserved.
+            @reginaldsahilchand
+          </Link>
+          &nbsp;{new Date().getFullYear()}, All Rights Reserved.
         </p>
 
         <Paragraph
@@ -45,18 +34,14 @@ export const Footer = ({
 
       <div className="p-spacing-default-10px border-y-default">
         <div className="w-full p-spacing-default-20px flex flex-col md:flex-row md:items-center md:justify-between gap-spacing-default-20px border-full-default rounded-default-8px">
-          <ReactScrollLink
-            to="hero"
-            smooth
-            spy
-            onClick={() => {
-              setActive("hero");
-              toast.success("Yeeted to the top ✨");
-            }}
-            className="cursor-pointer text-xs font-bold uppercase"
-          >
-            <LabeledIcon icon={<BiUpArrow />} label="Scroll to top" />
-          </ReactScrollLink>
+          <div className="flex items-center gap-spacing-default-10px">
+            <Link
+              href="/projects/all"
+              className="p-spacing-default-10px border-full-default rounded-full hover:border-primary! transition-all"
+            >
+              All Projects
+            </Link>
+          </div>
 
           <div className="mt-2 md:mt-0 grid grid-cols-2 md:grid-cols-3 gap-spacing-default-10px text-default-opacity-50">
             {socialMediaLinks.map((item) => (
@@ -65,7 +50,7 @@ export const Footer = ({
                 target="_blank"
                 rel="noreferrer"
                 key={item.id}
-                className="hover:text-default transition-colors"
+                className="hover:text-primary transition-colors"
               >
                 <LabeledIcon icon={item.icon} label={item.title} />
               </Link>
@@ -76,6 +61,10 @@ export const Footer = ({
 
       <div className="p-spacing-default-10px">
         <div className="lowercase text-balance">
+          <div className="w-fit py-spacing-default-10px px-spacing-default-20px mb-spacing-default-10px border-full-default rounded-full">
+            Today is: {new Date().toDateString()}
+          </div>
+
           <div className="text-sm text-default-opacity-50">
             This website was last updated on:{" "}
             {response.data.updated_at
@@ -87,7 +76,7 @@ export const Footer = ({
             href={"https://github.com/reginaldsc02/rsc-dev-portfolio"}
             target="_blank"
             rel="noreferrer"
-            className="w-fit block"
+            className="w-fit block hover:text-primary transition-colors"
           >
             <LabeledIcon icon={<BiCode />} label="View source code" />
           </Link>

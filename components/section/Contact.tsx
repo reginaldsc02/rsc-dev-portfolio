@@ -49,7 +49,7 @@ export const Contact = () => {
           />
         </SectionParagraph>
 
-        <div className="my-spacing-default-20px p-spacing-default-20px sm:text-2xl border-y-default">
+        <div className="my-spacing-default-20px p-spacing-default-20px sm:text-xl border-y-default">
           <Link
             href={`mailto: ${email}`}
             rel="noreferrer"
@@ -59,11 +59,7 @@ export const Contact = () => {
           </Link>
         </div>
 
-        <Button
-          icon={<BiSolidEnvelope />}
-          text={"Let's Build Something"}
-          onClick={copyEmailToClipboard}
-        />
+        <Button text={"Let's Build Something"} onClick={copyEmailToClipboard} />
       </div>
     </section>
   );
