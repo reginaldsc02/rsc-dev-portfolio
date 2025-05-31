@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import { useGitHubApi } from "@/api/useGitHubApi";
-import { Paragraph } from "../ui/Paragraph";
-import { LabeledIcon } from "../ui/LabeledIcon";
+import { Paragraph } from "./Paragraph";
+import { LabeledIcon } from "./LabeledIcon";
 import { BiCode } from "react-icons/bi";
 import { socialMediaLinks } from "@/data/socialMediaLinks";
 

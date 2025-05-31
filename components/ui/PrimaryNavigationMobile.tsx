@@ -6,6 +6,7 @@ import { HamburgerButton } from "./HamburgerButton";
 import { BiCollapseHorizontal } from "react-icons/bi";
 import { SocialMediaNavigation } from "./SocialMediaNavigation";
 import { PrimaryNavigationType } from "@/custom_types/PrimaryNavigationType";
+import Link from "next/link";
 
 export const PrimaryNavigationMobile = ({
   activeLink,
@@ -17,6 +18,7 @@ export const PrimaryNavigationMobile = ({
   handlePrimaryDrawer: () => void;
 }) => {
   const [userClickedNavLink, setUserClickedNavLink] = useState(false);
+  const pathname = usePathname();
 
   const handleNavOnClick = (nav: { url: string }) => {
     setActiveLink(nav.url);
@@ -37,26 +39,39 @@ export const PrimaryNavigationMobile = ({
           onClick={handlePrimaryDrawer}
         />
       </div>
+
       <ul className="h-full mt-spacing-default-10px p-spacing-default-10px block overflow-y-auto">
-        {navLinks?.map((nav, index) => (
-          <li key={nav.url}>
-            <ReactScrollLink
-              to={nav.url}
-              smooth
-              spy
-              onClick={() => handleNavOnClick(nav)}
-              className={`p-spacing-default-20px mb-spacing-default-20px text-2xl block cursor-pointer border-full-default rounded-full hover:border-primary! transition-all ${
-                activeLink === nav.url
-                  ? "border-primary!"
-                  : usePathname() === "/" && index === 0 && !userClickedNavLink
-                  ? "border-primary!"
-                  : ""
-              }`}
-            >
-              {nav.title}
-            </ReactScrollLink>
-          </li>
-        ))}
+        {pathname !== "/" ? (
+          <Link
+            href="/"
+            onClick={handlePrimaryDrawer}
+            className="p-spacing-default-20px mb-spacing-default-20px text-2xl block cursor-pointer border-full-default rounded-full hover:border-primary! transition-all"
+          >
+            Home
+          </Link>
+        ) : (
+          <>
+            {navLinks?.map((nav, index) => (
+              <li key={nav.url}>
+                <ReactScrollLink
+                  to={nav.url}
+                  smooth
+                  spy
+                  onClick={() => handleNavOnClick(nav)}
+                  className={`p-spacing-default-20px mb-spacing-default-20px text-2xl block cursor-pointer border-full-default rounded-full hover:border-primary! transition-all ${
+                    activeLink === nav.url
+                      ? "border-primary!"
+                      : pathname === "/" && index === 0 && !userClickedNavLink
+                      ? "border-primary!"
+                      : ""
+                  }`}
+                >
+                  {nav.title}
+                </ReactScrollLink>
+              </li>
+            ))}
+          </>
+        )}
 
         <div className="my-16 flex items-center justify-center">
           <SocialMediaNavigation />
