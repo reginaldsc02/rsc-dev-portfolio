@@ -1,14 +1,12 @@
 "use client";
 
 import { Button } from "@/components/ui/Button";
-import { LinkButton } from "@/components/ui/LinkButton";
 import { MainContainer } from "@/components/ui/MainContainer";
 import { ProjectCard } from "@/components/ui/ProjectCard";
 import { ThreeColumnGrid } from "@/components/ui/ThreeColumnGrid";
 import { backendProjectsList } from "@/data/backendProjectsList";
 import { frontendProjectsList } from "@/data/frontendProjectsList";
 import { useState } from "react";
-import { BiDesktop, BiHomeSmile, BiServer } from "react-icons/bi";
 
 export default function AllProjects() {
   const projectList = [
@@ -39,10 +37,9 @@ export default function AllProjects() {
   return (
     <MainContainer>
       <div className="p-spacing-default-10px border-b-default">
-        <div className="p-spacing-default-10px flex max-[450px]:flex-col items-center md:justify-between gap-spacing-default-10px border-full-default rounded-default-8px">
-          <div className="w-[90%] flex items-center max-[450px]:justify-center flex-wrap gap-spacing-default-10px">
+        <div className="gap-spacing-default-10px border-full-default rounded-default-8px">
+          <div className="p-spacing-default-10px flex items-center flex-wrap gap-spacing-default-10px">
             <Button
-              icon={<BiDesktop />}
               text={"frontend"}
               isPill
               isPrimary={projectCategory !== projectCategories.frontendProjects}
@@ -53,7 +50,6 @@ export default function AllProjects() {
             />
 
             <Button
-              icon={<BiServer />}
               text={"backend"}
               isPill
               isPrimary={projectCategory !== projectCategories.backendProjects}
@@ -63,15 +59,6 @@ export default function AllProjects() {
               disabled={projectCategory === projectCategories.backendProjects}
             />
           </div>
-
-          <LinkButton
-            icon={<BiHomeSmile />}
-            text="home"
-            href="/"
-            isPill
-            isPrimary={false}
-            target="_self"
-          />
         </div>
       </div>
 
@@ -86,8 +73,6 @@ export default function AllProjects() {
                 link={project.link}
                 repoName={project.repoName}
                 description={project.description}
-                programmingLanguage={project.programmingLanguage}
-                programmingLanguageIcon={project.programmingLanguageIcon}
               />
             </div>
           ))}
