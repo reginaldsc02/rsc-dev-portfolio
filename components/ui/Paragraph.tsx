@@ -7,9 +7,7 @@ export const Paragraph = ({
 }) => {
   return (
     <p
-      className={`tracking-wide ${
-        isImportant ? "text-default" : "text-default-opacity-50"
-      }`}
+      className={`${isImportant ? "text-default" : "text-default-opacity-50"}`}
     >
       {paragraph || "Paragraph"}
     </p>
