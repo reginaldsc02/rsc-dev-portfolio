@@ -7,6 +7,7 @@ import NextTopLoader from "nextjs-toploader";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ClerkProvider } from "@clerk/nextjs";
+import { PrimaryHeader } from "@/components/ui/PrimaryHeader";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -53,6 +54,7 @@ export default function RootLayout({
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
+          <PrimaryHeader />
           <NextTopLoader
             color="var(--rsc-primary)"
             showSpinner={false}
