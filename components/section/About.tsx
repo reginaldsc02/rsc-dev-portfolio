@@ -2,7 +2,7 @@ import Image from "next/image";
 import { LinkButton } from "../ui/LinkButton";
 import { Paragraph } from "../ui/Paragraph";
 import { SectionHeader } from "../ui/SectionHeader";
-import { BiDownload, BiSolidFilePdf, BiSolidUser } from "react-icons/bi";
+import { BiDownload, BiSolidFilePdf } from "react-icons/bi";
 
 export const About = () => {
   return (
@@ -12,7 +12,6 @@ export const About = () => {
     >
       <div className="p-spacing-default-20px border-full-default rounded-default-8px">
         <SectionHeader
-          icon={<BiSolidUser />}
           title="Between Logic & Lore"
           subtitle="The Brain Behind the Backend"
         />

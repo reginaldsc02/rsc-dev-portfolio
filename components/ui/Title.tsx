@@ -1,16 +1,7 @@
-import { BiError } from "react-icons/bi";
-import { LabeledIcon } from "./LabeledIcon";
-
-export const Title = ({
-  icon,
-  title,
-}: {
-  icon: React.ReactNode;
-  title: string;
-}) => {
+export const Title = ({ title }: { title: string }) => {
   return (
     <h2 className="font-semibold text-balance capitalize text-2xl sm:text-3xl md:text-4xl">
-      <LabeledIcon icon={icon || <BiError />} label={title || "Title"} />
+      {title || "Title"}
     </h2>
   );
 };

@@ -3,14 +3,12 @@ import { Paragraph } from "../ui/Paragraph";
 import { SectionHeader } from "../ui/SectionHeader";
 import { SectionParagraph } from "../ui/SectionParagraph";
 import { LabeledIcon } from "../ui/LabeledIcon";
-import { BiLogoReact } from "react-icons/bi";
 
 export const Skills = () => {
   return (
     <section id="skills" className="p-spacing-default-10px border-t-default">
       <div className="border-y-default p-spacing-default-10px">
         <SectionHeader
-          icon={<BiLogoReact />}
           title="The Arsenal of Alchemy"
           subtitle="Crafting Magic with Code & Craft"
         />

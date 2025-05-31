@@ -6,7 +6,7 @@ import { Paragraph } from "../ui/Paragraph";
 import { SectionHeader } from "../ui/SectionHeader";
 import { SectionParagraph } from "../ui/SectionParagraph";
 import { LabeledIcon } from "../ui/LabeledIcon";
-import { BiSolidEnvelope, BiSolidPhone } from "react-icons/bi";
+import { BiSolidEnvelope } from "react-icons/bi";
 
 export const Contact = () => {
   const [, setCopied] = useState(false);
@@ -32,7 +32,6 @@ export const Contact = () => {
     >
       <div className="p-spacing-default-20px border-full-default rounded-default-8px">
         <SectionHeader
-          icon={<BiSolidPhone />}
           title="The Connection Code"
           subtitle="Whispers of Code, Calls of Collaboration"
         />
