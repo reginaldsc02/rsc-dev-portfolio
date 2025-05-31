@@ -15,7 +15,6 @@
   "dependencies": {
     "@clerk/nextjs": "^6.20.2",
     "@prisma/client": "^6.8.2",
-    "prisma": "^6.8.2",
     "@types/react-scroll": "^1.8.10",
     "@vercel/analytics": "^1.5.0",
     "@vercel/speed-insights": "^1.2.0",
@@ -23,6 +22,7 @@
     "nextjs-toploader": "^3.8.16",
     "nodemailer": "^7.0.3",
     "octokit": "^5.0.2",
+    "prisma": "^6.8.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-hot-toast": "^2.5.2",
