@@ -1,14 +1,8 @@
-import { Button } from "../ui/Button";
-import { Link } from "react-scroll";
-import { Dispatch, SetStateAction } from "react";
 import { Paragraph } from "../ui/Paragraph";
 import { BiSearch } from "react-icons/bi";
+import { LinkButton } from "../ui/LinkButton";
 
-export const Hero = ({
-  setActive,
-}: {
-  setActive: Dispatch<SetStateAction<string>>;
-}) => {
+export const Hero = () => {
   return (
     <section id="hero" className="pt-14 grid gap-spacing-default-10px">
       <div className="p-spacing-default-20px py-2 flex md:items-center justify-between flex-col md:flex-row tracking-tighter border-y-default">
@@ -59,15 +53,12 @@ export const Hero = ({
       </div>
 
       <div className="my-spacing-default-20px border-y-default">
-        <Link
-          to="projects"
-          smooth
-          spy
-          onClick={() => setActive("projects")}
-          className="w-fit block"
-        >
-          <Button icon={<BiSearch />} text="View Projects" />
-        </Link>
+        <LinkButton
+          icon={<BiSearch />}
+          text="View all Projects"
+          href="/projects/all"
+          target="_self"
+        />
       </div>
 
       <blockquote className="flex justify-end pt-14 px-spacing-default-20px text-right text-default-opacity-50 border-y-default">

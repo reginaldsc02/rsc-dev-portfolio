@@ -11,7 +11,7 @@ export const LinkButton = ({
   isPill = false,
   isPrimary = true,
   ...rest
-}: ButtonType & React.ComponentProps<"a">) => {
+}: ButtonType & { href: string } & React.ComponentProps<"a">) => {
   const buttonIsMain = buttonStyle.global.main.concat(
     isPrimary ? buttonStyle.primary : buttonStyle.secondary
   );
