@@ -44,7 +44,10 @@ export const PrimaryNavigationMobile = ({
         {pathname !== "/" ? (
           <Link
             href="/"
-            onClick={handlePrimaryDrawer}
+            onClick={() => {
+              handlePrimaryDrawer;
+              setActiveLink("");
+            }}
             className="p-spacing-default-20px mb-spacing-default-20px text-2xl block cursor-pointer border-full-default rounded-full hover:border-primary! transition-all"
           >
             Home

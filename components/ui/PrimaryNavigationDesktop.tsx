@@ -22,6 +22,7 @@ export const PrimaryNavigationDesktop = ({
       {pathname !== "/" ? (
         <Link
           href="/"
+          onClick={() => setActiveLink("")}
           className="p-spacing-default-10px border-full-default rounded-full hover:border-primary! transition-all"
         >
           Home
