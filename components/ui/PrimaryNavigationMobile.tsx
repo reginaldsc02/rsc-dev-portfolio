@@ -96,6 +96,13 @@ export const PrimaryNavigationMobile = ({
           </>
         )}
 
+        <Link
+          href="/journals"
+          className="p-spacing-default-20px mb-spacing-default-20px text-2xl block cursor-pointer border-full-default rounded-full hover:border-primary! transition-all"
+        >
+          Journals
+        </Link>
+
         <div className="my-16 flex items-center justify-center">
           <SocialMediaNavigation />
         </div>
