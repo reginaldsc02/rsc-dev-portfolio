@@ -36,6 +36,7 @@ export const PrimaryNavigationDesktop = ({
       {pathname !== "/" ? (
         <Link
           href="/"
+          aria-label="Go to home page"
           onClick={() => setActiveLink("home")}
           className="px-2 py-1 block cursor-pointer border-full-default rounded-full hover:border-primary! transition-all"
         >
@@ -67,6 +68,13 @@ export const PrimaryNavigationDesktop = ({
               </ReactScrollLink>
             </li>
           ))}
+
+          <Link
+            href="/journals"
+            className="px-2 py-1 block cursor-pointer border-full-default rounded-full hover:border-primary! transition-all"
+          >
+            Journals
+          </Link>
         </ul>
       )}
     </nav>
