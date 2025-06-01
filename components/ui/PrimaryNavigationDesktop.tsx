@@ -37,7 +37,7 @@ export const PrimaryNavigationDesktop = ({
         <Link
           href="/"
           onClick={() => setActiveLink("home")}
-          className="p-spacing-default-10px border-full-default rounded-full hover:border-primary! transition-all"
+          className="px-2 py-1 block cursor-pointer border-full-default rounded-full hover:border-primary! transition-all"
         >
           Home
         </Link>
