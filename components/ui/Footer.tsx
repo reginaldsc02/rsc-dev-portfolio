@@ -33,11 +33,11 @@ export const Footer = () => {
       </div>
 
       <div className="p-spacing-default-10px border-y-default">
-        <div className="w-full p-spacing-default-20px flex flex-col md:flex-row md:items-center md:justify-between gap-spacing-default-20px border-full-default rounded-default-8px">
+        <div className="w-full p-spacing-default-10px flex flex-col md:flex-row md:items-center md:justify-between gap-spacing-default-20px border-full-default rounded-default-8px">
           <div className="flex items-center gap-spacing-default-10px">
             <Link
               href="/projects/all"
-              className="p-spacing-default-10px border-full-default rounded-full hover:border-primary! transition-all"
+              className="px-2 py-1 border-full-default rounded-full hover:border-primary! transition-all"
             >
               All Projects
             </Link>
