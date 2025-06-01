@@ -1,13 +1,12 @@
 "use client";
 
 import { Button } from "@/components/ui/Button";
-import { Header } from "@/components/ui/Header";
+import { HeaderAndLink } from "@/components/ui/HeaderAndLink";
 import { MainContainer } from "@/components/ui/MainContainer";
 import { ProjectCard } from "@/components/ui/ProjectCard";
 import { ThreeColumnGrid } from "@/components/ui/ThreeColumnGrid";
 import { backendProjectsList } from "@/data/backendProjectsList";
 import { frontendProjectsList } from "@/data/frontendProjectsList";
-import Link from "next/link";
 import { useState } from "react";
 
 export default function AllProjects() {
@@ -38,17 +37,7 @@ export default function AllProjects() {
 
   return (
     <>
-      <Header>
-        <div className="w-full flex items-center justify-end">
-          <Link
-            href="/"
-            aria-label="Go to home page"
-            className="px-2 py-1 block cursor-pointer border-full-default rounded-full hover:border-primary! transition-all"
-          >
-            Home
-          </Link>
-        </div>
-      </Header>
+      <HeaderAndLink href={"/"} title={"Home"} />
 
       <MainContainer>
         <div className="p-spacing-default-10px border-b-default">
