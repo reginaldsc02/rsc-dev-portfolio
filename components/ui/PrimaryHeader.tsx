@@ -16,31 +16,33 @@ export const PrimaryHeader = () => {
 
   return (
     <Header>
-      <div className="flex items-center gap-spacing-default-20px">
-        <div className="px-2 py-1 text-xs bg-primary rounded-full">
-          <div className="font-bold">v0.1.0</div>
+      <div className="w-full flex items-center justify-between">
+        <div className="flex items-center gap-spacing-default-20px">
+          <div className="px-2 py-1 text-xs bg-primary rounded-full">
+            <div className="font-bold">v0.1.0</div>
+          </div>
+
+          <PrimaryNavigationDesktop
+            activeLink={activeLink}
+            setActiveLink={setActiveLink}
+          />
+
+          <PrimaryNavigationMobile
+            activeLink={activeLink}
+            setActiveLink={setActiveLink}
+            primaryDrawer={primaryDrawer}
+            handlePrimaryDrawer={handlePrimaryDrawer}
+          />
         </div>
 
-        <PrimaryNavigationDesktop
-          activeLink={activeLink}
-          setActiveLink={setActiveLink}
+        <HamburgerButton
+          icon={<BiExpandHorizontal />}
+          onClick={handlePrimaryDrawer}
         />
 
-        <PrimaryNavigationMobile
-          activeLink={activeLink}
-          setActiveLink={setActiveLink}
-          primaryDrawer={primaryDrawer}
-          handlePrimaryDrawer={handlePrimaryDrawer}
-        />
-      </div>
-
-      <HamburgerButton
-        icon={<BiExpandHorizontal />}
-        onClick={handlePrimaryDrawer}
-      />
-
-      <div className="hidden lg:flex items-center gap-spacing-default-20px">
-        <SocialMediaNavigation />
+        <div className="hidden lg:flex items-center gap-spacing-default-20px">
+          <SocialMediaNavigation />
+        </div>
       </div>
     </Header>
   );

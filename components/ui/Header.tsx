@@ -15,7 +15,7 @@ export const Header = ({
         |
       </div>
 
-      <div className="w-full flex items-center justify-between">{children}</div>
+      {children}
     </header>
   );
 };
