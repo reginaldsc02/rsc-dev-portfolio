@@ -58,6 +58,7 @@ export const PrimaryNavigationMobile = ({
         {pathname !== "/" ? (
           <Link
             href="/"
+            aria-label="Go to home page"
             onClick={() => {
               handlePrimaryDrawer();
               setActiveLink("home");
