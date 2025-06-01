@@ -24,7 +24,7 @@ export const PrimaryNavigationDesktop = ({
         ?.firstElementChild as HTMLAnchorElement;
 
       if (homeLink) {
-        activeLink === "home"
+        activeLink && activeLink === "home"
           ? (homeLink.style.borderColor = "var(--rsc-primary)")
           : (homeLink.style.borderColor = "transparent");
       }
