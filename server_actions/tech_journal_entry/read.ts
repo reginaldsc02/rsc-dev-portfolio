@@ -2,11 +2,25 @@
 
 import { prisma } from "@/index";
 
-export const readTechJournalEntry = async (slug: string) => {
+export const readTechJournalEntry = async ({
+  requireSlug,
+  slug,
+}: {
+  requireSlug: boolean;
+  slug?: string;
+}) => {
+  if (requireSlug && !slug) {
+    throw new Error("slug is required");
+  }
+
+  if (requireSlug && typeof slug !== "string") {
+    throw new TypeError("slug must be of type string");
+  }
+
+  const whereClause = requireSlug ? { slug } : undefined;
   const techJournalEntries = await prisma.techjournalentry.findMany({
-    where: {
-      slug: slug,
-    },
+    where: whereClause,
   });
+
   return techJournalEntries;
 };
