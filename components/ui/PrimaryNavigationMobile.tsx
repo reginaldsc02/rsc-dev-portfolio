@@ -1,6 +1,6 @@
 import { Link as ReactScrollLink } from "react-scroll";
 import { navLinks } from "@/data/navLinks";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { HamburgerButton } from "./HamburgerButton";
 import { BiCollapseHorizontal } from "react-icons/bi";
@@ -18,6 +18,7 @@ export const PrimaryNavigationMobile = ({
   handlePrimaryDrawer: () => void;
 }) => {
   const [userClickedNavLink, setUserClickedNavLink] = useState(false);
+  const navLinksArray = useRef<(HTMLLIElement | null)[]>([]);
   const pathname = usePathname();
 
   const handleNavOnClick = (nav: { url: string }) => {
@@ -25,6 +26,19 @@ export const PrimaryNavigationMobile = ({
     handlePrimaryDrawer();
     setUserClickedNavLink(true);
   };
+
+  useEffect(() => {
+    if (navLinksArray.current) {
+      const homeLink = navLinksArray.current[0]
+        ?.firstElementChild as HTMLAnchorElement;
+
+      if (homeLink) {
+        activeLink === "home"
+          ? (homeLink.style.borderColor = "var(--rsc-primary)")
+          : (homeLink.style.borderColor = "transparent");
+      }
+    }
+  }, [pathname, activeLink]);
 
   return (
     <nav
@@ -46,7 +60,7 @@ export const PrimaryNavigationMobile = ({
             href="/"
             onClick={() => {
               handlePrimaryDrawer();
-              setActiveLink("");
+              setActiveLink("home");
             }}
             className="p-spacing-default-20px mb-spacing-default-20px text-2xl block cursor-pointer border-full-default rounded-full hover:border-primary! transition-all"
           >
@@ -55,7 +69,12 @@ export const PrimaryNavigationMobile = ({
         ) : (
           <>
             {navLinks?.map((nav, index) => (
-              <li key={nav.url}>
+              <li
+                key={nav.url}
+                ref={(el) => {
+                  navLinksArray.current[index] = el;
+                }}
+              >
                 <ReactScrollLink
                   to={nav.url}
                   smooth

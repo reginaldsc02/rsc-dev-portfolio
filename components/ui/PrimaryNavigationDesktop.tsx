@@ -1,6 +1,6 @@
 import { Link as ReactScrollLink } from "react-scroll";
 import { navLinks } from "@/data/navLinks";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
 import { PrimaryNavigationType } from "@/custom_types/PrimaryNavigationType";
 import Link from "next/link";
@@ -10,6 +10,7 @@ export const PrimaryNavigationDesktop = ({
   setActiveLink,
 }: PrimaryNavigationType) => {
   const [userClickedNavLink, setUserClickedNavLink] = useState(false);
+  const navLinksArray = useRef<(HTMLLIElement | null)[]>([]);
   const pathname = usePathname();
 
   const handleNavOnClick = (nav: { url: string }) => {
@@ -17,12 +18,25 @@ export const PrimaryNavigationDesktop = ({
     setUserClickedNavLink(true);
   };
 
+  useEffect(() => {
+    if (navLinksArray.current) {
+      const homeLink = navLinksArray.current[0]
+        ?.firstElementChild as HTMLAnchorElement;
+
+      if (homeLink) {
+        activeLink === "home"
+          ? (homeLink.style.borderColor = "var(--rsc-primary)")
+          : (homeLink.style.borderColor = "transparent");
+      }
+    }
+  }, [pathname, activeLink]);
+
   return (
     <nav className="hidden lg:block">
       {pathname !== "/" ? (
         <Link
           href="/"
-          onClick={() => setActiveLink("")}
+          onClick={() => setActiveLink("home")}
           className="p-spacing-default-10px border-full-default rounded-full hover:border-primary! transition-all"
         >
           Home
@@ -30,7 +44,12 @@ export const PrimaryNavigationDesktop = ({
       ) : (
         <ul className="flex gap-spacing-default-10px">
           {navLinks?.map((nav, index) => (
-            <li key={nav.url}>
+            <li
+              key={nav.url}
+              ref={(el) => {
+                navLinksArray.current[index] = el;
+              }}
+            >
               <ReactScrollLink
                 to={nav.url}
                 smooth
