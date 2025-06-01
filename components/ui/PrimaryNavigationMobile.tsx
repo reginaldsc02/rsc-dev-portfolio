@@ -33,9 +33,11 @@ export const PrimaryNavigationMobile = ({
         ?.firstElementChild as HTMLAnchorElement;
 
       if (homeLink) {
-        activeLink && activeLink === "home"
-          ? (homeLink.style.borderColor = "var(--rsc-primary)")
-          : (homeLink.style.borderColor = "transparent");
+        if (activeLink === "home") {
+          homeLink.style.borderColor = "var(--rsc-primary)";
+        } else {
+          homeLink.style.borderColor = "transparent";
+        }
       }
     }
   }, [pathname, activeLink]);
