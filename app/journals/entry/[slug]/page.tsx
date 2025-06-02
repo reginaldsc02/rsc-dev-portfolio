@@ -40,18 +40,16 @@ export default function JournalEntry() {
 
           <MainContainer>
             <div className="p-spacing-default-10px">
-              <article className="p-spacing-default-10px border-full-default rounded-default-8px overflow-y-auto">
+              <article className="p-spacing-default-10px border-full-default rounded-default-8px overflow-y-auto flex flex-col gap-spacing-default-10px">
                 {data && data.length > 0 ? (
                   data.map((journalEntry) => (
                     <div
                       key={journalEntry.id}
                       className="p-spacing-default-20px h-fit border-full-default rounded-default-8px block"
                     >
-                      <div className="pb-spacing-default-10px border-b-default">
-                        {journalEntry.title || "Untitled"}
-                      </div>
+                      <div>{journalEntry.title || "Untitled"}</div>
 
-                      <div className="mb-spacing-default-20px py-spacing-default-20px text-default-opacity-50 list-none break-words whitespace-normal h-[160px] border-b-default">
+                      <div className="mt-spacing-default-20px py-spacing-default-20px text-default-opacity-50 list-none break-words whitespace-normal border-y-default">
                         <Paragraph
                           paragraph={
                             journalEntry.summary || "Summary is not available"

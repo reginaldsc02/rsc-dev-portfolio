@@ -41,7 +41,7 @@ export default function JournalEntries() {
                       key={journalEntry.id}
                       className="p-spacing-default-20px h-fit border-full-default rounded-default-8px block"
                     >
-                      <div className="pb-spacing-default-10px border-b-default">
+                      <div>
                         <LabeledIcon
                           icon={<BiBookReader />}
                           label={
@@ -54,7 +54,7 @@ export default function JournalEntries() {
                         />
                       </div>
 
-                      <p className="mb-spacing-default-20px py-spacing-default-20px text-default-opacity-50 list-none break-words whitespace-normal h-[160px] border-b-default">
+                      <p className="mt-spacing-default-20px py-spacing-default-20px text-default-opacity-50 list-none break-words whitespace-normal border-y-default">
                         {journalEntry.summary.length > 100
                           ? journalEntry.summary.substring(0, 100).concat("...")
                           : journalEntry.summary || "Summary is not available"}
