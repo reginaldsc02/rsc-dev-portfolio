@@ -8,6 +8,8 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ClerkProvider } from "@clerk/nextjs";
 import { Footer } from "@/components/ui/Footer";
+import { Toaster } from "react-hot-toast";
+import { CustomCursor } from "@/components/ui/CustomCursor";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -59,6 +61,10 @@ export default function RootLayout({
             showSpinner={false}
             showForHashAnchor={true}
           />
+
+          <Toaster position="top-center" reverseOrder={false} />
+          <CustomCursor />
+
           {children}
           <Analytics />
           <SpeedInsights />
