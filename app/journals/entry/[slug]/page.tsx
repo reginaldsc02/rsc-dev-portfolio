@@ -10,7 +10,7 @@ import { readTechJournalEntry } from "@/server_actions/tech_journal_entry/read";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
-import { BiBookReader, BiErrorCircle, BiLinkAlt } from "react-icons/bi";
+import { BiErrorCircle, BiLinkAlt } from "react-icons/bi";
 
 export default function JournalEntry() {
   const params = useParams();
@@ -48,13 +48,10 @@ export default function JournalEntry() {
                       className="p-spacing-default-20px h-fit border-full-default rounded-default-8px block"
                     >
                       <div className="pb-spacing-default-10px border-b-default">
-                        <LabeledIcon
-                          icon={<BiBookReader />}
-                          label={journalEntry.title || "Untitled"}
-                        />
+                        {journalEntry.title || "Untitled"}
                       </div>
 
-                      <div className="mt-spacing-default-10px mb-spacing-default-20px py-spacing-default-10px text-default-opacity-50 list-none break-words whitespace-normal h-[160px] border-b-default">
+                      <div className="mb-spacing-default-20px py-spacing-default-20px text-default-opacity-50 list-none break-words whitespace-normal h-[160px] border-b-default">
                         <Paragraph
                           paragraph={
                             journalEntry.summary || "Summary is not available"
