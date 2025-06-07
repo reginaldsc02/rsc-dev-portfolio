@@ -26,11 +26,11 @@ export default function JournalEntries() {
     <Loader />
   ) : (
     <Container>
-      <div className="max-h-screen overflow-y-auto">
+      <div className="max-h-screen overflow-y-scroll">
         <article
           className={`${
             data.length > 0
-              ? "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 grid-flow-row gap-y-5 overflow-y-scroll"
+              ? "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 grid-flow-row gap-y-5"
               : "block"
           }`}
         >
