@@ -1,13 +1,12 @@
 "use client";
 
-import { Button } from "@/components/ui/Button";
-import { HeaderAndLink } from "@/components/ui/HeaderAndLink";
-import { MainContainer } from "@/components/ui/MainContainer";
-import { ProjectCard } from "@/components/ui/ProjectCard";
-import { ThreeColumnGrid } from "@/components/ui/ThreeColumnGrid";
-import { backendProjectsList } from "@/data/backendProjectsList";
-import { frontendProjectsList } from "@/data/frontendProjectsList";
+import { Button } from "@/components/shared/ui/Button";
+import { Container } from "@/components/shared/ui/Container";
+import { ProjectCard } from "@/components/shared/ui/ProjectCard";
+import { backendProjectsList } from "@/components/shared/lib/constants/backendProjectsList";
+import { frontendProjectsList } from "@/components/shared/lib/constants/frontendProjectsList";
 import { useState } from "react";
+import { NotFound } from "@/components/shared/ui/NotFound";
 
 export default function AllProjects() {
   const projectList = [
@@ -36,59 +35,66 @@ export default function AllProjects() {
       ?.project || [];
 
   return (
-    <>
-      <HeaderAndLink href={"/"} title={"Home"} />
+    <Container>
+      <div className="grid gap-5">
+        <div className="w-fit mx-auto p-2.5 flex items-center gap-5 overflow-x-hidden border border-gray-950/10 dark:border-gray-50/10 rounded-full bg-background">
+          <Button
+            text={"frontend"}
+            primary={projectCategory !== projectCategories.frontendProjects}
+            onClick={() =>
+              setProjectCategory(projectCategories.frontendProjects)
+            }
+            disabled={projectCategory === projectCategories.frontendProjects}
+          />
 
-      <MainContainer>
-        <div className="p-spacing-default-10px border-b-default">
-          <div className="gap-spacing-default-10px border-full-default rounded-default-8px">
-            <div className="p-spacing-default-10px flex items-center flex-wrap gap-spacing-default-10px">
-              <Button
-                text={"frontend"}
-                isPill
-                isPrimary={
-                  projectCategory !== projectCategories.frontendProjects
-                }
-                onClick={() =>
-                  setProjectCategory(projectCategories.frontendProjects)
-                }
-                disabled={
-                  projectCategory === projectCategories.frontendProjects
-                }
-              />
-
-              <Button
-                text={"backend"}
-                isPill
-                isPrimary={
-                  projectCategory !== projectCategories.backendProjects
-                }
-                onClick={() =>
-                  setProjectCategory(projectCategories.backendProjects)
-                }
-                disabled={projectCategory === projectCategories.backendProjects}
-              />
-            </div>
-          </div>
+          <Button
+            text={"backend"}
+            primary={projectCategory !== projectCategories.backendProjects}
+            onClick={() =>
+              setProjectCategory(projectCategories.backendProjects)
+            }
+            disabled={projectCategory === projectCategories.backendProjects}
+          />
         </div>
 
-        <div className="p-spacing-default-10px">
-          <ThreeColumnGrid>
-            {project.map((project) => (
+        <div className="flex items-center justify-center flex-wrap gap-5">
+          {project && project.length > 0 ? (
+            project.map((project) => (
               <div key={project.id}>
                 <ProjectCard
                   imageSrc={project.imageSrc}
                   imageAltText={project.imageAltText}
                   title={project.title}
-                  link={project.link}
-                  repoName={project.repoName}
+                  href={project.href}
                   description={project.description}
                 />
               </div>
-            ))}
-          </ThreeColumnGrid>
+            ))
+          ) : (
+            <NotFound text="Projects not found!" />
+          )}
         </div>
-      </MainContainer>
-    </>
+
+        <div className="w-fit mx-auto p-2.5 flex items-center gap-5 overflow-x-hidden border border-gray-50/10 rounded-full bg-background">
+          <Button
+            text={"frontend"}
+            primary={projectCategory !== projectCategories.frontendProjects}
+            onClick={() =>
+              setProjectCategory(projectCategories.frontendProjects)
+            }
+            disabled={projectCategory === projectCategories.frontendProjects}
+          />
+
+          <Button
+            text={"backend"}
+            primary={projectCategory !== projectCategories.backendProjects}
+            onClick={() =>
+              setProjectCategory(projectCategories.backendProjects)
+            }
+            disabled={projectCategory === projectCategories.backendProjects}
+          />
+        </div>
+      </div>
+    </Container>
   );
 }

@@ -1,15 +1,15 @@
+import "./globals.css";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
-import "./border.css";
-import "./scrollbar.css";
 import NextTopLoader from "nextjs-toploader";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ClerkProvider } from "@clerk/nextjs";
-import { Footer } from "@/components/ui/Footer";
 import { Toaster } from "react-hot-toast";
-import { CustomCursor } from "@/components/ui/CustomCursor";
+import { Header } from "@/components/shared/ui/Header";
+import { Footer } from "@/components/shared/ui/Footer";
+import { Suspense } from "react";
+import { Loader } from "@/components/shared/ui/Loader";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -56,19 +56,21 @@ export default function RootLayout({
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
-          <NextTopLoader
-            color="var(--rsc-primary)"
-            showSpinner={false}
-            showForHashAnchor={true}
-          />
+          <Suspense fallback={<Loader />}>
+            <Toaster position="top-center" reverseOrder={false} />
+            <NextTopLoader
+              color="var(--rsc-primary)"
+              showSpinner={false}
+              showForHashAnchor={true}
+            />
 
-          <Toaster position="top-center" reverseOrder={false} />
-          <CustomCursor />
+            <Header />
+            {children}
+            <Footer />
+          </Suspense>
 
-          {children}
           <Analytics />
           <SpeedInsights />
-          <Footer />
         </body>
       </html>
     </ClerkProvider>

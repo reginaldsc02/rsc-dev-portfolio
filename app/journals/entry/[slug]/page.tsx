@@ -1,16 +1,14 @@
 "use client";
 
-import { JournalsPageHeader } from "@/components/ui/JournalsPageHeader";
-import { LabeledIcon } from "@/components/ui/LabeledIcon";
-import { Loader } from "@/components/ui/Loader";
-import { MainContainer } from "@/components/ui/MainContainer";
-import { Paragraph } from "@/components/ui/Paragraph";
-import { TechJournalEntriesType } from "@/custom_types/TechJournalEntriesType";
+import { TechJournalEntriesType } from "@/components/shared/lib/types/TechJournalEntriesType";
+import { Container } from "@/components/shared/ui/Container";
+import { Loader } from "@/components/shared/ui/Loader";
+import { NotFound } from "@/components/shared/ui/NotFound";
+import { Paragraph } from "@/components/shared/ui/Paragraph";
 import { readTechJournalEntry } from "@/server_actions/tech_journal_entry/read";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
-import { BiErrorCircle, BiLinkAlt } from "react-icons/bi";
 
 export default function JournalEntry() {
   const params = useParams();
@@ -30,89 +28,60 @@ export default function JournalEntry() {
     getTechJournalEntries();
   }, [slug]);
 
-  return (
-    <>
-      {!data ? (
-        <Loader />
-      ) : (
-        <>
-          <JournalsPageHeader />
+  return !data ? (
+    <Loader />
+  ) : (
+    <Container>
+      <article className="flex flex-col gap-5">
+        {data && data.length > 0 ? (
+          data.map((journalEntry) => (
+            <div key={journalEntry.id}>
+              <div className="mr-5 p-5 grid gap-5 border border-gray-950/10 dark:border-gray-50/10 rounded-lg">
+                <div className="pb-2.5 font-bold capitalize text-xl text-center border-b border-gray-950/10 dark:border-gray-50/10">
+                  {journalEntry.title}
+                </div>
+                <Paragraph text={journalEntry.summary} />
 
-          <MainContainer>
-            <div className="p-spacing-default-10px">
-              <article className="p-spacing-default-10px border-full-default rounded-default-8px overflow-y-auto flex flex-col gap-spacing-default-10px">
-                {data && data.length > 0 ? (
-                  data.map((journalEntry) => (
-                    <div
-                      key={journalEntry.id}
-                      className="p-spacing-default-20px h-fit border-full-default rounded-default-8px block"
-                    >
-                      <div>{journalEntry.title || "Untitled"}</div>
+                <div className="flex max-[500px]:flex-col items-center max-[500px]:justify-center justify-between gap-5">
+                  <Link
+                    href="/journals"
+                    className="underline underline-offset-4 uppercase text-xs font-bold transition-colors hover:text-primary"
+                  >
+                    Back to journals
+                  </Link>
 
-                      <div className="mt-spacing-default-20px py-spacing-default-20px text-default-opacity-50 list-none break-words whitespace-normal border-y-default">
-                        <Paragraph
-                          paragraph={
-                            journalEntry.summary || "Summary is not available"
-                          }
-                          isImportant
-                        />
-                      </div>
-
-                      <div className="mt-spacing-default-20px flex max-[500px]:flex-col items-center max-[500px]:justify-center justify-between gap-spacing-default-20px">
-                        <div className="flex items-center gap-spacing-default-6px">
-                          <BiLinkAlt />
-                          <Link
-                            href="/journals"
-                            className="underline underline-offset-4 uppercase text-xs font-bold transition-colors hover:text-primary"
-                          >
-                            Back to journals
-                          </Link>
-                        </div>
-
-                        <hr className="w-full hidden max-[500px]:block" />
-
-                        <div className="flex flex-col items-end max-[500px]:items-center text-sm">
-                          <div>
-                            Written by{" "}
-                            <Link
-                              href={
-                                journalEntry.author
-                                  ? "https://github.com/reginaldsc02"
-                                  : "/"
-                              }
-                              target="_blank"
-                              rel="noreferrer"
-                              className="underline hover:text-primary transition-colors"
-                            >
-                              {journalEntry.author || "Anonymous"}
-                            </Link>
-                          </div>
-
-                          <div className="text-default-opacity-50">
-                            Last updated on{" "}
-                            {journalEntry.updated_at
-                              ? new Date(
-                                  journalEntry.updated_at
-                                ).toLocaleDateString()
-                              : "Date is not available"}
-                          </div>
-                        </div>
-                      </div>
+                  <div className="flex flex-col items-end max-[500px]:items-center text-sm text-gray-950/70 dark:text-gray-50/70">
+                    <div>
+                      Written by{" "}
+                      <Link
+                        href={
+                          journalEntry.author
+                            ? "https://github.com/reginaldsc02"
+                            : "/"
+                        }
+                        target="_blank"
+                        rel="noreferrer"
+                        className="underline hover:text-primary transition-colors"
+                      >
+                        {journalEntry.author || "Anonymous"}
+                      </Link>
                     </div>
-                  ))
-                ) : (
-                  <div className="p-spacing-default-20px border-full-default rounded-default-8px">
-                    <LabeledIcon
-                      icon={<BiErrorCircle />}
-                      label="Journal entries not found 🤔"
-                    />
+
+                    <div className="text-default-opacity-50">
+                      Last updated on{" "}
+                      {journalEntry.updated_at
+                        ? new Date(journalEntry.updated_at).toLocaleDateString()
+                        : "Date is not available"}
+                    </div>
                   </div>
-                )}
-              </article>
+                </div>
+              </div>
             </div>
-          </MainContainer>
-        </>
-      )}
-    </>
+          ))
+        ) : (
+          <NotFound text="Journal entries not found!" />
+        )}
+      </article>
+    </Container>
   );
 }

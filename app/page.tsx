@@ -1,5 +1,5 @@
-import { RootLayout } from "@/components/layout/RootLayout";
+import { HomePage } from "@/components/landing/HomePage";
 
 export default function Home() {
-  return <RootLayout />;
+  return <HomePage />;
 }
