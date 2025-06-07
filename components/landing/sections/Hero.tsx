@@ -1,6 +1,5 @@
 import { ButtonLink } from "@/components/shared/ui/ButtonLink";
 import { DisplayText } from "@/components/shared/ui/DisplayText";
-import { Heading } from "@/components/shared/ui/Heading";
 import { Paragraph } from "@/components/shared/ui/Paragraph";
 import { Section } from "@/components/shared/ui/Section";
 
