@@ -42,37 +42,32 @@ export default function JournalEntry() {
                 </div>
                 <Paragraph text={journalEntry.summary} />
 
-                <div className="flex max-[500px]:flex-col items-center max-[500px]:justify-center justify-between gap-5">
+                <Link
+                  href="/journals"
+                  className="text-center font-black text-sm uppercase underline underline-offset-4 hover:text-primary transition-colors"
+                >
+                  Back to journals
+                </Link>
+
+                <div className="mt-5 flex flex-col items-center justify-center gap-2.5">
                   <Link
-                    href="/journals"
-                    className="underline underline-offset-4 uppercase text-xs font-bold transition-colors hover:text-primary"
+                    href={
+                      journalEntry.author
+                        ? "https://github.com/reginaldsc02"
+                        : "/"
+                    }
+                    target="_blank"
+                    rel="noreferrer"
+                    className="underline hover:text-primary transition-colors text-center"
                   >
-                    Back to journals
+                    {journalEntry.author || "Anonymous"}
                   </Link>
 
-                  <div className="flex flex-col items-end max-[500px]:items-center text-sm text-gray-950/70 dark:text-gray-50/70">
-                    <div>
-                      Written by{" "}
-                      <Link
-                        href={
-                          journalEntry.author
-                            ? "https://github.com/reginaldsc02"
-                            : "/"
-                        }
-                        target="_blank"
-                        rel="noreferrer"
-                        className="underline hover:text-primary transition-colors"
-                      >
-                        {journalEntry.author || "Anonymous"}
-                      </Link>
-                    </div>
-
-                    <div className="text-default-opacity-50">
-                      Last updated on{" "}
-                      {journalEntry.updated_at
-                        ? new Date(journalEntry.updated_at).toLocaleDateString()
-                        : "Date is not available"}
-                    </div>
+                  <div className="text-default-opacity-50 text-center">
+                    Last updated on{" "}
+                    {journalEntry.updated_at
+                      ? new Date(journalEntry.updated_at).toLocaleDateString()
+                      : "Date is not available"}
                   </div>
                 </div>
               </div>
