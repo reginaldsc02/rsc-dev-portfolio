@@ -26,7 +26,7 @@ export default function JournalEntries() {
     <Loader />
   ) : (
     <Container>
-      <div className="max-h-screen overflow-y-scroll">
+      <div className="max-h-screen overflow-y-auto">
         <article
           className={`${
             data.length > 0
