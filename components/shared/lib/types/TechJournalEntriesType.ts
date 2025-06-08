@@ -1,10 +1,7 @@
 export interface TechJournalEntriesType {
-  slug: string | null;
   id: number;
   title: string;
-  author: string;
+  slug: string | null;
   summary: string;
-  featured: boolean | null;
   created_at: Date | null;
-  updated_at: Date | null;
 }
