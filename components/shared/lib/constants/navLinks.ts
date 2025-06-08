@@ -16,4 +16,10 @@ export const navLinks = [
     href: "/journals",
     id: "@journals",
   },
+
+  {
+    title: "Admin",
+    href: "/admin/dashboard",
+    id: "@admin",
+  },
 ];
