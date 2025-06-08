@@ -23,9 +23,13 @@ export const readTechJournalEntry = async ({
     whereClause.slug = slug;
   }
 
-  const techJournalEntries = await prisma.techjournalentry.findMany({
-    where: whereClause,
-  });
+  try {
+    let techJournalEntries = await prisma.techjournalentry.findMany({
+      where: whereClause,
+    });
 
-  return techJournalEntries;
+    return techJournalEntries;
+  } catch (error) {
+    return [];
+  }
 };
