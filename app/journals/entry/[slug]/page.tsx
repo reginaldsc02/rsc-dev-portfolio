@@ -36,7 +36,7 @@ export default function JournalEntry() {
         {data && data.length > 0 ? (
           data.map((journalEntry) => (
             <div key={journalEntry.id}>
-              <div className="mr-5 p-5 grid gap-5 border border-gray-950/10 dark:border-gray-50/10 rounded-lg">
+              <div className="p-5 grid gap-5 border border-gray-950/10 dark:border-gray-50/10 rounded-lg">
                 <div className="pb-2.5 font-bold capitalize text-xl text-center border-b border-gray-950/10 dark:border-gray-50/10">
                   {journalEntry.title}
                 </div>
@@ -48,28 +48,6 @@ export default function JournalEntry() {
                 >
                   Back to journals
                 </Link>
-
-                <div className="mt-5 flex flex-col items-center justify-center gap-2.5">
-                  <Link
-                    href={
-                      journalEntry.author
-                        ? "https://github.com/reginaldsc02"
-                        : "/"
-                    }
-                    target="_blank"
-                    rel="noreferrer"
-                    className="underline hover:text-primary transition-colors text-center"
-                  >
-                    {journalEntry.author || "Anonymous"}
-                  </Link>
-
-                  <div className="text-default-opacity-50 text-center">
-                    Last updated on{" "}
-                    {journalEntry.updated_at
-                      ? new Date(journalEntry.updated_at).toLocaleDateString()
-                      : "Date is not available"}
-                  </div>
-                </div>
               </div>
             </div>
           ))
