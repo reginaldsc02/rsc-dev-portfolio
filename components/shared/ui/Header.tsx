@@ -5,8 +5,12 @@ import { navLinks } from "../lib/constants/navLinks";
 import { socialMediaLinks } from "../lib/constants/socialMediaLinks";
 import { BiWindowClose, BiWindowOpen } from "react-icons/bi";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 export const Header = () => {
+  const pathname = usePathname();
+  if (pathname.startsWith("/admin")) return null;
+
   const [navDrawerOpen, setNavDrawerOpen] = useState(false);
   const handleNavDrawerOpen = () => setNavDrawerOpen(!navDrawerOpen);
 
