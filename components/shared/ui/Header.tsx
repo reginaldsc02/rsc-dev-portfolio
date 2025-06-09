@@ -8,6 +8,7 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { Logo } from "./Logo";
 import { Navigation } from "./Navigation";
+import { HamburgerButton } from "./HamburgerButton";
 
 export const Header = () => {
   const pathname = usePathname();
@@ -20,16 +21,10 @@ export const Header = () => {
     <header className="min-h-16 p-5 sticky top-0 left-0 z-40 flex items-center justify-between md:justify-evenly bg-background">
       <Logo onClick={() => setNavDrawerOpen(false)} />
 
-      <button
-        type="button"
-        aria-label={
-          navDrawerOpen ? "Close navigation menu" : "Open navigation menu"
-        }
-        onClick={handleNavDrawerOpen}
-        className="md:hidden cursor-pointer hover:text-primary transition-colors"
-      >
-        {navDrawerOpen ? <BiWindowClose /> : <BiWindowOpen />}
-      </button>
+      <HamburgerButton
+        navDrawerOpen={navDrawerOpen}
+        handleNavDrawerOpen={handleNavDrawerOpen}
+      />
 
       <Navigation
         navLinks={navLinks}
