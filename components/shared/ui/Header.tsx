@@ -18,7 +18,7 @@ export const Header = () => {
   const handleNavDrawerOpen = () => setNavDrawerOpen(!navDrawerOpen);
 
   return (
-    <header className="min-h-16 p-5 sticky top-0 left-0 z-40 flex items-center justify-between md:justify-evenly bg-background">
+    <header className="min-h-16 px-5 sticky top-0 left-0 z-40 flex items-center justify-between md:justify-evenly border-b border-gray-950/10 dark:border-gray-50/10 bg-background">
       <Logo onClick={() => setNavDrawerOpen(false)} />
 
       <HamburgerButton
