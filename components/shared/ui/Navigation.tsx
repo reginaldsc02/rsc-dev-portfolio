@@ -33,7 +33,7 @@ export const Navigation = ({
         navDrawerOpen ? "translate-x-0" : "translate-x-full"
       }`}
     >
-      <ul className="flex flex-col md:flex-row ml-2.5">
+      <ul className="flex flex-col md:flex-row mt-2.5 ml-2.5">
         {navLinks.map((nav: NavLinkType) => (
           <li
             key={nav.id}
