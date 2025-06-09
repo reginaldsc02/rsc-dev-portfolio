@@ -10,6 +10,7 @@ export const HamburgerButton = ({
   return (
     <button
       type="button"
+      aria-expanded={navDrawerOpen ? true : false}
       aria-label={
         navDrawerOpen ? "Close navigation menu" : "Open navigation menu"
       }

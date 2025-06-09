@@ -19,7 +19,6 @@ export const Navigation = ({
 }) => {
   return (
     <nav
-      aria-expanded={navDrawerOpen ? true : false}
       className={`w-full h-[calc(100vh-4rem)] md:w-auto md:h-auto pb-2.5 md:pb-0 fixed md:static top-16 left-0 z-40 md:z-auto bg-background md:bg-transparent md:translate-x-0 transition-transform overflow-y-auto ${
         navDrawerOpen ? "translate-x-0" : "translate-x-full"
       }`}

@@ -11,9 +11,10 @@ import { HamburgerButton } from "./HamburgerButton";
 
 export const Header = () => {
   const pathname = usePathname();
+  const [navDrawerOpen, setNavDrawerOpen] = useState(false);
+
   if (pathname.startsWith("/admin")) return null;
 
-  const [navDrawerOpen, setNavDrawerOpen] = useState(false);
   const handleNavDrawerOpen = () => setNavDrawerOpen(!navDrawerOpen);
 
   return (
