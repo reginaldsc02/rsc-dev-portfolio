@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { navLinks } from "../lib/constants/navLinks";
 import { socialMediaLinks } from "../lib/constants/socialMediaLinks";
-import { BiWindowClose, BiWindowOpen } from "react-icons/bi";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { Logo } from "./Logo";
