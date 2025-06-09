@@ -6,6 +6,7 @@ import { socialMediaLinks } from "../lib/constants/socialMediaLinks";
 import { BiWindowClose, BiWindowOpen } from "react-icons/bi";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
+import { Logo } from "./Logo";
 
 export const Header = () => {
   const pathname = usePathname();
@@ -16,14 +17,7 @@ export const Header = () => {
 
   return (
     <header className="min-h-16 p-5 sticky top-0 left-0 z-40 flex items-center justify-between md:justify-evenly bg-background">
-      <Link
-        href={"/"}
-        onClick={() => setNavDrawerOpen(false)}
-        aria-label="Reginald Chand"
-        className="lowercase hover:text-primary transition-colors"
-      >
-        @ReginaldChand
-      </Link>
+      <Logo onClick={() => setNavDrawerOpen(false)} />
 
       <button
         type="button"
