@@ -1,14 +1,7 @@
 import Link from "next/link";
 import { socialMediaLinks } from "../lib/constants/socialMediaLinks";
 import { Dispatch, SetStateAction } from "react";
-import {
-  SignedOut,
-  SignInButton,
-  SignUpButton,
-  SignedIn,
-  UserButton,
-} from "@clerk/nextjs";
-import { usePathname } from "next/navigation";
+import { ClerkProfileCard } from "./ClerkProfileCard";
 
 interface NavLinkType {
   id: string | number;
@@ -25,8 +18,6 @@ export const Navigation = ({
   navDrawerOpen: boolean;
   setNavDrawerOpen: Dispatch<SetStateAction<boolean>>;
 }) => {
-  const pathname = usePathname();
-
   return (
     <nav
       className={`w-full h-[calc(100vh-4rem)] md:w-auto md:h-auto pb-2.5 md:pb-0 fixed md:static top-16 left-0 z-40 md:z-auto bg-background md:bg-transparent md:translate-x-0 transition-transform overflow-y-auto ${
@@ -64,19 +55,7 @@ export const Navigation = ({
         ))}
       </ul>
 
-      <div
-        className={`mt-8 ml-5 ${
-          !pathname.startsWith("/admin") ? "hidden" : "md:hidden"
-        }`}
-      >
-        <SignedOut>
-          <SignInButton />
-          <SignUpButton />
-        </SignedOut>
-        <SignedIn>
-          <UserButton />
-        </SignedIn>
-      </div>
+      <ClerkProfileCard />
     </nav>
   );
 };
