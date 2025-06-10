@@ -2,22 +2,19 @@ import Link from "next/link";
 import { socialMediaLinks } from "../lib/constants/socialMediaLinks";
 import { Dispatch, SetStateAction } from "react";
 import { ClerkProfileCard } from "./ClerkProfileCard";
+import { NavLinkType } from "../lib/types/NavLinkType";
 
-interface NavLinkType {
-  id: string | number;
-  href: string;
-  title: string;
-}
+type NavigationType = {
+  navLinks: Array<NavLinkType>;
+  navDrawerOpen: boolean;
+  setNavDrawerOpen: Dispatch<SetStateAction<boolean>>;
+};
 
 export const Navigation = ({
   navLinks,
   navDrawerOpen,
   setNavDrawerOpen,
-}: {
-  navLinks: Array<NavLinkType>;
-  navDrawerOpen: boolean;
-  setNavDrawerOpen: Dispatch<SetStateAction<boolean>>;
-}) => {
+}: NavigationType) => {
   return (
     <nav
       className={`w-full h-[calc(100vh-4rem)] md:w-auto md:h-auto pb-2.5 md:pb-0 fixed md:static top-16 left-0 z-40 md:z-auto bg-background md:bg-transparent md:translate-x-0 transition-transform overflow-y-auto ${
