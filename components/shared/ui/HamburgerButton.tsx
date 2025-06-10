@@ -1,12 +1,14 @@
 import { BiWindowClose, BiWindowOpen } from "react-icons/bi";
 
+type HamburgerButtonType = {
+  navDrawerOpen: boolean;
+  handleNavDrawerOpen: () => void;
+};
+
 export const HamburgerButton = ({
   navDrawerOpen,
   handleNavDrawerOpen,
-}: {
-  navDrawerOpen: boolean;
-  handleNavDrawerOpen: () => void;
-}) => {
+}: HamburgerButtonType) => {
   return (
     <button
       type="button"
