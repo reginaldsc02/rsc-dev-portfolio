@@ -1,14 +1,8 @@
 import Link from "next/link";
 import { socialMediaLinks } from "../lib/constants/socialMediaLinks";
-import { Dispatch, SetStateAction } from "react";
 import { ClerkProfileCard } from "./ClerkProfileCard";
+import { NavigationType } from "../lib/types/NavigationType";
 import { NavLinkType } from "../lib/types/NavLinkType";
-
-type NavigationType = {
-  navLinks: Array<NavLinkType>;
-  navDrawerOpen: boolean;
-  setNavDrawerOpen: Dispatch<SetStateAction<boolean>>;
-};
 
 export const Navigation = ({
   navLinks,
