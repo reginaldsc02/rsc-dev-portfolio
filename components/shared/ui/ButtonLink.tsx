@@ -1,13 +1,12 @@
 import Link from "next/link";
 import { ButtonType } from "../lib/types/ButtonType";
-import { TextType } from "../lib/types/TextType";
 
 export const ButtonLink = ({
   text,
   href,
   primary = true,
   ...rest
-}: { href: TextType } & ButtonType & React.ComponentProps<"a">) => {
+}: { href: string } & ButtonType & React.ComponentProps<"a">) => {
   return (
     <Link
       href={href}
