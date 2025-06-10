@@ -1,15 +1,13 @@
 import Link from "next/link";
 import { Paragraph } from "./Paragraph";
 
-export const JournalCard = ({
-  title,
-  summary,
-  href,
-}: {
+type JournalCardType = {
   title: string;
   summary: string;
   href: string;
-}) => {
+};
+
+export const JournalCard = ({ title, summary, href }: JournalCardType) => {
   return (
     <div className="mr-5 p-5 grid gap-5 border border-gray-950/10 dark:border-gray-50/10 rounded-lg">
       <div className="pb-2.5 font-bold capitalize text-xl text-center border-b border-gray-950/10 dark:border-gray-50/10">
