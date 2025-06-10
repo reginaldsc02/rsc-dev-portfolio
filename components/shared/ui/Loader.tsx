@@ -1,9 +1,12 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { BounceLoader } from "react-spinners";
 
 export const Loader = () => {
+  const pathname = usePathname();
+
   const loadingMessages = [
     "Casting spells",
     "Waking the dragons",
@@ -30,11 +33,17 @@ export const Loader = () => {
   const [loadingMessage, setLoadingMessage] = useState("Please wait");
 
   useEffect(() => {
-    const randomIndex = Math.floor(Math.random() * loadingMessages.length);
-    const randomMessage = loadingMessages[randomIndex];
+    let i = 0;
 
-    setLoadingMessage(randomMessage);
-  }, [loadingMessage]);
+    const intervalId = setInterval(() => {
+      if (i === loadingMessages.length) i = 0;
+      const message = loadingMessages[i];
+      setLoadingMessage(message);
+      i++;
+    }, 2000);
+
+    return () => clearInterval(intervalId);
+  }, [pathname]);
 
   return (
     <div className="w-full h-screen fixed top-0 left-0 z-50 flex items-center justify-center pointer-events-none bg-background">
