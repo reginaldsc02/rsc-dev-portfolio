@@ -6,10 +6,10 @@ import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ClerkProvider } from "@clerk/nextjs";
 import { Toaster } from "react-hot-toast";
-import { Header } from "@/components/shared/ui/Header";
 import { Footer } from "@/components/shared/ui/Footer";
 import { Suspense } from "react";
 import { Loader } from "@/components/shared/ui/Loader";
+import { LandingPageHeader } from "@/components/shared/ui/LandingPageHeader";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -64,7 +64,7 @@ export default function RootLayout({
               showForHashAnchor={true}
             />
 
-            <Header />
+            <LandingPageHeader />
             {children}
             <Footer />
           </Suspense>
