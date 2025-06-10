@@ -1,13 +1,12 @@
 "use client";
 
-import Link from "next/link";
 import { navLinks } from "../lib/constants/navLinks";
-import { socialMediaLinks } from "../lib/constants/socialMediaLinks";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import { Logo } from "./Logo";
 import { Navigation } from "./Navigation";
 import { HamburgerButton } from "./HamburgerButton";
+import { SocialMediaLinks } from "./SocialMediaLinks";
 
 export const LandingPageHeader = () => {
   const pathname = usePathname();
@@ -32,20 +31,7 @@ export const LandingPageHeader = () => {
         setNavDrawerOpen={setNavDrawerOpen}
       />
 
-      <ul className="hidden md:flex gap-2.5">
-        {socialMediaLinks.map((sml) => (
-          <li key={sml.id} className="hover:text-primary transition-colors">
-            <Link
-              href={sml.href}
-              aria-label={sml.title}
-              target="_blank"
-              rel="noreferrer"
-            >
-              {sml.icon}
-            </Link>
-          </li>
-        ))}
-      </ul>
+      <SocialMediaLinks />
     </header>
   );
 };
